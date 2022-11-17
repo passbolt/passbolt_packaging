@@ -1,0 +1,134 @@
+# Personal scripts #
+####################
+# you can place your personal bash scripts in bin/my
+/bin/my/*
+
+# Local config #
+################
+/config/app.php
+/config/passbolt.php
+/config/Migrations/schema-dump-default.lock
+/config/gpg/serverkey.asc
+/config/gpg/serverkey_private.asc
+/config/gpg/*.asc
+/config/gpg/*.key
+/config/license
+/config/subscription_key.txt
+/config/ldap.php
+/config/DirectorySync/schema/*
+/config/jwt/jwt.key
+/config/jwt/jwt.pem
+
+# JS Dependencies #
+################
+/node_modules
+
+# Legacy images #
+#################
+/webroot/img/public/*
+!/webroot/img/public/empty
+
+# DEBIAN Package #
+##################
+.kitchen/
+.kitchen.local.yml
+debian/tmp/
+debian/passbolt-ce/
+debian/.debhelper/
+debian/files
+debian/passbolt-api-ce/
+debian/passbolt-api-pro/
+debian/*debhelper*
+debian/*substvars*
+
+# RPM Package #
+###############
+/_passbolt-configure
+/cron.d
+/logrotate.d
+/*.rpm
+
+# CakePHP specific files #
+##########################
+/config/app_local.php
+/config/.env
+/logs/*
+/tmp/*
+!/tmp/avatars/empty
+/vendor/*
+
+# IDE and editor specific files #
+#################################
+
+
+# IDE and editor specific files #
+#################################
+/.project
+/.buildpath
+/.settings/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.directory
+
+# Tool specific files #
+#######################
+# PHPUnit
+.phpunit.result.cache
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+# IDE specific files  #
+#######################
+# vim
+*~
+*.swp
+*.swo
+# sublime text & textmate
+*.sublime-*
+*.stTheme.cache
+*.tmlanguage.cache
+*.tmPreferences.cache
+# Eclipse
+.settings/*
+# JetBrains, aka PHPStorm, IntelliJ IDEA
+.idea
+.idea/*
+/.idea/*
+/out/
+# NetBeans
+nbproject/*
+/nbproject
+# Visual Studio Code
+.vscode
+# Sass preprocessor
+.sass-cache/
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+# JIRA plugin
+atlassian-ide-plugin.xml
+# Others
+*.mo
+.project
+.buildpath
+*.iml
+
+# Tilt
+tilt_modules*
+## File-based project format:
+*.ipr
+*.iws
+
+# PHPUNIT generated file
+.phpunit.result.cache
