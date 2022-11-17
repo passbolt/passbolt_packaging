@@ -1,0 +1,369 @@
+passbolt-pro-server (3.7.3-1) buster; urgency=medium
+  * PB-19090 Protect forms from spell-jacking attack
+
+ -- Diego Lendoiro <diego@passbolt.com>  Tue, 27 Sep 2022 14:30:00 +0000
+
+passbolt-pro-server (3.7.2-1) buster; urgency=medium
+  * PB-18380 Let passbolt-configure script setup certbot for RHEL9 support
+  * PB-18405 Redirect on non-json request if no MFA settings are found
+  * PB-16983 Handles the lack of permissions on image directory when deleting
+  * PB-16898 Redesign download a supported browser to get started
+  * PB-19040 As AD synchronizing with LDAP, users should be removed from passbolt groups
+  * PB-18415 Extends folder name length to 256 chars
+  * PB-18650 Add a check on mysql status in order to run mysql commands only when it's ready in unit tests
+  * PB-18664 Add retry logic to Gitlab CI jobs
+  * PB-18645 Bump Ldap tools version for better PHP8.x support
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Wed, 21 Sep 2022 10:00:00 +0000
+
+passbolt-pro-server (3.7.1-1) buster; urgency=medium
+  * PB-18486 Removes all resources_tags entries for tags that are not shared and for which the user_id is set to null.
+  * PB-18398 Fix tag regression: sets associations name to be CakePHP compatible
+  * PB-17072 Quotes fields in a join condition fixing Postgres
+  * PB-17068 Fix postgresql compatibility issue
+  * PB-18427 Fix LDAP/AD SELinux issue on RHEL
+  * PB-18381 Fix source language typos
+  * PB-18397 Fix as an admin I can generate a server key with the webinstaller within an instance over http
+  * PB-17096 Fix resource_types name and slug postgresql compatibility
+  * PB-18372 Bump styleguide version to 3.7.1
+  * PB-17068 PBL-07-003 Remove non necessary user id enumeration possibility
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Fri, 12 Aug 2022 12:00:00 +0000
+
+passbolt-pro-server (3.7.0-1) buster; urgency=medium
+  * PB-17098 Add rockylinux 9 support
+  * PB-16751 Add Redhat 9 support
+  * PB-16749 Add Ubuntu 22.04 support
+  * PB-16950 Add Spanish and Lithuanian support
+  * PB-14514 Add PHP8.0 support
+  * PB-14514 Fix PHP8.1 compatibility issues
+  * PB-16161 Create action log endpoint for user CRUD
+  * PB-16844 Common part of the user recovery and setup audit log
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Thu, 28 July 2022 15:35:00 +0000
+
+passbolt-pro-server (3.6.0-1) buster; urgency=medium
+  * PB-9738 Add account recovery organization policy settings by admins
+  * PB-13685 Add account recovery organization settings set with key rotation + misc cleanup
+  * PB-12837 Add account recovery setup for users
+  * PB-14236 Add account recovery request process for users
+  * PB-14236 Add account recovery response process by admins
+  * PB-14410 Add the account recovery final step for users after approval by admins
+  * PB-14233 List all pending account recovery requests for admins
+  * PB-13769 Add account recovery related email notifications to users and admins
+  * PB-14452 Add cleanup tasks for account recovery
+  * PB-16123 Remove key rotation logic from package post install scripts
+  * PB-15277 Remove mariadb dependency for RPM package
+  * PB-14947 Package versionning for RPM
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Wed, 25 May 2022 17:30:00 +0000
+
+passbolt-pro-server (3.5.0-3) buster; urgency=medium
+  * PB-14959 updating the pull key logic in debian postinst
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Fri, 29 Apr 2022 14:30:00 +0000
+
+passbolt-pro-server (3.5.0-2) buster; urgency=medium
+  * PB-13923 Update the repository key to sign packages
+  * PB-13749 Update firewalld install check
+  * PB-13743 Fix bad condition logic to setup firewalld
+  * PB-13650 Delete jwt folder only while uninstalling
+  * PB-13783 Update selinux policy RPM package
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Wed, 13 Apr 2022 21:30:00 +0000
+
+passbolt-pro-server (3.5.0-1) buster; urgency=medium
+  * PB-13161 As LU I should be able to use passbolt with my Android mobile
+  * PB-13161 As LU I should be able to use passbolt with my IOS mobile
+  * PB-5967 As AD I can use passbolt with a PostgreSQL database provider [experimental]
+  * PB-5967 As AD I can migrate an existing instance to PostgreSQL with the help of the command line [experimental] and MySQL to Postgres migration tools, e.g. as described here: https://pgloader.readthedocs.io and here: https://pgloader.io/.
+  * PB-8513 As LU I can request gpg keys using pagination
+  * PB-6053 As LU I can request folders using pagination
+  * PB-13321 As a user I can use passbolt in Dutch
+  * PB-13321 As a user I can use passbolt in Japanese
+  * PB-13321 As a user I can use passbolt in Polish
+  * PB-12817 As LU I can import avatars having a jpeg extension
+  * PB-12943 As AD I should be able to see log when a user tries to sign-in with an invalid bearer token
+  * PB-12888 Improve performances of the operations requiring permissions accesses by replacing the single index on type by a combined index involving the requested columns
+  * PB-13177 As AD I should be able to see any gpg keys errors from the healthcheck
+  * PB-13183 As LU I should be able create resource having a name or a username of 255 characters long
+  * PB-13265 As AD I can create a JWT key pair even if the database is not set
+  * PB-13164 As AD I can cleanup duplicate entries in the favorites tables, folder_relations, groups_users and permissions
+  * PB-13217 PBL-06-011 Fix ACL on mobile transfer view controller
+  * PB-9887 Fix as AD I can send email digest from the /bin/cron script
+  * PB-12951 Fix as a user I shouldn’t get an error requesting the JWT refresh end point providing a MFA token with MFA disabled
+  * PB-12957 Fix multiple language issues reported by community
+  * PB-12914 Fix as a group manager I should not get multiple notifications when a group is updated
+  * PB-13158 As AD I should see a tip with proper directory permissions when the JWT assets healthcheck fails
+  * PB-12835 Move users setup/recover/register controllers logic into services to welcome the upcoming account recovery feature
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Tue, 18 Jan 2022 10:40:00 +0000
+
+passbolt-pro-server (3.4.0-2) buster; urgency=medium
+  * Synchronising with RPM package
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Tue, 07 Dec 2021 14:00:00 +0000
+
+passbolt-pro-server (3.4.0-1) buster; urgency=medium
+  * PB-9826 As a user I want to use passbolt natively on Edge
+  * PB-8371 As LU I want to see the login/MFA/recover/register screens in dark mode
+  * PB-8522 As LU I should see the MFA verify field having focus
+  * PB-9730 As AD I should be able to check avatars read issues from the healthcheck
+  * PB-8932 Fix as LU I should see an animation when I successfully configured MFA
+  * PB-9286 Fix as LU I should see the locale dropdown field of the setup/recover screen well positioned
+  * PB-9397 Fix as AD I shouldn't see an error on the healthcheck if the JWT auth is disabled and I never configured it
+  * PB-9114 Fix as lu I should be able to upload a transparent avatar in .png format.
+  * PB-9750 Fix spelling mistakes reported by the community
+  * PB-9762 Fix requesting /auth/login.json should not trigger an unexpected error
+  * PB-9888 Fix MFA & JWT refresh token issue, remove Bearer from the hashed session identifier
+  * PB-12817 Fix as LU I should be able to update jpeg avatar
+  * PB-12581 Fix as AD I should be able to configure the users directory integration
+  * PB-7374 As soft deleted but logged in user I should be forbidden to request the API
+  * PB-9340 Fix email queue data should be stored and deserialized as json and not php
+  * PB-9311 Refactor JWT and MFA plugins for better code maintainability.
+  * PB-8320 Implement the tests that are marked as incomplete for cleaner continuous integration test reports
+  * PB-8211 Psalm set to level 4
+  * PB-9726 Fix do not load cleanup tasks unless in CLI mode
+  * PB-9753 Improve table fields validation tests, do not save entity when testing the validation of properties
+  * PB-9310 Move avatar file_storage logic into AvatarsTable
+  * PB-9785 Update JWT healthcheck help messages
+  * PB-9656 Migrate fields from utf8mb4 to a more performant encoding when possible
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Tue, 07 Dec 2021 12:30:00 +0000
+
+passbolt-pro-server (3.3.1-1) buster; urgency=medium
+  * PB-9820 / PBL-06-008 WP3: JWT key confusion leads to authentication bypass (High) [experimental][disabled by default]
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Wed, 24 Nov 2021 15:00:00 +0000
+
+passbolt-pro-server (3.3.0-1) buster; urgency=medium
+  * PB-8414 Adapting package to be compatible with Debian 11
+  * PB-7815 As a server administrator I should be able to enable / disable the in-form menu feature, enabled by default
+  * PB-6072 As a server administrator I should be able to enable / disable the password generator feature, enabled by default
+  * PB-8189 As a user I should be able to use the application in German or Swedish
+  * PB-7847 As AN I should be able to authenticate to passbolt via JWT access and refresh tokens [experimental][disabled by default]
+  * PB-6034  As LU I should be able to configure my mobile app [experimental][disabled by default]
+  * PB-8908 As a user I should see the footer of the passbolt emails translated with my locale
+  * PB-8364 As a user I should see the subject of the passbolt emails translated with my locale
+  * PB-6032 As API user I shouldn’t see the _joinData properties in the resource entry points responses
+  * PB-8281 Add Debian 11 bullseye support
+  * PB-7750 As AD I should be notified by the healthcheck when a tmp files is executable
+  * PB-7760 Increase PHPStan level to 6
+  * PB-8081 As AD I should be able to configure passbolt over IPv6 while installing a passbolt package
+  * PB-5866 As AD I should be able to detect avatar data discrepancies using the passbolt cleanup command
+  * PB-7605 As a developer I should be able to enable/disable a plugin easily
+  * PB-5982 as LU sharing a folders with a user which contains resources already shared with this same user I should move the resources in the shared folders
+  * PB-5457 Fix as LU importing a batch of passwords I should not get an internal errors because of database deadlock
+  * PB-7840 Fix as AD I can install/reconfigure the passbolt package if ssl certificates are already present
+  * PB-7961 Fix PBL-03-002 Missing CSRF protection on the user directories synchronize and ignore user entry points
+  * PB-8047 Fix PBL-02-002 As LU I should logout by posting to the API and the entry point should should be protected by CSRF
+  * PB-7751 Updates FlySystem dependency to v2.1.1
+  * SEC-181 Fix information disclosure: recover endpoint should not return user role and name.
+  * PB-8488 Remove user agent unnecessary check associated with MFA token
+  * PB-8336 Clean phpunit.xml file
+  * PB-8448 Hashes the session ID prior to passord_hash
+  * PB-8210 Replaces PHPSESSID with session_name()
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Tue, 26 Oct 2021 10:30:00 +0000
+
+passbolt-pro-server (3.2.2-2) buster; urgency=medium
+  * PB-7840 Fix package issue for ssl certificates that are already in the correct path during install/reconfigure
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Tue, 27 Jul 2021 11:00:00 +0000
+
+passbolt-pro-server (3.2.2-1) buster; urgency=medium
+  * PB-5910 Fix ldap admin screen should load only default admin users which are active and not deleted
+
+ -- Gerold Mougenel <gerold@passbolt.com>  Tue, 16 Jun 2021 15:30:00 +0000
+
+passbolt-pro-server (3.2.1-1) buster; urgency=medium
+  * GITHUB-402 Fix API v3 regression, login must accept JSON data
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Tue, 4 Jun 2021 19:00:00 +0000
+
+passbolt-pro-server (3.2.0-1) buster; urgency=medium
+  * PB-5054 French internationalization
+  * PB-5171 As logged-in user I can paginate the result of the users and resources index controllers
+  * PB-5526 As admin I can save the subscription key as organization setting
+  * PB-5854 As logged-in user I can save the locale of a user as account setting
+  * PB-5854 As admin I can save the locale the organization as organization setting
+  * PB-5985 As system administration I should be able to import a subscription key from the command line
+  * PB-5523 Fix as system administrator I should see the healthcheck errors colored in red
+  * PB-5860 Fix password max length should be set to 4096 in resource type definitions
+  * PB-6007 Fix all group managers should receive an email when a new user is added to a group after a Ldap synchronization
+  * PB-6031 Fix as LU I shouldn't get a fatal error when using a scalar instead of an array for some filters values
+  * PB-6131 Fix healthcheck error messages display
+  * PB-5975 Test code with PHPStan - level 4
+  * Avatar table should use created and modified for timestamp and not created_at and modified_at
+  * Move avatar in database
+  * PB-5527 Migration to CakePHP4
+  * Remove X-XSS-Protection as per Cure53 audit recommendations
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Tue, 1 Jun 2021 12:00:00 +0000
+
+passbolt-pro-server (3.1.0-1) buster; urgency=medium
+  * PB-5211 The fields Group object class and User object class in user directory have to be sent server side
+  * GITHUB-378 Fix healthcheck ssl fullBaseUrl check
+  * Fix email digest email preview should accept empty (null) template
+  * Fix send test email command should accept undefined username and password
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Fri, 18 Mar 2021 10:20:00 +0000
+
+passbolt-pro-server (3.0.2-1) buster; urgency=medium
+  * PB-5211 The fields Group object class and User object class in user directory have to be sent server side
+  * GITHUB-378 Fix healthcheck ssl fullBaseUrl check
+  * Fix email digest email preview should accept empty (null) template
+  * Fix send test email command should accept undefined username and password
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Fri, 9 Mar 2021 16:13:00 +0000
+
+passbolt-pro-server (3.0.1-1) buster; urgency=medium
+  * Fix resources population of resource_type_id field migration
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Wed, 24 Feb 2021 13:43:00 +0000
+
+passbolt-pro-server (3.0.0-2) buster; urgency=medium
+  * Drop support for api format v1, api-version parameter is deprecated
+  * Remove title from api response envelope format
+  * Drop support for PHP < v7.3, application require PHP v7.3 by default
+  * Drop support for Composer < v2, application requires Composer v2 by default
+  * Add dark theme to the community edition
+  * Add new system check utilities in ./bin, for example ./bin/status-report
+  * Add web installer automatically populates mysql credentials (VM / Debian Package)
+  * Add support for multiple resource types
+  * Add resource with encrypted description as resource type
+  * Add generic cron job task in ./bin/cron
+  * Add support for untracked personal shell scripts under ./bin/my
+  * Add support for configurable footer link in config
+  * Add permissions filters on resource view and index
+  * Add permissions contain options on resource view
+  * Update OpenPGP-PHP dependencies to provide PHP 7.4 compatibility
+  * Remove unmaintained user agent parser library
+  * Fix PHP 7.4 warnings
+  * Improve testsuite execution times
+  * Refactor testsuite to not install data model from fixtures but use migrations instead
+  * Refactor testsuite to remove unused fixtures
+  * Migrate administration and mfa settings screen to React
+  * Add placeholder application skeleton when webextension is still loading
+  * Redesign of login and recover screens
+  * Add Mysql 8 support
+  * Fix allow overriding rememberMe options in passbolt.php configuration file
+  * Fix all target blank link should contain rel noopener noreferrer
+  * Fix email sender, email subject should not exceed 255 characters.
+  * Fix secret access log on resource view with contain secret
+  * GITHUB-376 Fix missing route prefix on the recovery button
+  * GITHUB-373 Fix API format for create group (previously v1 instead of v2 format)
+  * GITHUB-372 Fix after modifying passwd, the modification time should be changed
+  * GITHUB-370 Fix metadata should be deleted for deleted resources
+  * GITHUB-369 Fix Notification Emails Have Wrong Tense In Subject/Body
+  * GITHUB-368 Clarify PHP extension requirements
+  * GITHUB-362 Fix wrong filename on healthcheck HELP message for assertConfigFiles
+  * GITHUB-356 As a user I shouldn't be able to export folders if export plugin is disabled
+  * GITHUB-350 Fix no mails are sent when providers offer AUTH PLAIN authentication only
+  * GITHUB-339 Fix web installer urls do not work when passbolt is installed in a directory
+  * Fix performance issues on resource / folder activity log
+  * Add run cleanup after migrations on postinst
+
+ -- Diego Lendoiro <diego@passbolt.com>  Thu, 22 Feb 2021 16:37:00 +0000
+
+passbolt-pro-server (3.0.0-1) buster; urgency=medium
+  * Cron job executes bin/cron script.
+  * Add cake passbolt show_logs command to display error.log path.
+  * Add bin/utils.sh script.
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Mon, 18 Jan 2021 16:02:00 +0000
+
+passbolt-pro-server (2.14.0-0) stretch; urgency=medium
+  * Add an option to the migrate shell task to avoid clearing the cache after the migration is completed
+  * PB-1429 Fix "ldap error messages are incorrect in case of validation issues"
+  * PB-1431 Fix "LDAP: a notification should not be sent to a group administrator requesting him to add a non-active user."
+  * Fix: user_id should be saved in action_logs table after successful login
+  * PB-1370 Folders: Fix Performance improvement while retrieving items associated folder_parent_id and personal status
+  * Fix user setup completed admin email notification
+  * PB-1391 Fix a resource modified field should be updated when its secret is modified
+  * Fix display a validation error when db password contains a quote or db name contain a dash
+  * PB-1413: Fix "User last_logged_in virtual field should be based on action logs"
+  * PB-1484: Fix "LDAP: The user of a ldap group that cannot be synced should not have their memberships synchronized"
+  * PB-1464 Add configuration option for Log module in order to blacklist the logging of certain entry points that cause too much volume.
+  * PB-1464 Remove 'AuthIsAuthenticated.isAuthenticated' log entries from db and prevent further logging.
+  * PB-1464 Add indexes in action_logs related tables in order to improve password history performances.
+  * Add an entry to secrets_history when a resource is shared with a new user.
+  * Appjs version bump v2.13.9
+
+ -- Kevin Muller <kevin@passbolt.com>  Tue, 25 Aug 2020 10:00:00 +0000
+passbolt-pro-server (2.13.5-1) stretch; urgency=medium
+  * Fix display a validation error when db password contains a quote or db name contain a dash
+  * Fix email notification settings bootstrap messes up non persistent database connection in wizard
+  * Bump dependencies versions
+
+ -- Diego Lendoiro <diego@passbolt.com>  Thu, 13 Aug 2020 10:00:00 +0000
+passbolt-pro-server (2.13.1-1) stretch; urgency=medium
+  * pb-1347 as a passbolt server administrator i should be able to use advanced filters for the ldap queries.
+  * folders audit log
+  * PB-1284 Add tasks and services to re-validate existing data
+  * Add contain options (creator.profile and modifier.profile) to the folders view and index entry points
+  * Appjs version bump v2.13.7
+  * Pro Styleguide version bump v2.13.13
+  * Cache the list of users folders relations while performing a bulk SSCs detection
+  * PB-1320 Folders performances fix missing folders tables indexes
+  * GITHUB-350 No mails are sent when providers offer AUTH PLAIN authentication only
+  * PB-1328 Fixed various folders email issue
+  * Fix group delete sole owner of non shared folders issue
+  * PB-1165 As a logged in user I can create a folder
+  * PB-1213 As a logged in user I edit folder permissions
+  * PB-1165 As a LU I can delete folders (with and without cascade)
+  * PB-1165 As LU I can move a resource in a folder I own
+  * PB-1253 As a LU I can move folders
+  * PB-1214 As a LU I cannot create cycles when moving/sharing folders
+  * PB-1046 Cleanup shell tasks for folders
+  * PB-1164 As GM while deleting a group I should be able to transfer ownership of folder if necessary
+  * PB-1164 As AD while deleting a user I should be able to transfer ownership of folder if necessary
+  * PB-1168 Add baseline code and tests for Debian package build
+  * PB-1067 As a user I can receive digest emails when creating a lot of resources
+  * PB-1067 As a user I can receive digest emails when added/removed from a lot of groups
+  * Pro Styleguide version bump v2.13.10
+  * Appjs version bump v2.13.0.
+  * PB-1046 Adapt Cleanup test runner to take in account cleanup that are adding records
+  * PB-1046 Adapt Cleanup shell task to allow external sources to add cleanup tasks
+  * PB-1046 Remove empty EmailTraits files
+  * Delete unused default keys (cleanup)
+  * Update to latest passbolt_test_data version.
+  * Misc refactoring for email notifications
+  * Misc refactoring to split model logic into services
+  * Clear plugins in tearDown of application test cases
+  * Fix appjs plugin requestUntilSuccess bug
+  * Fix load the plugin license manually in the integration tests
+  * Fix load webinstaller plugin manually in plugin tests
+  * Fix composer php version.
+  * Fix misc checkstyle issues
+  * PB-980: Fix "secret access logging in password activity log should not display other resources secret access after a multiple share"
+  *## Security fixes
+  * PB-1209: Update javascript client dependencies
+  * PB-1370 Performance improvement while retrieving items associated folder_parent_id and personal status
+
+ -- Diego Lendoiro <diego@passbolt.com>  Thu, 9 Jul 2020 14:24:00 +0000
+
+passbolt-pro-server (2.12.0-1) stretch; urgency=medium
+  * Refactor config script
+  * Refactor postinst script
+  * Added questions for nginx setup
+  * Wording on the templates file
+  * Cleaned git files from build
+  * Added .in templates for multiple build files
+  * Added lintian overrides
+  * Added logrotation for /var/log/passbolt/error.log
+  * Introduced triggers for mysql and nginx
+
+ -- Diego Lendoiro <diego@passbolt.com> Thu, 21 May 2020 18:24:00 +0000
+
+passbolt-pro-server (2.12.0-0) stretch; urgency=medium
+
+  * Created an automated debian package
+
+ -- Albert Casals <skarbat@gmail.com>  Fri, 27 Dec 2019 01:15:00 +0100
+
+passbolt-pro-server (2.7.1-0) stretch; urgency=medium
+
+  * Initial release.
+
+ -- Diego Lendoiro <diego@passbolt.com>  Fri, 8 Mar 2019 10:08:11 +0000
