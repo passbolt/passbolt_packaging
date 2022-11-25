@@ -7,7 +7,7 @@ default:
       - api_failure
       - stale_schedule
 
-image: alpine:latest
+image: registry.gitlab.org/passbolt/passbolt-ci-images:alpine
 
 variables:
   DOCKER_HOST: tcp://localhost:2375
@@ -26,6 +26,3 @@ include:
   - local: '/.gitlab-ci/Jobs/debian_package_build.yml'
   - local: '/.gitlab-ci/Jobs/packages_tests.yml'
   - local: '/.gitlab-ci/Jobs/rpm_package_build.yml'
-
-code_quality:
-  stage: unit-test

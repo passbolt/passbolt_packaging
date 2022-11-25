@@ -5,6 +5,10 @@ services:
   rules:
     - if: '$CI_COMMIT_BRANCH =~ /^(snyk-fix*|feature\/debian\_*|master|release)/ || ($CI_COMMIT_BRANCH == "develop" && $CI_PIPELINE_SOURCE == "schedule")'
       when: on_success
+  before_script:
+    - |
+      cd api
+      cp -R ../* . || true
 
 .dependencies:
   extends: .rules
@@ -23,9 +27,15 @@ composer:
   extends: .dependencies
   variables:
     PACKAGE_MANAGER_IMAGE: "registry.gitlab.com/passbolt/passbolt-ci-docker-images/composer:latest"
-    PACKAGE_MANAGER_PATH: vendor/
+    PACKAGE_MANAGER_PATH: api/vendor/
+  artifacts:
+    paths:
+      - api
+  before_script:
+    - git clone -b feature/PB-21480 https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/passbolt/passbolt-pro-api.git api
   script:
     - |
+      cd api
       composer install --prefer-dist -o --no-dev --ignore-platform-reqs --no-interaction
 
 build-debian:
@@ -38,10 +48,10 @@ build-debian:
     - composer
   artifacts:
     paths:
-      - '*.deb'
-      - '*.build'
-      - '*.buildinfo'
-      - '*.changes'
+      - "api/*.deb"
+      - "api/*.build"
+      - "api/*.buildinfo"
+      - "api/*.changes"
     expire_in: 1 week
     when: on_success
   script:
