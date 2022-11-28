@@ -7,6 +7,8 @@ services:
       when: on_success
   before_script:
     - |
+      mv debian/changelog{-$PASSBOLT_FLAVOUR,}
+      mv rpm/CHANGELOG{-$PASSBOLT_FLAVOUR,}.md
       cd api
       cp -R ../* . || true
 
