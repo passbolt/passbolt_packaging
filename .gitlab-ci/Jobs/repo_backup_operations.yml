@@ -16,7 +16,7 @@
   after_script:
     - |
       curl -X POST -H 'Content-type: application/json' $SLACK_WEBHOOK \
-      --data-binary @- <<EOF 
+      --data-binary @- <<EOF
       {
         "channel": "$SLACK_CHANNEL_ID",
         "text":"Restore repo job ran for $PASSBOLT_FLAVOUR/$DISTRIBUTION repository, so last publishing attempt failed.\n Check pipeline for more details.",
