@@ -121,8 +121,6 @@ build-suse:
     REPO: "$BUCKET_NAME/$REPO_PATH/$COMPONENT"
     PACKAGE_ARCH: "noarch"
   before_script:
-    - cd api
-    - cp -R ../* . || true
     - *clone-repo-bucket
     - *gpg-setup
   script:
