@@ -79,7 +79,7 @@ build-debian:
   dependencies:
     - build-debian
   script:
-    - /publisher.sh
+    - cd api && /publisher.sh
   retry:
     max: 0
 
