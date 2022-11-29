@@ -11,8 +11,7 @@
       --ciphertext-file -
   }
 
-.install-jq-rhel-8: &install-jq-rhel-8
-  yum install -y jq ${DEPENDENCIES}
+.install-jq-rhel-8: &install-jq-rhel-8 yum install -y jq ${DEPENDENCIES}
 
 .install-jq-rhel-7: &install-jq-rhel-7
   - yum install -y epel-release
@@ -33,7 +32,7 @@
     - composer
   artifacts:
     paths:
-      - '*.rpm'
+      - "*.rpm"
     expire_in: 1 week
     when: on_success
 
@@ -45,7 +44,7 @@
     - composer
   artifacts:
     paths:
-      - '*.rpm'
+      - "*.rpm"
     expire_in: 1 week
     when: on_success
 
@@ -75,8 +74,6 @@ build-suse:
   script:
     - zypper install -y rpmdevtools rpmlint rsync rpm-build bc jq
     - *build-passbolt-rpm-package
-
-
 
 # gcloud sdk https://cloud.google.com/sdk/docs/downloads-versioned-archives
 .clone-repo-bucket: &clone-repo-bucket |
@@ -127,6 +124,7 @@ build-suse:
     - *clone-repo-bucket
     - *gpg-setup
   script:
+    - cd api
     - *publish-script
   retry:
     max: 0
@@ -208,7 +206,6 @@ publish-yum-el7-stable:
   rules:
     - if: '$CI_COMMIT_MESSAGE =~ /publish-package/ && $CI_COMMIT_BRANCH == "release"'
       when: on_success
-
 
 .publish-suse:
   extends: .publish-rpm
