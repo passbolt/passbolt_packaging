@@ -34,7 +34,7 @@ composer:
     paths:
       - api
   before_script:
-    - git clone -b feature/PB-21480 https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/passbolt/passbolt-pro-api.git api
+    - git clone -b ${API_CLONE_BRANCH} https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/passbolt/passbolt-${PASSBOLT_FLAVOUR}-api.git api
   script:
     - |
       cd api
