@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+* [3.8.4] Tue Dec 13 2022 Diego Lendoiro <diego@passbolt.com>
+- PB-21618 As an administrator I want to clean up duplicated folders relations located at the root
+- PB-21760 As signed-in user sharing a resource with a user already having access to the resource, it should not create duplicated folders relations
+
 * [3.8.3-1] Thu Dec 1 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-21631 Ensure the OpenPGP server key is in the keyring prior to sending any emails
 
@@ -13,7 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-21439 As an anonymous user having a second factor method enabled, I should be able to authenticate without getting a 404
 
 * [3.8.0-2] Fri Nov 11 2022 Daniel Del Rio <daniel@passbolt.com>
-- PB-21411 remove access_log configuration from location block 
+- PB-21411 remove access_log configuration from location block
 
 * [3.8.0-1] Thu Nov 10 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-19192: As an administrator, I want to manage SMTP settings in the administration workspace
