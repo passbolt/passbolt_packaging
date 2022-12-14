@@ -77,6 +77,7 @@ build-suse:
 
 # gcloud sdk https://cloud.google.com/sdk/docs/downloads-versioned-archives
 .clone-repo-bucket: &clone-repo-bucket |
+  cd api
   yum install python39 wget -y
   wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/$GCLOUD_PACKAGE_VERSION
   echo "$GCLOUD_SHA256SUM $GCLOUD_PACKAGE_VERSION" | sha256sum -c -
@@ -96,7 +97,6 @@ build-suse:
   - echo "%_gpg_name $GPG_KEY_ID" >> ~/.rpmmacros
 
 .publish-script: &publish-script |
-  cd api
   yum install -y createrepo_c rpm-sign
   mkdir -p $COMPONENT/$PACKAGE_ARCH
   [ $COMPONENT == "testing" ] && rm -f $COMPONENT/$PACKAGE_ARCH/*rpm
