@@ -1,5 +1,24 @@
+passbolt-ce-server (3.9.0-1) buster; urgency=medium
+  * PB-20539 As a user I can protect the authentication to passbolt with a second factor method
+  * PB-19601 As an admin running the healthcheck I should not see an unmanaged error if DB connection fails
+  * PB-21497 GITHUB-437 As an administrator I should see default user avatar in the email I receive when a user complete the setup
+  * PB-21501 GITHUB-411 As an administrator I should see the correct path relative to config tips in the health check report
+  * PB-21551 As an administrator I should be able to update with the web installer without getting an error due the subscription
+  * PB-21756 As an anonymous user switching MFA provider I should be redirected to the original target
+  * PB-21756 As an anonymous user verifying my second factor I should not get a 500 error due to an improperly sanitized redirect parameter
+  * PB-19653 Rename Google authenticator into Totp authenticator
+  * PB-19807 As an administrator I want to know if email hostname availability is enabled in the health check report
+  * PB-20985 As an administrator I shouldn't be able to send a test email in command line without defining the recipient
+  * PB-21502 As an administrator I want to know if I run a passbolt command without using the webserver user
+  * PB-21635 As an administrator I want to the cron events to be logged
+  * PB-21751 As anonymous user I don't want to see the TOTP field auto-completed when I verify my second factor authentication
+  * PB-19715 As an administrator I want to lock the SMTP settings entry points
+
+  -- Daniel Del Rio <daniel@passbolt.com>  Wed, 18 Jan 2023 15:50:00 +0000
+
 passbolt-ce-server (3.8.3-1) buster; urgency=medium
   * PB-21631 Ensure the OpenPGP server key is in the keyring prior to sending any emails
+
   -- Daniel Del Rio <daniel@passbolt.com>  Thu, 1 Dec 2022 09:52:00 +0000
 
 passbolt-ce-server (3.8.1-1) buster; urgency=medium
@@ -7,6 +26,7 @@ passbolt-ce-server (3.8.1-1) buster; urgency=medium
   * PB-21438 As an administrator using docker, I should be able to access the SMTP settings of my organization
   * PB-21486 As an administrator, I can define the SMTP authentication method via the SMTP admin workspace
   * PB-21481 As an administrator, I want emails to be sent with the sender settings defined in database, if defined in the database
+
   -- Daniel Del Rio <daniel@passbolt.com>  Thu, 17 Nov 2022 18:25:00 +0000
 
 passbolt-ce-server (3.8.0-2) buster; urgency=medium

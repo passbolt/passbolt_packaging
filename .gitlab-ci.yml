@@ -15,6 +15,7 @@ variables:
   DOCKER_TLS_CERTDIR: ""
 
 stages:
+  - ci-scripts-tests
   - package-deps
   - package-build
   - package-tests
@@ -26,3 +27,4 @@ include:
   - local: '/.gitlab-ci/Jobs/debian_package_build.yml'
   - local: '/.gitlab-ci/Jobs/packages_tests.yml'
   - local: '/.gitlab-ci/Jobs/rpm_package_build.yml'
+  - local: '/.gitlab-ci/Jobs/ci_scripts_tests.yml'

@@ -15,7 +15,7 @@
         --form "variables[PASSBOLT_FLAVOUR]=$PASSBOLT_FLAVOUR" \
         --form "variables[UPSTREAM_COMMIT_SHA]=$CI_COMMIT_SHA" \
         --form "variables[UPSTREAM_PROJECT_ID]=$CI_PROJECT_ID" \
-        --form "variables[PASSBOLT_FLAVOUR]=$PASSBOLT_FLAVOUR" \
+        --form "variables[PASSBOLT_PUBLISH]=$PASSBOLT_FLAVOUR" \
         --form "variables[PASSBOLT_VERSION]=$PASSBOLT_VERSION" \
         "https://gitlab.com/api/v4/projects/$TRIGGER_PROJECT_ID/trigger/pipeline"
   rules:
