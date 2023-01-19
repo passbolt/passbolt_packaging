@@ -8,7 +8,7 @@
   script:
     - |
       apk add --update curl jq && rm -rf /var/cache/apk/*
-      export PASSBOLT_VERSION=$(cat ./debian/changelog | awk 'match($0, /\(([0-9]+\.[0-9]+\.[0-9]+\-[0-9])\)?/) {print substr($0, RSTART, RLENGTH);exit}' | tr -d "()")
+      export PASSBOLT_VERSION=$(cat ./debian/changelog-$PASSBOLT_FLAVOUR | awk 'match($0, /\(([0-9]+\.[0-9]+\.[0-9]+\-[0-9])\)?/) {print substr($0, RSTART, RLENGTH);exit}' | tr -d "()")
       curl --request POST \
         --form "token=$CI_JOB_TOKEN" \
         --form "ref=$BRANCH" \
