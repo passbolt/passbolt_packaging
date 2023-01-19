@@ -2,7 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-* [3.9.0] Wed Jan 18 2023 Daniel Del Rio <daniel@passbolt.com>
+* [3.9.0-2] Thu, 19 Jan 2023 Daniel Del Rio <daniel@passbolt.com>
+- PB-22409 fix cronjob user
+
+* [3.9.0-1] Wed Jan 18 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-21828 As a user I can use Microsoft Azure as single sign on provider (Alpha)
 - PB-19601 As an admin running the healthcheck I should not see an unmanaged error if DB connection fails
 - PB-21497 GITHUB-437 As an administrator I should see default user avatar in the email I receive when a user complete the setup
