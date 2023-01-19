@@ -110,6 +110,8 @@ if platform_family?('debian')
       cwd     "#{node['dest_dir']}"
       command "export PASSBOLT_FLAVOUR=#{node['passbolt_flavour']} \
                && make -f debian/rules debian/control \
+               && export EMAIL=test-noreply@passbolt.com \
+               && git config --global --add safe.directory /app/passbolt \
                && gbp dch --snapshot --snapshot-number=$(date +%s) --ignore-branch >/dev/null 2>&1 \
                && mk-build-deps -irt'apt-get --no-install-recommends -yV' debian/control && dpkg-checkbuilddeps \
                && debuild --preserve-envvar PASSBOLT_FLAVOUR --preserve-envvar PASSBOLT_COMPONENT -us -uc -b -i -I  \

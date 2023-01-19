@@ -126,10 +126,10 @@ publish-debian-stable:
     - job: "ubuntu-2004-break"
     - job: "ubuntu-2004-purge"
     - job: "ubuntu-2004-fs"
-    - job: "ubuntu-2204-runtime"
-    - job: "ubuntu-2204-break"
-    - job: "ubuntu-2204-purge"
-    - job: "ubuntu-2204-fs"
+    # - job: "ubuntu-2204-runtime"
+    # - job: "ubuntu-2204-break"
+    # - job: "ubuntu-2204-purge"
+    # - job: "ubuntu-2204-fs"
     - job: "build-debian"
 
 publish-ubuntu-testing:

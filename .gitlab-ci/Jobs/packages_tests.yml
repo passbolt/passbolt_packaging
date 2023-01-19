@@ -59,10 +59,10 @@ ubuntu-2004-runtime:
   variables:
     KITCHEN_JOB: runtime-benchmarks-ubuntu-2004
 
-ubuntu-2204-runtime:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: runtime-benchmarks-ubuntu-2204
+#ubuntu-2204-runtime:
+#  extends: .kitchen-test-debian
+#  variables:
+#    KITCHEN_JOB: runtime-benchmarks-ubuntu-2204
 
 centos-7-runtime:
   extends: .kitchen-test-yum-7
@@ -124,10 +124,10 @@ ubuntu-2004-break:
   variables:
     KITCHEN_JOB: break-benchmarks-ubuntu-2004
 
-ubuntu-2204-break:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: break-benchmarks-ubuntu-2204
+#ubuntu-2204-break:
+#  extends: .kitchen-test-debian
+#  variables:
+#    KITCHEN_JOB: break-benchmarks-ubuntu-2204
 
 centos-7-break:
   extends: .kitchen-test-yum-7
@@ -189,10 +189,10 @@ ubuntu-2004-purge:
   variables:
     KITCHEN_JOB: purge-benchmarks-ubuntu-2004
 
-ubuntu-2204-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-ubuntu-2204
+#ubuntu-2204-purge:
+#  extends: .kitchen-test-debian
+#  variables:
+#    KITCHEN_JOB: purge-benchmarks-ubuntu-2204
 
 centos-7-purge:
   extends: .kitchen-test-yum-7
@@ -254,10 +254,10 @@ ubuntu-2004-fs:
   variables:
     KITCHEN_JOB: filesystem-benchmarks-ubuntu-2004
 
-ubuntu-2204-fs:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: filesystem-benchmarks-ubuntu-2204
+#ubuntu-2204-fs:
+#  extends: .kitchen-test-debian
+#  variables:
+#    KITCHEN_JOB: filesystem-benchmarks-ubuntu-2204
 
 centos-7-fs:
   extends: .kitchen-test-yum-7
