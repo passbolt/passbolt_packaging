@@ -12,6 +12,8 @@ Architecture: all
 Pre-depends:
   debconf
 Depends: ${misc:Depends},
+  cron,
+  openssl,
   php-cli (>= 7),
   php-mbstring (>= 7),
   php-intl (>= 7),
@@ -21,7 +23,6 @@ Depends: ${misc:Depends},
   php-gd (>= 7),
   @PASSBOLT_EXTENSIONS@
   php-gnupg,
-  cron
 Recommends: default-mysql-server | virtual-mysql-server, nginx | apache2
 Suggests: certbot, python-certbot-nginx | python-certbot-apache
 Description: Passbolt, open source password manager for teams
