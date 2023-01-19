@@ -13,7 +13,7 @@ ifeq ($(PASSBOLT_FLAVOUR), ce)
 endif
 
 ifeq ($(PASSBOLT_FLAVOUR), pro)
-	PASSBOLT_EXTENSIONS := php-ldap, php-curl,
+	PASSBOLT_EXTENSIONS := php-ldap,
 	SED_COMMAND := s
 	CONTROL_OP := /g
 endif
