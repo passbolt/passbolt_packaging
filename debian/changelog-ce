@@ -13,8 +13,9 @@ passbolt-ce-server (3.9.0-1) buster; urgency=medium
   * PB-21635 As an administrator I want to the cron events to be logged
   * PB-21751 As anonymous user I don't want to see the TOTP field auto-completed when I verify my second factor authentication
   * PB-19715 As an administrator I want to lock the SMTP settings entry points
+  * PB-21778 Add openssl dependency to allow jwt creation on minimal installations
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Wed, 18 Jan 2023 15:50:00 +0000
+  -- Diego Lendoiro <diego@passbolt.com>  Thu, 19 Jan 2023 10:29:00 +0000
 
 passbolt-ce-server (3.8.3-1) buster; urgency=medium
   * PB-21631 Ensure the OpenPGP server key is in the keyring prior to sending any emails
@@ -30,7 +31,7 @@ passbolt-ce-server (3.8.1-1) buster; urgency=medium
   -- Daniel Del Rio <daniel@passbolt.com>  Thu, 17 Nov 2022 18:25:00 +0000
 
 passbolt-ce-server (3.8.0-2) buster; urgency=medium
-  * PB-21411 remove access_log configuration from location block    
+  * PB-21411 remove access_log configuration from location block
 
   -- Daniel Del Rio <daniel@passbolt.com>  Fri, 11 Nov 2022 14:05:00 +0000
 
