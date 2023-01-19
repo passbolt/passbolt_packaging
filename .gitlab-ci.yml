@@ -7,7 +7,7 @@ default:
       - api_failure
       - stale_schedule
 
-image: registry.gitlab.org/passbolt/passbolt-ci-images:alpine
+image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/alpine-3.16
 
 variables:
   DOCKER_HOST: tcp://localhost:2375
