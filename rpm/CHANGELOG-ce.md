@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+* [3.9.0-2] Thu, 19 Jan 2023 Daniel Del Rio <daniel@passbolt.com>
+- PB-20539 As a user I can protect the authentication to passbolt with a second factor method
+
 * [3.9.0-1] Wed, 18 Jan 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-20539 As a user I can protect the authentication to passbolt with a second factor method
 - PB-19601 As an admin running the healthcheck I should not see an unmanaged error if DB connection fails

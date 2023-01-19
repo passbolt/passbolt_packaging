@@ -1,3 +1,8 @@
+passbolt-ce-server (3.9.0-2) buster; urgency=medium
+  * PB-22407 Add php-curl as dependency
+
+  -- Daniel Del Rio <daniel@passbolt.com>  Thu, 19 Jan 2023 12:55:00 +0000
+
 passbolt-ce-server (3.9.0-1) buster; urgency=medium
   * PB-20539 As a user I can protect the authentication to passbolt with a second factor method
   * PB-19601 As an admin running the healthcheck I should not see an unmanaged error if DB connection fails
