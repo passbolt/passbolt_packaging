@@ -15,6 +15,7 @@ Depends: ${misc:Depends},
   cron
   openssl,
   php-cli (>= 7),
+  php-curl (>= 7),
   php-mbstring (>= 7),
   php-intl (>= 7),
   php-mysql (>= 7),
