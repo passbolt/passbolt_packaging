@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+* [3.10.0-1] Thu, 09 Feb 2023 Daniel Del Rio <daniel@passbolt.com>
+- PB-19784 As a user I can self register if my email domain matches the policy defined by the administrators
+- PB-21827 As an administrator I can manage the MFA policies of my organisation
+- PB-22652 As a user I can authenticate with SSO with an email address having a different case
+- PB-21485 As a server administrator I want to configure the list of active proxies the instance is behind in order to get client IP when necessary
+- PB-21682 As an administrator I want to configure the client option of the SMTP settings
+- PB-22019 As a server administrator I want to configure TOTP MFA secret length
+- PB-22574 As a signed-in user I want the sharing of resources to not perform a cycle detection
+- PB-22327 env variable PASSBOLT_PLUGINS_SMTP_SETTINGS renamed in PASSBOLT_PLUGINS_SMTP_SETTINGS_ENABLED (backward compatible)
+- PB-22406 curl and openssl extensions requirements added
+- PB-22413 bump CakePHP to ^4.3.11
+- PB-22420 SSO test routes removed
+
 * [3.9.0-2] Thu, 19 Jan 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-22409 fix cronjob user
 
