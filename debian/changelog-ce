@@ -7,7 +7,7 @@ passbolt-ce-server (3.10.0-1) buster; urgency=medium
   * PB-22406 curl and openssl extensions requirements added
   * PB-22413 bump CakePHP to ^4.3.11
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Thu, 09 Feb 2023 17:15:00 +0000
+  -- Daniel Del Rio <daniel@passbolt.com>  Fri, 10 Feb 2023 10:00:00 +0000
 
 passbolt-ce-server (3.9.0-2) buster; urgency=medium
   * PB-22407 Add php-curl as dependency

@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-* [3.9.0-3] Thu, 09 Feb 2023 Daniel Del Rio <daniel@passbolt.com>
+* [3.10.0-1] Fri, 10 Feb 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-19784 As a user I can self register if my email domain matches the policy defined by the administrators
 - PB-21485 As a server administrator I want to configure the list of active proxies the instance is behind in order to get client IP when necessary
 - PB-21682 As an administrator I want to configure the client option of the SMTP settings

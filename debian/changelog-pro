@@ -11,7 +11,7 @@ passbolt-pro-server (3.10.0-1) buster; urgency=medium
   * PB-22413 bump CakePHP to ^4.3.11
   * PB-22420 SSO test routes removed
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Thu, 09 Feb 2023 17:20:00 +0000
+  -- Daniel Del Rio <daniel@passbolt.com>  Fri, 10 Feb 2023 10:00:00 +0000
 
 passbolt-pro-server (3.9.0-1) buster; urgency=medium
   * PB-21828 As a user I can use Microsoft Azure as single sign on provider (Alpha)
