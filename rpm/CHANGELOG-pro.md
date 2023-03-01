@@ -1,11 +1,40 @@
-# Change Log
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+* [3.11.0-1] Wed, 01 Mar 2023 Diego Lendoiro <diego@passbolt.com>
+- PB-22435 As a user using SSO Azure I can recover my account using SSO Azure
+- PB-22741 As an administrator I should see an error in the healthcheck if I use php 7.3 or less
+- PB-22747 As an administrator I can define a regular expression to customise email validation
+- PB-22748 As an administrator I can access to the paginated list of action logs on the browser
+- PB-22866 As a user I want to use passbolt in Italian
+- PB-22866 As a user I want to use passbolt in Portuguese (Brazil)
+- PB-22866 As a user I want to use passbolt in Korean
+- PB-22866 As a user I want to use passbolt in Romanian
+- PB-21489 As a user I should not see double headers in emails sent by the email digest
+- PB-22725 As an administrator I want to manage Duo v4 settings
+- PB-21763 As a user I want to see a clean SSO error feedback in the popup after failing to sign-up with SSO
+- PB-21764 As a user I want to see a clean SSO feedback in the popup after signing-in with SSO
+- PB-21906 As a user I don’t want to receive email by default when I create a resource or a folder as well as I don’t want to see any details for this content by default
+- PB-22512 As an SSO administrator I want to see the access_token details when it is missing or has invalid claims
+- PB-22610 As a user I want the SSO Azure authentication to support nonce
+- PB-22416 As a developer I can safely deactivate plugins between solutions
+- PB-22756 Fixes a range of failing pagination tests
+- PB-22760 SSO State Type refactoring
+- PB-22495 Refactors the SmtpTransport to enhance the code coverage of emails
+- PB-22430 Refactoring of SSO state to use separate table
+
+* [3.10.0-1] Fri, 10 Feb 2023 Daniel Del Rio <daniel@passbolt.com>
+- PB-19784 As a user I can self register if my email domain matches the policy defined by the administrators
+- PB-21827 As an administrator I can manage the MFA policies of my organisation
+- PB-22652 As a user I can authenticate with SSO with an email address having a different case
+- PB-21485 As a server administrator I want to configure the list of active proxies the instance is behind in order to get client IP when necessary
+- PB-21682 As an administrator I want to configure the client option of the SMTP settings
+- PB-22019 As a server administrator I want to configure TOTP MFA secret length
+- PB-22574 As a signed-in user I want the sharing of resources to not perform a cycle detection
+- PB-22327 env variable PASSBOLT_PLUGINS_SMTP_SETTINGS renamed in PASSBOLT_PLUGINS_SMTP_SETTINGS_ENABLED (backward compatible)
+- PB-22406 curl and openssl extensions requirements added
+- PB-22413 bump CakePHP to ^4.3.11
+- PB-22420 SSO test routes removed
 
 * [3.9.0-2] Thu, 19 Jan 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-22409 fix cronjob user
-
-* [3.9.0-1] Wed Jan 18 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-21828 As a user I can use Microsoft Azure as single sign on provider (Alpha)
 - PB-19601 As an admin running the healthcheck I should not see an unmanaged error if DB connection fails
 - PB-21497 GITHUB-437 As an administrator I should see default user avatar in the email I receive when a user complete the setup
@@ -31,25 +60,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-20541 Replace usage of Cake core Exception with CakeException when not done yet
 - PB-21361 Remove deprecated usage of authenticateAs in tests
 - PB-21658 Add support to PHP 8.2
-
-* [3.8.4] Tue Dec 13 2022 Diego Lendoiro <diego@passbolt.com>
 - PB-21618 As an administrator I want to clean up duplicated folders relations located at the root
 - PB-21760 As signed-in user sharing a resource with a user already having access to the resource, it should not create duplicated folders relations
-
-* [3.8.3-1] Thu Dec 1 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-21631 Ensure the OpenPGP server key is in the keyring prior to sending any emails
-
-* [3.8.1-1] Thu Nov 17 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-21478 As an administrator, I should be able to edit SMTP settings having a sender email not being a valid email
 - PB-21438 As an administrator using docker, I should be able to access the SMTP settings of my organization
 - PB-21486 As an administrator, I can define the SMTP authentication method via the SMTP admin workspace
 - PB-21481 As an administrator, I want emails to be sent with the sender settings defined in database, if defined in the database
 - PB-21439 As an anonymous user having a second factor method enabled, I should be able to authenticate without getting a 404
-
-* [3.8.0-2] Fri Nov 11 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-21411 remove access_log configuration from location block
-
-* [3.8.0-1] Thu Nov 10 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-19192: As an administrator, I want to manage SMTP settings in the administration workspace
 - PB-19151: As a user, I want to use passbolt with the Solarized light theme
 - PB-19151: As a user, I want to use passbolt with the Solarized dark theme
@@ -69,11 +88,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-6081: Move community plugins into plugins/PassboltCe
 - PB-19621: Stop changing folders permissions in installation tests
 - PB-19255 As an administrator I can trigger 500 errors on demand to test my logs
-
-* [3.7.3-1] Tue Sep 27 2022 Diego Lendoiro <diego@passbolt.com>
 - PB-19090 Protect forms from spell-jacking attack
-
-* [3.7.2-1] Wed Sep 21 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-18380 Let passbolt-configure script setup certbot for RHEL9 support
 - PB-18405 Redirect on non-json request if no MFA settings are found
 - PB-16983 Handles the lack of permissions on image directory when deleting
@@ -83,8 +98,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-18650 Add a check on mysql status in order to run mysql commands only when it's ready in unit tests
 - PB-18664 Add retry logic to Gitlab CI jobs
 - PB-18645 Bump Ldap tools version for better PHP8.x support
-
-* [3.7.1-1] Fri Aug 12 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-18486 Removes all resources_tags entries for tags that are not shared and for which the user_id is set to null.
 - PB-18398 Fix tag regression: sets associations name to be CakePHP compatible
 - PB-17072 Quotes fields in a join condition fixing Postgres
@@ -95,8 +108,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-17096 Fix resource_types name and slug postgresql compatibility
 - PB-18372 Bump styleguide version to 3.7.1
 - PB-17068 PBL-07-003 Remove non necessary user id enumeration possibility
-
-* [3.7.0-1] Thu July 28 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-17098 Add rockylinux 9 support
 - PB-16751 Add Redhat 9 support
 - PB-16749 Add Ubuntu 22.04 support
@@ -105,8 +116,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-14514 Fix PHP8.1 compatibility issues
 - PB-16161 Create action log endpoint for user CRUD
 - PB-16844 Common part of the user recovery and setup audit log
-
-* [3.6.0-1] Wed May 25 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-9738 Add account recovery organization policy settings by admins
 - PB-13685 Add account recovery organization settings set with key rotation + misc cleanup
 - PB-12837 Add account recovery setup for users
@@ -119,18 +128,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-16123 Remove key rotation logic from package post install scripts
 - PB-15277 Remove mariadb dependency for RPM package
 - PB-14947 Package versionning for RPM
-
-* [3.5.0-3] Fri Apr 29 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-15039 fixing repomd.xml signing issues
-
-* [3.5.0-2] Wed Apr 13 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-13923 Update the repository key to sign packages
 - PB-13749 Update firewalld install check
 - PB-13743 Fix bad condition logic so setup firewalld
 - PB-13650 Delete jwt folder only while uninstalling
 - PB-13783 Update selinux policy RPM package
-
-* [3.5.0-1] Tue Jan 18 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-13161 As LU I should be able to use passbolt with my Android mobile
 - PB-13161 As LU I should be able to use passbolt with my IOS mobile
 - PB-5967 As AD I can use passbolt with a PostgreSQL database provider [experimental]
@@ -154,11 +157,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-12914 Fix as a group manager I should not get multiple notifications when a group is updated
 - PB-13158 As AD I should see a tip with proper directory permissions when the JWT assets healthcheck fails
 - PB-12835 Move users setup/recover/register controllers logic into services to welcome the upcoming account recovery feature
-
-* [3.4.0-3] Mon Dec 27 2021 Gerold Mougenel <gerold@passbolt.com>
 - PB-12958 Fix RPM package, add https before fullbaseurl
-
-* [3.4.0] Tue Dec 07 2021 Gerold Mougenel <gerold@passbolt.com>
 - PB-9826 As a user I want to use passbolt natively on Edge
 - PB-8371 As LU I want to see the login/MFA/recover/register screens in dark mode
 - PB-8522 As LU I should see the MFA verify field having focus
