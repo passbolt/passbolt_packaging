@@ -1,6 +1,25 @@
-# Change Log
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+* [3.11.0-1] Wed, 01 Mar 2023 Diego Lendoiro <diego@passbolt.com>
+- PB-22741 As an administrator I should see an error in the healthcheck if I use php 7.3 or less
+- PB-22747 As an administrator I can define a regular expression to customise email validation
+- PB-22866 As a user I want to use passbolt in Italian
+- PB-22866 As a user I want to use passbolt in Portuguese (Brazil)
+- PB-22866 As a user I want to use passbolt in Korean
+- PB-22866 As a user I want to use passbolt in Romanian
+- PB-21489 As a user I should not see double headers in emails sent by the email digest
+- PB-22725 As an administrator I want to manage Duo v4 settings
+- PB-21906 As a user I don’t want to receive email by default when I create a resource or a folder as well as I don’t want to see any details for this content by default
+- PB-22416 As a developer I can safely deactivate plugins between solutions
+- PB-22756 Fixes a range of failing pagination tests
+- PB-22495 Refactors the SmtpTransport to enhance the code coverage of emails
+
+* [3.10.0-1] Fri, 10 Feb 2023 Daniel Del Rio <daniel@passbolt.com>
+- PB-19784 As a user I can self register if my email domain matches the policy defined by the administrators
+- PB-21485 As a server administrator I want to configure the list of active proxies the instance is behind in order to get client IP when necessary
+- PB-21682 As an administrator I want to configure the client option of the SMTP settings
+- PB-22019 As a server administrator I want to configure TOTP MFA secret length
+- PB-22327 env variable PASSBOLT_PLUGINS_SMTP_SETTINGS renamed in PASSBOLT_PLUGINS_SMTP_SETTINGS_ENABLED (backward compatible)
+- PB-22406 curl and openssl extensions requirements added
+- PB-22413 bump CakePHP to ^4.3.11
 
 * [3.9.0-3] Thu, 19 Jan 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-22409 fix cronjob user
@@ -35,7 +54,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-21361 Remove deprecated usage of authenticateAs in tests
 - PB-21658 Add support to PHP 8.2
 
-* [3.8.3-1] Thu, 1 Dec 2022 Daniel Del Rio <daniel@passbolt.com>
+* [3.8.3-1] Thu, 01 Dec 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-21631 Ensure the OpenPGP server key is in the keyring prior to sending any emails
 
 * [3.8.1-1] Thu, 17 Nov 2022 Daniel Del Rio <daniel@passbolt.com>
@@ -49,9 +68,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-21481 As an administrator, I want emails to be sent with the sender settings defined in database, if defined in the database
 
 * [3.8.0-2] Fri, 11 Nov 2022 Daniel Del Rio <daniel@passbolt.com>
-- PB-21411 remove access_log configuration from location block    
+- PB-21411 remove access_log configuration from location block
 
-* [3.8.0-1] Tue, 10 Nov 2022 Daniel Del Rio <daniel@passbolt.com>
+* [3.8.0-1] Thu, 10 Nov 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-19192: As an administrator, I want to manage SMTP settings in the administration workspace
 - PB-19151: As a user, I want to use passbolt with the Solarized light theme
 - PB-19151: As a user, I want to use passbolt with the Solarized dark theme
@@ -75,14 +94,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-16898 Redesign download a supported browser to get started
 - PB-18650 Add a check on mysql status in order to run mysql commands only when it's ready in unit tests
 - PB-18664 Add retry logic to Gitlab CI jobs
-
-* [3.7.1-1] Fri Aug 12 2022 Daniel Del Rio <gerold@passbolt.com>
 - PB-18381 Fix source language typos
 - PB-18397 Fix as an admin I can generate a server key with the webinstaller within an instance over http
 - PB-17096 Fix resouce_types name and slug postgresql compatibility
 - PB-18372 Bump styleguide version to 3.7.1
-
-* [3.7.0-1] Thu July 28 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-17098 Add rockylinux 9 support
 - PB-16751 Add Redhat 9 support
 - PB-16749 Add Ubuntu 22.04 support
@@ -91,8 +106,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-14514 Fix PHP8.1 compatibility issues
 - PB-16161 Create action log endpoint for user CRUD
 - PB-16844 Common part of the user recovery and setup audit log
-
-* [3.6.0-1] Wed May 25 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-9739 OpenPGP key and message validation refactoring
 - PB-14141 Enhanced public/private key validation rules
 - PB-13685 Enhanced secret validation rules
@@ -101,18 +114,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-16123 Remove key rotation logic from package post install scripts
 - PB-15277 Remove mariadb dependency for RPM package
 - PB-14947 Package versioning for RPM
-
-* [3.5.0-3] Fri Apr 29 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-15039 fixing repomd.xml signing issues
-
-* [3.5.0-2] Wed Apr 13 2022 Gerold Mougenel <gerold@passbolt.com>
 - PB-13923 Update the repository key to sign packages
 - PB-13749 Update firewalld install check
 - PB-13743 Fix bad condition logic so setup firewalld
 - PB-13650 Delete jwt folder only while uninstalling
 - PB-13783 Update selinux policy RPM package
-
-* [3.5.0-1] Tue Jan 18 2022 Daniel Del Rio <daniel@passbolt.com>
 - PB-13161 As LU I should be able to use passbolt with my Android mobile
 - PB-13161 As LU I should be able to use passbolt with my IOS mobile
 - PB-5967 As AD I can use passbolt with a PostgreSQL database provider [experimental]
@@ -134,11 +141,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PB-12914 Fix as a group manager I should not get multiple notifications when a group is updated
 - PB-13158 As AD I should see a tip with proper directory permissions when the JWT assets healthcheck fails
 - PB-12835 Move users setup/recover/register controllers logic into services to welcome the upcoming account recovery feature
-
-* [3.4.0-3] Mon Dec 27 2021 Gerold Mougenel <gerold@passbolt.com>
 - PB-12958 Fix RPM package, add https before fullbaseurl
-
-* [3.4.0] Tue Dec 07 2021 Gerold Mougenel <gerold@passbolt.com>
 - PB-9826 As a user I want to use passbolt natively on Edge
 - PB-8371 As LU I want to see the login/MFA/recover/register screens in dark mode
 - PB-8522 As LU I should see the MFA verify field having focus
