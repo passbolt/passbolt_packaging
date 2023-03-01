@@ -1,3 +1,27 @@
+passbolt-pro-server (3.11.0-1) buster; urgency=medium
+  * PB-22435 As a user using SSO Azure I can recover my account using SSO Azure
+  * PB-22741 As an administrator I should see an error in the healthcheck if I use php 7.3 or less
+  * PB-22747 As an administrator I can define a regular expression to customise email validation
+  * PB-22748 As an administrator I can access to the paginated list of action logs on the browser
+  * PB-22866 As a user I want to use passbolt in Italian
+  * PB-22866 As a user I want to use passbolt in Portuguese (Brazil)
+  * PB-22866 As a user I want to use passbolt in Korean
+  * PB-22866 As a user I want to use passbolt in Romanian
+  * PB-21489 As a user I should not see double headers in emails sent by the email digest
+  * PB-22725 As an administrator I want to manage Duo v4 settings
+  * PB-21763 As a user I want to see a clean SSO error feedback in the popup after failing to sign-up with SSO
+  * PB-21764 As a user I want to see a clean SSO feedback in the popup after signing-in with SSO
+  * PB-21906 As a user I don’t want to receive email by default when I create a resource or a folder as well as I don’t want to see any details for this content by default
+  * PB-22512 As an SSO administrator I want to see the access_token details when it is missing or has invalid claims
+  * PB-22610 As a user I want the SSO Azure authentication to support nonce
+  * PB-22416 As a developer I can safely deactivate plugins between solutions
+  * PB-22756 Fixes a range of failing pagination tests
+  * PB-22760 SSO State Type refactoring
+  * PB-22495 Refactors the SmtpTransport to enhance the code coverage of emails
+  * PB-22430 Refactoring of SSO state to use separate table
+
+ -- Diego Lendoiro <diego@passbolt.com>  Wed, 01 Mar 2023 17:10:55 +0100
+
 passbolt-pro-server (3.10.0-1) buster; urgency=medium
   * PB-19784 As a user I can self register if my email domain matches the policy defined by the administrators
   * PB-21827 As an administrator I can manage the MFA policies of my organisation
@@ -11,7 +35,7 @@ passbolt-pro-server (3.10.0-1) buster; urgency=medium
   * PB-22413 bump CakePHP to ^4.3.11
   * PB-22420 SSO test routes removed
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Fri, 10 Feb 2023 10:00:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Fri, 10 Feb 2023 10:00:00 +0000
 
 passbolt-pro-server (3.9.0-1) buster; urgency=medium
   * PB-21828 As a user I can use Microsoft Azure as single sign on provider (Alpha)
@@ -41,18 +65,18 @@ passbolt-pro-server (3.9.0-1) buster; urgency=medium
   * PB-21658 Add support to PHP 8.2
   * PB-21778 Add openssl dependency to allow jwt creation on minimal installations
 
-  -- Diego Lendoiro <diego@passbolt.com>  Thu, 19 Jan 2023 10:29:00 +0000
+ -- Diego Lendoiro <diego@passbolt.com>  Thu, 19 Jan 2023 10:29:00 +0000
 
 passbolt-pro-server (3.8.4-1) buster; urgency=medium
   * PB-21618 As an administrator I want to clean up duplicated folders relations located at the root
   * PB-21760 As signed-in user sharing a resource with a user already having access to the resource, it should not create duplicated folders relations
 
-  -- Diego Lendoiro <diego@passbolt.com>  Tue, 13 Dec 2022 16:37:00 +0000
+ -- Diego Lendoiro <diego@passbolt.com>  Tue, 13 Dec 2022 16:37:00 +0000
 
 passbolt-pro-server (3.8.3-1) buster; urgency=medium
   * PB-21631 Ensure the OpenPGP server key is in the keyring prior to sending any emails
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Thu, 1 Dec 2022 10:5:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Thu, 01 Dec 2022 10:05:00 +0000
 
 passbolt-pro-server (3.8.1-1) buster; urgency=medium
   * PB-21478 As an administrator, I should be able to edit SMTP settings having a sender email not being a valid email
@@ -61,12 +85,12 @@ passbolt-pro-server (3.8.1-1) buster; urgency=medium
   * PB-21481 As an administrator, I want emails to be sent with the sender settings defined in database, if defined in the database
   * PB-21439 As an anonymous user having a second factor method enabled, I should be able to authenticate without getting a 404
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Thu, 17 Nov 2022 18:20:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Thu, 17 Nov 2022 18:20:00 +0000
 
 passbolt-pro-server (3.8.0-2) buster; urgency=medium
   * PB-21411 remove access_log configuration from location block
 
-  -- Daniel Del Rio <daniel@passbolt.com>  Fri, 11 Nov 2022 13:50:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Fri, 11 Nov 2022 13:50:00 +0000
 
 passbolt-pro-server (3.8.0-1) buster; urgency=medium
   * PB-19192: As an administrator, I want to manage SMTP settings in the administration workspace
@@ -133,7 +157,7 @@ passbolt-pro-server (3.7.0-1) buster; urgency=medium
   * PB-16161 Create action log endpoint for user CRUD
   * PB-16844 Common part of the user recovery and setup audit log
 
- -- Gerold Mougenel <gerold@passbolt.com>  Thu, 28 July 2022 15:35:00 +0000
+ -- Gerold Mougenel <gerold@passbolt.com>  Thu, 28 Jul 2022 15:35:00 +0000
 
 passbolt-pro-server (3.6.0-1) buster; urgency=medium
   * PB-9738 Add account recovery organization policy settings by admins
@@ -267,12 +291,12 @@ passbolt-pro-server (3.2.2-2) buster; urgency=medium
 passbolt-pro-server (3.2.2-1) buster; urgency=medium
   * PB-5910 Fix ldap admin screen should load only default admin users which are active and not deleted
 
- -- Gerold Mougenel <gerold@passbolt.com>  Tue, 16 Jun 2021 15:30:00 +0000
+ -- Gerold Mougenel <gerold@passbolt.com>  Wed, 16 Jun 2021 15:30:00 +0000
 
 passbolt-pro-server (3.2.1-1) buster; urgency=medium
   * GITHUB-402 Fix API v3 regression, login must accept JSON data
 
- -- Daniel Del Rio <daniel@passbolt.com>  Tue, 4 Jun 2021 19:00:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Fri, 04 Jun 2021 19:00:00 +0000
 
 passbolt-pro-server (3.2.0-1) buster; urgency=medium
   * PB-5054 French internationalization
@@ -292,7 +316,7 @@ passbolt-pro-server (3.2.0-1) buster; urgency=medium
   * PB-5527 Migration to CakePHP4
   * Remove X-XSS-Protection as per Cure53 audit recommendations
 
- -- Daniel Del Rio <daniel@passbolt.com>  Tue, 1 Jun 2021 12:00:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Tue, 01 Jun 2021 12:00:00 +0000
 
 passbolt-pro-server (3.1.0-1) buster; urgency=medium
   * PB-5211 The fields Group object class and User object class in user directory have to be sent server side
@@ -300,7 +324,7 @@ passbolt-pro-server (3.1.0-1) buster; urgency=medium
   * Fix email digest email preview should accept empty (null) template
   * Fix send test email command should accept undefined username and password
 
- -- Daniel Del Rio <daniel@passbolt.com>  Fri, 18 Mar 2021 10:20:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Thu, 18 Mar 2021 10:20:00 +0000
 
 passbolt-pro-server (3.0.2-1) buster; urgency=medium
   * PB-5211 The fields Group object class and User object class in user directory have to be sent server side
@@ -308,7 +332,7 @@ passbolt-pro-server (3.0.2-1) buster; urgency=medium
   * Fix email digest email preview should accept empty (null) template
   * Fix send test email command should accept undefined username and password
 
- -- Daniel Del Rio <daniel@passbolt.com>  Fri, 9 Mar 2021 16:13:00 +0000
+ -- Daniel Del Rio <daniel@passbolt.com>  Tue, 09 Mar 2021 16:13:00 +0000
 
 passbolt-pro-server (3.0.1-1) buster; urgency=medium
   * Fix resources population of resource_type_id field migration
@@ -357,7 +381,7 @@ passbolt-pro-server (3.0.0-2) buster; urgency=medium
   * Fix performance issues on resource / folder activity log
   * Add run cleanup after migrations on postinst
 
- -- Diego Lendoiro <diego@passbolt.com>  Thu, 22 Feb 2021 16:37:00 +0000
+ -- Diego Lendoiro <diego@passbolt.com>  Mon, 22 Feb 2021 16:37:00 +0000
 
 passbolt-pro-server (3.0.0-1) buster; urgency=medium
   * Cron job executes bin/cron script.
@@ -366,7 +390,7 @@ passbolt-pro-server (3.0.0-1) buster; urgency=medium
 
  -- Daniel Del Rio <daniel@passbolt.com>  Mon, 18 Jan 2021 16:02:00 +0000
 
-passbolt-pro-server (2.14.0-0) stretch; urgency=medium
+passbolt-pro-server (2.14.0-0) buster; urgency=medium
   * Add an option to the migrate shell task to avoid clearing the cache after the migration is completed
   * PB-1429 Fix "ldap error messages are incorrect in case of validation issues"
   * PB-1431 Fix "LDAP: a notification should not be sent to a group administrator requesting him to add a non-active user."
@@ -384,13 +408,15 @@ passbolt-pro-server (2.14.0-0) stretch; urgency=medium
   * Appjs version bump v2.13.9
 
  -- Kevin Muller <kevin@passbolt.com>  Tue, 25 Aug 2020 10:00:00 +0000
-passbolt-pro-server (2.13.5-1) stretch; urgency=medium
+
+passbolt-pro-server (2.13.5-1) buster; urgency=medium
   * Fix display a validation error when db password contains a quote or db name contain a dash
   * Fix email notification settings bootstrap messes up non persistent database connection in wizard
   * Bump dependencies versions
 
  -- Diego Lendoiro <diego@passbolt.com>  Thu, 13 Aug 2020 10:00:00 +0000
-passbolt-pro-server (2.13.1-1) stretch; urgency=medium
+
+passbolt-pro-server (2.13.1-1) buster; urgency=medium
   * pb-1347 as a passbolt server administrator i should be able to use advanced filters for the ldap queries.
   * folders audit log
   * PB-1284 Add tasks and services to re-validate existing data
@@ -434,9 +460,9 @@ passbolt-pro-server (2.13.1-1) stretch; urgency=medium
   * PB-1209: Update javascript client dependencies
   * PB-1370 Performance improvement while retrieving items associated folder_parent_id and personal status
 
- -- Diego Lendoiro <diego@passbolt.com>  Thu, 9 Jul 2020 14:24:00 +0000
+ -- Diego Lendoiro <diego@passbolt.com>  Thu, 09 Jul 2020 14:24:00 +0000
 
-passbolt-pro-server (2.12.0-1) stretch; urgency=medium
+passbolt-pro-server (2.12.0-1) buster; urgency=medium
   * Refactor config script
   * Refactor postinst script
   * Added questions for nginx setup
@@ -447,16 +473,14 @@ passbolt-pro-server (2.12.0-1) stretch; urgency=medium
   * Added logrotation for /var/log/passbolt/error.log
   * Introduced triggers for mysql and nginx
 
- -- Diego Lendoiro <diego@passbolt.com> Thu, 21 May 2020 18:24:00 +0000
+ -- Diego Lendoiro <diego@passbolt.com>  Thu, 21 May 2020 18:24:00 +0000
 
-passbolt-pro-server (2.12.0-0) stretch; urgency=medium
-
+passbolt-pro-server (2.12.0-0) buster; urgency=medium
   * Created an automated debian package
 
  -- Albert Casals <skarbat@gmail.com>  Fri, 27 Dec 2019 01:15:00 +0100
 
-passbolt-pro-server (2.7.1-0) stretch; urgency=medium
-
+passbolt-pro-server (2.7.1-0) buster; urgency=medium
   * Initial release.
 
- -- Diego Lendoiro <diego@passbolt.com>  Fri, 8 Mar 2019 10:08:11 +0000
+ -- Diego Lendoiro <diego@passbolt.com>  Fri, 08 Mar 2019 10:08:11 +0000
