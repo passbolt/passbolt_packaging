@@ -276,10 +276,10 @@ case "$deb_action" in
     if is_upgrade; then
       su -c '/usr/share/php/passbolt/bin/cake passbolt migrate' -s /bin/bash www-data
       su -c '/usr/share/php/passbolt/bin/cake cache clear_all' -s /bin/bash www-data
+      cleanup_dry_run
       db_purge
       db_stop
       set_jwt_keys
-      cleanup_dry_run
       exit 0
     fi
 
