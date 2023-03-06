@@ -237,6 +237,10 @@ configure_nginx() {
     esac
 }
 
+cleanup_dry_run() {
+    su -c '/usr/share/php/passbolt/bin/cake passbolt cleanup --dry-run' -s /bin/bash www-data || true
+}
+
 info_message() {
   local proto
   if [ "${nginx_values[configuration]}" == 'none' ]; then
@@ -275,6 +279,7 @@ case "$deb_action" in
       db_purge
       db_stop
       set_jwt_keys
+      cleanup_dry_run
       exit 0
     fi
 

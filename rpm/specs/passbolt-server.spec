@@ -122,6 +122,7 @@ if [ $1 -gt 1 ]
 then
     su -c '%{_datadir}/php/passbolt/bin/cake passbolt migrate' -s /bin/bash %{_nginx_user} >> /var/log/passbolt/upgrade.log
     su -c '%{_datadir}/php/passbolt/bin/cake cache clear_all' -s /bin/bash %{_nginx_user} >> /var/log/passbolt/upgrade.log
+    su -c '%{_datadir}/php/passbolt/bin/cake passbolt cleanup --dry-run' -s /bin/bash %{_nginx_user} >> /var/log/passbolt/upgrade.log
     set_jwt_keys
 fi
 
