@@ -4,7 +4,10 @@ function clone_api() {
   local git_token=$3
   local passbolt_flavour=$4
   local dest=$5
-  git clone -b "${passbolt_branch}" --depth 1 "https://${git_user}:${git_token}@gitlab.com/passbolt/passbolt-${passbolt_flavour}-api.git" "${dest}"
+  git clone "https://${git_user}:${git_token}@gitlab.com/passbolt/passbolt-${passbolt_flavour}-api.git" "${dest}"
+  cd "$dest" || return 1
+  git checkout "$passbolt_branch"
+  cd - || return 1
 }
 
 function clean_up() {
