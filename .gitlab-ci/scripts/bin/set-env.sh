@@ -4,17 +4,15 @@
 
 CI_SCRIPTS_DIR=$(dirname "$0")/..
 
-source ./"$CI_SCRIPTS_DIR"/lib/version-check.sh
+source ./.gitlab-ci/scripts/lib/version-check.sh
+source ./.gitlab-ci/scripts/lib/set-env.sh
 
+declare -a tag_list
 tag="$1"
 
-if is_release_candidate "$tag"; then
-  read -r version candidate flavour filter <<< "$(echo "$tag" | awk -F '-' '{print $1,$2,$3,$4}')"
-  version="$version-$candidate"
-else
-  read -r version flavour filter <<< "$(echo "$tag" | awk -F '-' '{print $1,$2,$3}')"
-fi
+# This line doesn't work on zsh shell
+read -r -a tag_list <<< "$(parse_tag "$tag")"
 
-export PASSBOLT_VERSION="$version"
-export PASSBOLT_FLAVOUR="$flavour"
-export FILTER="$filter"
+export PASSBOLT_VERSION="${tag_list[0]}"
+export PASSBOLT_FLAVOUR="${tag_list[1]}"
+export FILTER="${tag_list[2]}"
