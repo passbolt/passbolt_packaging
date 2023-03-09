@@ -33,5 +33,9 @@ Describe "parsed tag array"
     When call get_parsed_tag_array "v3.11.0-rc.2-pro-rpm"
     The output should equal "v3.11.0-rc.2 pro rpm"
   End
+  It "containse a release candidate version flavour and NO filter in the right order"
+    When call get_parsed_tag_array "v3.11.0-rc.2-pro"
+    The output should equal "v3.11.0-rc.2 pro"
+  End
 
 End
