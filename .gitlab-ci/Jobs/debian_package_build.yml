@@ -5,6 +5,9 @@ services:
   rules:
     - if: '$CI_COMMIT_BRANCH =~ /^(snyk-fix*|feature\/debian\_*|master|release)/ || ($CI_COMMIT_BRANCH == "develop" && $CI_PIPELINE_SOURCE == "schedule")'
       when: on_success
+    - if: '$CI_COMMIT_TAG == ""'
+      #v3.9.0-rc.1-1-ce-debian
+    - if: '$CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+-\d+-$PASSBOLT_FLAVOUR-$PACKAGE_NAME/'
   before_script:
     - |
       mv debian/changelog{-$PASSBOLT_FLAVOUR,}

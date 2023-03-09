@@ -16,7 +16,9 @@ function validate_config_version_and_api_tag () {
 }
 
 function is_release_candidate () {
-  if [[ ! $PASSBOLT_VERSION =~ [0-9]+\.[0-9]+\.[0-9]+-rc\.[0-9]+ ]];then
+  local version=$1
+  if [[ ! $version =~ [0-9]+\.[0-9]+\.[0-9]+-rc\.[0-9]+ ]];then
     return 1
   fi
+  return 0
 }
