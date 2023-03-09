@@ -2,10 +2,12 @@
 
 # shellcheck disable=SC1091
 
-CI_SCRIPTS_DIR=$(dirname "$0")/..
+set -u
 
-source ./.gitlab-ci/scripts/lib/version-check.sh
-source ./.gitlab-ci/scripts/lib/set-env.sh
+CI_SCRIPTS_DIR=$(dirname "$BASH_SOURCE")/..
+
+source "$CI_SCRIPTS_DIR"/lib/version-check.sh
+source "$CI_SCRIPTS_DIR"/lib/set-env.sh
 
 declare -a tag_list
 tag="$1"
