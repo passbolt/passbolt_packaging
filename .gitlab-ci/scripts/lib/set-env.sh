@@ -41,6 +41,6 @@ function calculate_regex() {
   local default_value="$2"
   local pattern="$3"
 
-  result="$(echo "$message" | awk -v var="\\\[.*$pattern:\\\s*([^],^\\\s|^,]+).*\\\]" 'match($0, var, m) {print m[1]}')"
+  result="$(echo "$message" | sed -nE "s/.*\[.*($pattern: *)([^]|^ |^,]+).*\]/\\2/p")"
   echo "${result:-$default_value}"
 }
