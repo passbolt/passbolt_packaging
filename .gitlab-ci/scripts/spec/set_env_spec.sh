@@ -39,3 +39,42 @@ Describe "parsed tag array"
   End
 
 End
+
+Describe "parse_commit_message"
+
+  Include "lib/set-env.sh"
+  It "parses the commit message correctly with branch and flavour"
+    When call parse_commit_message "I want to run the tests on [branch: develop, flavour: ce]"
+    The output should equal "develop ce all testing"
+  End
+
+  It "parses the commit message correctly with flavour and branch"
+    When call parse_commit_message "I want to run the tests on [flavour: ce, branch: develop]"
+    The output should equal "develop ce all testing"
+  End
+
+  It "parses the commit message correctly with default values"
+    When call parse_commit_message "I want to run the tests on default settings"
+    The output should equal "release pro all testing"
+  End
+
+  It "parses the commit message correctly with single value"
+    When call parse_commit_message "I want to run the tests on [branch: branch]"
+    The output should equal "branch pro all testing"
+  End
+
+  It "returns default values when commit message is incorrect with wrong delimiters"
+    When call parse_commit_message "I want to run the tests on \branch: branch\\"
+    The output should equal "release pro all testing"
+  End
+
+  It "returns default values when commit message is incorrect with no delimiters []"
+    When call parse_commit_message "I want to run the tests on branch: branch"
+    The output should equal "release pro all testing"
+  End
+
+  It "returns default values when commit message is incorrect with a single ["
+    When call parse_commit_message "I want to run the tests on [branch: branch"
+    The output should equal "release pro all testing"
+  End
+End

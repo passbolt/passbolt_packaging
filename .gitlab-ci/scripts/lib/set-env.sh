@@ -16,3 +16,31 @@ function parse_tag() {
     echo "$tag" | awk -F '-' '{print $1,$2,$3,"stable"}'
   fi
 }
+
+# Example [branch: develop] # points to pro flavour
+# Example [flavour: ce] # points to release branch
+# Example [branch: develop, flavour: ce]
+#
+function parse_commit_message() {
+  local message="$1"
+  local branch
+  local flavour
+  local component
+  local filter
+
+  branch=$(calculate_regex "$message" "release" "branch")
+  component=$(calculate_regex "$message" "testing" "component")
+  filter=$(calculate_regex "$message" "all" "filter")
+  flavour=$(calculate_regex "$message" "pro" "flavour")
+
+  echo "$branch" "$flavour" "$filter" "$component"
+}
+
+function calculate_regex() {
+  local message="$1"
+  local default_value="$2"
+  local pattern="$3"
+
+  result="$(echo "$message" | awk -v var="\\\[.*$pattern:\\\s*([^],^\\\s|^,]+).*\\\]" 'match($0, var, m) {print m[1]}')"
+  echo "${result:-$default_value}"
+}
