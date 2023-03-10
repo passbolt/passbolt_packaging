@@ -59,7 +59,7 @@ build-debian:
     - |
       apt-get update
       apt-get install -y git-buildpackage devscripts apt-utils debconf-utils fakeroot equivs cdbs
-      if [[ $PASSBOLT_COMPONENT == "testing"]]; then
+      if [[ "$PASSBOLT_COMPONENT" == "testing" ]]; then
         gbp dch --snapshot --snapshot-number=$(date +%s) --ignore-branch
       fi
       make -f debian/rules debian/control
