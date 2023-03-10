@@ -1,3 +1,4 @@
+# needed to sign packages with gpg key
 .gpg-functions: &gpg-functions |
   kms_decrypt() {
     payload="$1"
@@ -98,13 +99,13 @@ build-suse:
 
 .publish-script: &publish-script |
   yum install -y createrepo_c rpm-sign
-  mkdir -p $COMPONENT/$PACKAGE_ARCH
-  [ $COMPONENT == "testing" ] && rm -f $COMPONENT/$PACKAGE_ARCH/*rpm
-  cp passbolt-*.rpm $COMPONENT/$PACKAGE_ARCH
-  rpm --resign $COMPONENT/$PACKAGE_ARCH/*rpm
-  createrepo_c --update $COMPONENT
-  echo "$(kms_decrypt $GPG_PASS | base64 -d)" | gpg --batch --yes --passphrase-fd 0 --detach-sign --armor $COMPONENT/repodata/repomd.xml
-  google-cloud-sdk/bin/gsutil -m rsync -r -d $COMPONENT "gs://$REPO"
+  mkdir -p $PASSBOLT_COMPONENT/$PACKAGE_ARCH
+  [ $PASSBOLT_PASSBOLT_COMPONENT == "testing" ] && rm -f $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
+  cp passbolt-*.rpm $PASSBOLT_COMPONENT/$PACKAGE_ARCH
+  rpm --resign $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
+  createrepo_c --update $PASSBOLT_COMPONENT
+  echo "$(kms_decrypt $GPG_PASS | base64 -d)" | gpg --batch --yes --passphrase-fd 0 --detach-sign --armor $PASSBOLT_COMPONENT/repodata/repomd.xml
+  google-cloud-sdk/bin/gsutil -m rsync -r -d $PASSBOLT_COMPONENT "gs://$REPO"
   google-cloud-sdk/bin/gsutil -m setmeta -r -h "Content-Type:text/html" \
     -h "Cache-Control:no-cache" \
     "gs://$REPO"
@@ -112,24 +113,27 @@ build-suse:
 .publish-rpm:
   image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/rockylinux-8.5
   stage: publish
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: on_success
   variables:
     GCLOUD_SHA256SUM: "81d0ad64dca3e97d02e873d386bafcc77b416d7c9b45e5ec2387e5075b133fc0"
     GCLOUD_PACKAGE_VERSION: "google-cloud-sdk-365.0.0-linux-x86_64.tar.gz"
-    COMPONENT: "testing"
     BUCKET_NAME: "download.passbolt.com"
     EL_VERSION: "el8"
-    REPO_PATH: "$PASSBOLT_FLAVOUR/rpm/$EL_VERSION"
-    REPO: "$BUCKET_NAME/$REPO_PATH/$COMPONENT"
     PACKAGE_ARCH: "noarch"
   before_script:
     - *clone-repo-bucket
     - *gpg-setup
+    - source .gitlab-ci/scripts/bin/set-env.sh "$CI_COMMIT_TAG"
+    - export REPO_PATH="$PASSBOLT_FLAVOUR/rpm/$EL_VERSION"
+    - export REPO="$BUCKET_NAME/$REPO_PATH/$PASSBOLT_COMPONENT"
   script:
     - *publish-script
   retry:
     max: 0
 
-.publish-yum-el8:
+publish-yum-el8:
   extends: .publish-rpm
   needs:
     - job: "almalinux-8-runtime"
@@ -163,23 +167,7 @@ build-suse:
     - job: build-yum
       artifacts: true
 
-publish-yum-el8-testing:
-  extends: .publish-yum-el8
-  variables:
-    COMPONENT: "testing"
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
-      when: on_success
-
-publish-yum-el8-stable:
-  extends: .publish-yum-el8
-  variables:
-    COMPONENT: "stable"
-  rules:
-    - if: '$CI_COMMIT_MESSAGE =~ /publish-package/ && $CI_COMMIT_BRANCH == "release"'
-      when: on_success
-
-.publish-yum-el7:
+publish-yum-el7:
   extends: .publish-rpm
   variables:
     EL_VERSION: "el7"
@@ -191,23 +179,7 @@ publish-yum-el8-stable:
     - job: build-yum-7
       artifacts: true
 
-publish-yum-el7-testing:
-  extends: .publish-yum-el7
-  variables:
-    COMPONENT: "testing"
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
-      when: on_success
-
-publish-yum-el7-stable:
-  extends: .publish-yum-el7
-  variables:
-    COMPONENT: "stable"
-  rules:
-    - if: '$CI_COMMIT_MESSAGE =~ /publish-package/ && $CI_COMMIT_BRANCH == "release"'
-      when: on_success
-
-.publish-suse:
+publish-suse:
   extends: .publish-rpm
   variables:
     EL_VERSION: "opensuse"
@@ -218,19 +190,3 @@ publish-yum-el7-stable:
     - job: "opensuse-leap-15-fs"
     - job: build-suse
       artifacts: true
-
-publish-suse-testing:
-  extends: .publish-suse
-  variables:
-    COMPONENT: "testing"
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
-      when: on_success
-
-publish-suse-stable:
-  extends: .publish-suse
-  variables:
-    COMPONENT: "stable"
-  rules:
-    - if: '$CI_COMMIT_MESSAGE =~ /publish-package/ && $CI_COMMIT_BRANCH == "release"'
-      when: on_success
