@@ -102,8 +102,6 @@ build-suse:
   mkdir -p $PASSBOLT_COMPONENT/$PACKAGE_ARCH
   if [ $PASSBOLT_PASSBOLT_COMPONENT == "testing" ]; then
     rm -f $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
-  else
-    exit 1
   fi
   cp passbolt-*.rpm $PASSBOLT_COMPONENT/$PACKAGE_ARCH
   rpm --resign $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
@@ -127,11 +125,11 @@ build-suse:
     EL_VERSION: "el8"
     PACKAGE_ARCH: "noarch"
   before_script:
-    - *clone-repo-bucket
-    - *gpg-setup
     - source .gitlab-ci/scripts/bin/set-env.sh "$CI_COMMIT_TAG"
     - export REPO_PATH="$PASSBOLT_FLAVOUR/rpm/$EL_VERSION"
     - export REPO="$BUCKET_NAME/$REPO_PATH/$PASSBOLT_COMPONENT"
+    - *clone-repo-bucket
+    - *gpg-setup
   script:
     - *publish-script
   retry:
