@@ -8,7 +8,7 @@ version-management:
     GPG_PASSPHRASE: $VERSION_PIPELINE_GPG_PASSPHRASE
     GPG_KEY_GRIP: $VERSION_PIPELINE_GPG_KEY_GRIP
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "pipeline" && $CI_COMMIT_BRANCH == "feature/PB-23708-build-pipeline-based-on-tags"'
+    - if: '$CI_PIPELINE_SOURCE == "trigger" && $CI_COMMIT_BRANCH == "feature/PB-23708-build-pipeline-based-on-tags"'
   script:
     - cat "$VERSION_PIPELINE_GPG_KEY" > "$GPG_KEY_PATH"
     - bash .gitlab-ci/scripts/bin/version-management-pipeline.sh
