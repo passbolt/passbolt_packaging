@@ -1,6 +1,3 @@
-* [3.11.1-1] Mon, 06 Mar 2023 Diego Lendoiro <diego@passbolt.com>
-- PB-23283 As an administrator I can disable username validation in Duo Callback endpoints
-
 * [3.11.0-1] Wed, 01 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - PB-22741 As an administrator I should see an error in the healthcheck if I use php 7.3 or less
 - PB-22747 As an administrator I can define a regular expression to customise email validation
