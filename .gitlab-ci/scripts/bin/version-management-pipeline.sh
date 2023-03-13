@@ -39,7 +39,7 @@ DEBIAN_CHANGELOG_PATH="debian/changelog-${PASSBOLT_FLAVOUR}"
 clean_up "$DEST"
 
 git fetch origin
-git checkout "$CI_COMMIT_REF"
+git checkout "$CI_COMMIT_REF_NAME"
 
 clone_api "$PASSBOLT_BRANCH" "$GIT_CI_TOKEN_NAME" "$CI_JOB_TOKEN" "$PASSBOLT_FLAVOUR" "$DEST"
 if ! validate_config_version_and_api_tag "$DEST"/config/version.php; then
@@ -56,15 +56,15 @@ update_packages_changelog_and_tag "${PASSBOLT_VERSION}" \
                           "${CHANGELOG_UPDATER_AUTHOR_NAME}" \
                           "${CHANGELOG_UPDATER_AUTHOR_EMAIL}"
 
-echo "Pulling $CI_COMMIT_REF"
+echo "Pulling $CI_COMMIT_REF_NAME"
 echo "========================="
-git pull origin "$CI_COMMIT_REF"
+git pull origin "$CI_COMMIT_REF_NAME"
 echo "Adding remote with write permissions"
 echo "===================================="
 git remote add packaging https://"$ACCESS_TOKEN_NAME":"$PACKAGING_BOT_TOKEN"@gitlab.com/passbolt/passbolt-ops/passbolt-packaging.git
-echo "Checking out to $CI_COMMIT_REF"
+echo "Checking out to $CI_COMMIT_REF_NAME"
 echo "================================="
-git checkout "$CI_COMMIT_REF"
-echo "Pushing to $CI_COMMIT_REF"
+git checkout "$CI_COMMIT_REF_NAME"
+echo "Pushing to $CI_COMMIT_REF_NAME"
 echo "============================"
-git push packaging "$CI_COMMIT_REF" --tags
+git push packaging "$CI_COMMIT_REF_NAME" --tags
