@@ -100,7 +100,11 @@ build-suse:
 .publish-script: &publish-script |
   yum install -y createrepo_c rpm-sign
   mkdir -p $PASSBOLT_COMPONENT/$PACKAGE_ARCH
-  [ $PASSBOLT_PASSBOLT_COMPONENT == "testing" ] && rm -f $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
+  if [ $PASSBOLT_PASSBOLT_COMPONENT == "testing" ]; then
+    rm -f $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
+  else
+    exit 1
+  fi
   cp passbolt-*.rpm $PASSBOLT_COMPONENT/$PACKAGE_ARCH
   rpm --resign $PASSBOLT_COMPONENT/$PACKAGE_ARCH/*rpm
   createrepo_c --update $PASSBOLT_COMPONENT
