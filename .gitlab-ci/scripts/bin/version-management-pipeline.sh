@@ -37,12 +37,9 @@ RPM_CHANGELOG_PATH="rpm/CHANGELOG-${PASSBOLT_FLAVOUR}.md"
 DEBIAN_CHANGELOG_PATH="debian/changelog-${PASSBOLT_FLAVOUR}"
 
 DEVELOP_BRANCH_NAME="temp-develop"
-MAIN_BRANCH_NAME="temp-main"
+MAIN_BRANCH_NAME="feature/PB-23708-build-pipeline-based-on-tags"
 
 clean_up "$DEST"
-
-git fetch origin
-git checkout "$MAIN_BRANCH_NAME"
 
 clone_api "$PASSBOLT_BRANCH" "$GIT_CI_TOKEN_NAME" "$CI_JOB_TOKEN" "$PASSBOLT_FLAVOUR" "$DEST"
 if ! validate_config_version_and_api_tag "$DEST"/config/version.php; then
