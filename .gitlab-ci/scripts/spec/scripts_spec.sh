@@ -76,7 +76,7 @@ Describe "is_release_candidate function"
   Before 'environment'
   Include "lib/version-check.sh"
   It "should be true for release candidate tag"
-    When call is_release_candidate
+    When call is_release_candidate "$PASSBOLT_VERSION"
     The status should be success
   End
 
@@ -86,7 +86,7 @@ Describe "is_release_candidate function"
   Before 'environment'
   Include "lib/version-check.sh"
   It "should be false for release NON candidate tag"
-    When call is_release_candidate
+    When call is_release_candidate "$PASSBOLT_VERSION"
     The status should be failure
   End
 

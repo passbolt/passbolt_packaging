@@ -12,7 +12,7 @@ function update_packages_changelog_and_tag() {
   local author_name=$7
   local author_email=$8
 
-  if ! is_release_candidate; then
+  if ! is_release_candidate "$passbolt_version"; then
     run_changelog_updater "--source-changelog=$source_changelog" \
                           "--debian-changelog=$debian_changelog" \
                           "--rpm-changelog=$rpm_changelog" \
