@@ -1,3 +1,7 @@
+* [3.11.1-1] Tue, 14 Mar 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-23283 As an administrator I can disable username validation in Duo Callback endpoints
+- PB-23310 As a user I can login and recover my account with SSO Azure when passbolt is in a sub-directory setup
+
 * [3.11.0-1] Wed, 01 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - PB-22435 As a user using SSO Azure I can recover my account using SSO Azure
 - PB-22741 As an administrator I should see an error in the healthcheck if I use php 7.3 or less
