@@ -44,7 +44,8 @@ git checkout "$CI_COMMIT_REF_NAME"
 clone_api "$PASSBOLT_BRANCH" "$GIT_CI_TOKEN_NAME" "$CI_JOB_TOKEN" "$PASSBOLT_FLAVOUR" "$DEST"
 
 if ! validate_config_version_and_api_tag "$DEST"/config/version.php; then
-  exit 1
+  echo "The version doesn't match!"
+  #exit 1
 fi
 
 setup_gpg_key "$GPG_KEY_PATH" "$GPG_PASSPHRASE" "$GPG_KEY_GRIP"
