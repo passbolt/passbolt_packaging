@@ -10,6 +10,7 @@ Requires:       php-mysqlnd >= 7.3
 Requires:       php-pecl-gnupg
 Requires:       php-process >= 7.3
 Requires:       php-xml >= 7.3
+Requires:       php-pecl-redis
 %if "%{_passbolt_flavour}" == "pro"
 Requires:       php-ldap >= 7.3
 %endif
