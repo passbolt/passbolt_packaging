@@ -1,3 +1,7 @@
+passbolt-ce-server (3.12.0-1) buster; urgency=medium
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 16 Mar 2023 12:36:21 +0000
+
 passbolt-ce-server (3.11.1-1) buster; urgency=medium
   * PB-23283 As an administrator I can disable username validation in Duo Callback endpoints
   * PB-21939 Add a dry-run step at the end of upgrades to validate data

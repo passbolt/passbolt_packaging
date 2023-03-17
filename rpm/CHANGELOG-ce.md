@@ -1,3 +1,5 @@
+* [3.12.0-1] Thu, 16 Mar 2023 Passbolt SA package signing key <contact@passbolt.com>
+
 * [3.11.1-1] Mon, 06 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - PB-23283 As an administrator I can disable username validation in Duo Callback endpoints
 

@@ -1,3 +1,22 @@
+passbolt-pro-server (3.12.0-1) buster; urgency=medium
+  * PB-20535 As a community user I want to use folders
+  * PB-22749 As an administrator I can customise passbolt to output the action logs in syslog
+  * PB-22749 As an administrator I can customise passbolt to output the action logs in a file
+  * PB-22749 As an administrator I can implement my own action logs handler
+  * PB-23813 Microsoft Azure as single sign on should be enabled by default
+  * PB-23717 As a user using the json API I should get a bad request error instead of an internal error if using api-version=v1
+  * PB-21826 Fix emails entries should not be locked when threshold limit is exceeded
+  * PB-23519 As an administrator running the DUO v4 migration I should not see a warning message if DUO was not configured
+  * PB-23721 As an administrator I want to be sure the server key is in the keyring before decrypting users directory settings
+  * PB-23311 As an administrator I should be the only one to know which users have enabled MFA
+  * PB-23333 As an administrator I should see a notice instead of a warning if I enabled the self registration plugin
+  * PB-23722 As a developer running the unit tests I want to be sure the version from the config matches the one from the changelog
+  * PB-22892 As a user recovering my account I want to see the success and error pages feedback
+  * PB-23287 Duo multi-factor authentication redirection refactoring
+  * PB-23702 Update phpseclib/phpseclib dependency
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 16 Mar 2023 15:09:02 +0000
+
 passbolt-pro-server (3.11.1-1) buster; urgency=medium
   * PB-23283 As an administrator I can disable username validation in Duo Callback endpoints
   * PB-23310 As a user I can login and recover my account with SSO Azure when passbolt is in a sub-directory setup
