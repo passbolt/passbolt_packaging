@@ -14,6 +14,7 @@ Requires:       php7-pecl
 Requires:       php7-posix >= 7.3
 Requires:       php7-xmlreader >= 7.3
 Requires:       php7-xmlwriter >= 7.3
+Requires:       php7-redis
 %if "%{_passbolt_flavour}" == "pro"
 Requires:       php7-ldap >= 7.3
 %endif

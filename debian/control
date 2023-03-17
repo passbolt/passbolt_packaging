@@ -22,7 +22,8 @@ Depends: ${misc:Depends},
   php-fpm (>= 7),
   php-xml (>= 7),
   php-gd (>= 7),
-  php-gnupg
+  php-gnupg,
+  php-redis
 Recommends: default-mysql-server | virtual-mysql-server, nginx | apache2
 Suggests: certbot, python-certbot-nginx | python-certbot-apache
 Description: Passbolt, open source password manager for teams
