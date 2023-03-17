@@ -1,3 +1,6 @@
+* [3.12.0-2] Fri, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
+- Added php-redis as dependency
+
 * [3.12.0-1] Thu, 16 Mar 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-20535 As a community user I want to use folders
 - PB-22749 As an administrator I can customise passbolt to output the action logs in syslog
