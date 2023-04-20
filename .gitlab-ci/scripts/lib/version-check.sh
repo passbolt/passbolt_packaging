@@ -18,11 +18,6 @@ function validate_config_version_and_api_tag () {
   local version
   version=$(echo "$PASSBOLT_VERSION" | tr -d 'v')
 
-  if is_release_candidate "$PASSBOLT_VERSION"; then
-    echo "We don't validate versions on RC"
-    return 0
-  fi
-
   if ! grep -q "$version" "$version_file"; then
     echo "Version number in version.php does not match the tag: $PASSBOLT_VERSION"
     return 1
