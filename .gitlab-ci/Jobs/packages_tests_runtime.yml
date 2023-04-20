@@ -4,7 +4,7 @@
   stage: package-test-runtime
   script:
     - apt update && apt install rsync -y
-    - gem install bundler:2.1.2
+    - gem install bundler:2.4.5
     - bundle install
     - cat $GL_REGISTRY_CREDS > ./creds.json
     - bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug
@@ -20,7 +20,7 @@
       artifacts: true
   script:
     - apt update && apt install rsync -y
-    - gem install bundler:2.1.2
+    - gem install bundler:2.4.5
     - bundle install
     - cat $GL_REGISTRY_CREDS > ./creds.json
     - bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug

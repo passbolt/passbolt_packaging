@@ -4,7 +4,7 @@
   stage: package-tests
   script:
     - apt update && apt install rsync build-essential openssh-client -y
-    - gem install bundler:2.1.2
+    - gem install bundler:2.4.5
     - bundle install
     - cat $GL_REGISTRY_CREDS > ./creds.json
     - bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug
@@ -15,7 +15,7 @@
   extends: .kitchen-test
   script:
     - apt update && apt install rsync build-essential openssh-client -y
-    - gem install bundler:2.1.2
+    - gem install bundler:2.4.5
     - bundle install
     - cat $GL_REGISTRY_CREDS > ./creds.json
     - bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug
@@ -207,7 +207,7 @@ almalinux-8-purge:
 fedora-34-purge:
   extends: .kitchen-test-yum
 variables:
-    KITCHEN_JOB: purge-benchmarks-fedora-34
+  KITCHEN_JOB: purge-benchmarks-fedora-34
 
 fedora-35-purge:
   extends: .kitchen-test-yum
