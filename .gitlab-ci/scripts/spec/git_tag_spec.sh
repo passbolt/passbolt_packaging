@@ -35,7 +35,7 @@ Describe "update_packages_changelog_and_tag function"
                               "${CHANGELOG_UPDATER_AUTHOR_NAME}" \
                               "${CHANGELOG_UPDATER_AUTHOR_EMAIL}"
     # expect this tag to be created
-    cat /tmp/changelog-arguments | grep "${EXPECTED_DOCKER_ARGUMENTS}" > /dev/null
+    cat /tmp/changelog-arguments | grep "${EXPECTED_CHANGELOG_UPDATER_ARGUMENTS}" > /dev/null
   }
 
   function environment {
@@ -82,7 +82,7 @@ Describe "update_packages_changelog_and_tag function"
     export RPM_CHANGELOG_PATH="rpm/CHANGELOG-${PASSBOLT_FLAVOUR}.md"
     export DEBIAN_CHANGELOG_PATH="debian/changelog-${PASSBOLT_FLAVOUR}"
 
-    export EXPECTED_DOCKER_ARGUMENTS="changelog-updater --source-changelog=api/CHANGELOG.md --debian-changelog=debian/changelog-ce --rpm-changelog=rpm/CHANGELOG-ce.md --passbolt-flavour=ce --name=Passbolt CI --email=syops@passbolt.com"
+    export EXPECTED_CHANGELOG_UPDATER_ARGUMENTS="changelog-updater --source-changelog=api/CHANGELOG.md --debian-changelog=debian/changelog-ce --rpm-changelog=rpm/CHANGELOG-ce.md --passbolt-flavour=ce --name=Passbolt CI --email=syops@passbolt.com"
   }
   Before 'environment'
   After 'clean_up'
