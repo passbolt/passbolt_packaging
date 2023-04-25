@@ -1,3 +1,8 @@
+passbolt-ce-server (3.12.2-rc.1-1) buster; urgency=medium
+  * PB-24315 Description should be forced to empty for resources of type password and description
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 25 Apr 2023 13:32:22 +0000
+
 passbolt-ce-server (3.12.0-3) buster; urgency=medium
   * Added php-redis to the control.in to set the dependency correctly
 

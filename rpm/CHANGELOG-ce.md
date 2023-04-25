@@ -1,3 +1,6 @@
+* [3.12.2-rc.1-1] Tue, 25 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24315 Description should be forced to empty for resources of type password and description
+
 * [3.12.0-2] Fri, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - Fixed wrong changelog for 3.12.0-1
 - Added php-redis as dependency
