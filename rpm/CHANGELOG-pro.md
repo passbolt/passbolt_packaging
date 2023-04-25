@@ -1,3 +1,5 @@
+* [3.12.1-rc.1-1] Tue, 25 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
+
 * [3.12.0-2] Fri, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - Added php-redis as dependency
 
