@@ -1,3 +1,6 @@
+* [3.12.2-1] Wed, 26 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24315 As signed-in user creating resources with encrypted description the API should not store unencrypted descriptions even if provided by the client
+
 * [3.12.0-2] Fri, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - Added php-redis as dependency
 
