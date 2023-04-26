@@ -1,5 +1,5 @@
-* [3.12.2-rc.1-1] Tue, 25 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
-- PB-24315 Description should be forced to empty for resources of type password and description
+* [3.12.2-1] Wed, 26 Apr 2023 Daniel Del Rio <daniel@passbolt.com>
+- PB-24315 As signed-in user creating resources with encrypted description the API should not store unencrypted descriptions even if provided by the client
 
 * [3.12.0-2] Fri, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
 - Fixed wrong changelog for 3.12.0-1
