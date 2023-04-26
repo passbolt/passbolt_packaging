@@ -1,3 +1,8 @@
+passbolt-ce-server (3.12.2-1) buster; urgency=medium
+  * PB-24315 As signed-in user creating resources with encrypted description the API should not store unencrypted descriptions even if provided by the client
+
+ -- Daniel Del Rio <daniel@passbolt.com>  Wed, 26 Apr 2023 13:45:22 +0000
+
 passbolt-ce-server (3.12.2-rc.1-1) buster; urgency=medium
   * PB-24315 Description should be forced to empty for resources of type password and description
 
