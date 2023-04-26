@@ -1,3 +1,35 @@
+* [4.0.0-rc.2-1] Wed, 26 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-21580 As a user I can use Google as single sign on provider
+- PB-24245 Adds two TOTP resource types feature flag
+- PB-24086 As an admin, I can create a user recovery token from the command line
+- PB-24056 As an admin I can view log stack traces when debug mode is enabled
+- PB-23599 As an admin I can obfuscate sensitive fields in API responses
+- PB-22926 As a new user I can self-register using SSO with email-self registration
+- PB-21570 As an administrator I receive an email when SSO configuration changes
+- PB-24073 As a developer I should ensure that the CHANGELOG.md file is in the right format
+- PB-24071 As a developer I can enable feature plugins with the plugins class name
+- PB-24272 Adds contribution link in CONTRIBUTING.md
+- PB-24052 Updates LDAP admin settings to support Kerberos/SASL
+- PB-23961 Adds SASL support for DirectorySync
+- PB-23927 As a system administration I can disable certain SSO providers from environment variable
+- PB-23321 Upgrade CakePHP to 4.4
+- PB-23598 Add LDAP filter / search to the API endpoint for configuration
+- PB-23289 Add new setting to allow updating user first and last name from LDAP
+- PB-23290 Update GroupSyncAction to rename group if changed in LDAP
+- PB-22720 Refactor LDAP feature to use directorytree/ldaprecord
+- PB-24297 Update guzzlehttp/psr7 to fix composer audit security vulnerability
+- PB-24296 As a developer I can retrieve in integration tests the body of json requests in array
+- PB-24083 Removes the usage of the Paginator deprecated in CakePHP 4.4
+- PB-24055 LDAP add support multi server to settings API endpoint
+- PB-23926 Bump PHPUnit to ~9.5.2 to avoid warning messages of 9.6
+- PB-22758 Introduce JWT key injection to enable parallel tests
+- PB-22622 Add CS rule to disallow space after NOT operator
+- PB-23786 Remove PHP 7.3 from the testing pipes
+- PB-24078 As a user I should receive the correct email avatar text after folder manipulation
+- PB-24039 Action log event listener should not throw error on missing connection
+- PB-23558 Remove PHP 8.2 deprecation warnings
+- PB-23557 Remove PHP 8.1 deprecation warnings
+
 * [3.12.2-1] Wed, 26 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24315 As signed-in user creating resources with encrypted description the API should not store unencrypted descriptions even if provided by the client
 
