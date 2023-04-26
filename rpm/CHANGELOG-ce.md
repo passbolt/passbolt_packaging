@@ -1,3 +1,23 @@
+* [4.0.0-rc.2-1] Wed, 26 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24245 Adds two TOTP resource types feature flag
+- PB-24086 As an admin, I can create a user recovery token from the command line
+- PB-24056 As an admin I can view log stack traces when debug mode is enabled
+- PB-24073 As a developer I should ensure that the CHANGELOG.md file is in the right format
+- PB-24071 As a developer I can enable feature plugins with the plugins class name
+- PB-24272 Adds contribution link in CONTRIBUTING.md
+- PB-23321 Upgrade CakePHP to 4.4
+- PB-24297 Update guzzlehttp/psr7 to fix composer audit security vulnerability
+- PB-24296 As a developer I can retrieve in integration tests the body of json requests in array
+- PB-24083 Removes the usage of the Paginator deprecated in CakePHP 4.4
+- PB-23926 Bump PHPUnit to ~9.5.2 to avoid warning messages of 9.6
+- PB-22758 Introduce JWT key injection to enable parallel tests
+- PB-22622 Add CS rule to disallow space after NOT operator
+- PB-23786 Remove PHP 7.3 from the testing pipes
+- PB-24078 As a user I should receive the correct email avatar text after folder manipulation
+- PB-24039 Action log event listener should not throw error on missing connection
+- PB-23558 Remove PHP 8.2 deprecation warnings
+- PB-23557 Remove PHP 8.1 deprecation warnings
+
 * [3.12.2-1] Wed, 26 Apr 2023 Daniel Del Rio <daniel@passbolt.com>
 - PB-24315 As signed-in user creating resources with encrypted description the API should not store unencrypted descriptions even if provided by the client
 
