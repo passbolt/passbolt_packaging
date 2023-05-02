@@ -1,22 +1,22 @@
-Requires:       php7 >= 7.3
-Requires:       php7-cli >= 7.3
-Requires:       php7-curl >= 7.3
-Requires:       php7-fileinfo >= 7.3
-Requires:       php7-fpm >= 7.3
-Requires:       php7-gd >= 7.3
-Requires:       php7-gnupg
-Requires:       php7-intl >= 7.3
-Requires:       php7-json >= 7.3
-Requires:       php7-mbstring >= 7.3
-Requires:       php7-mysql >= 7.3
-Requires:       php7-openssl >= 7.3
-Requires:       php7-pecl
-Requires:       php7-posix >= 7.3
-Requires:       php7-xmlreader >= 7.3
-Requires:       php7-xmlwriter >= 7.3
-Requires:       php7-redis
+Requires:       php >= 7.4
+Requires:       php-cli >= 7.4
+Requires:       php-curl >= 7.4
+Requires:       php-fileinfo >= 7.4
+Requires:       php-fpm >= 7.4
+Requires:       php-gd >= 7.4
+Requires:       php-gnupg
+Requires:       php-intl >= 7.4
+Requires:       php-json >= 7.4
+Requires:       php-mbstring >= 7.4
+Requires:       php-mysql >= 7.4
+Requires:       php-openssl >= 7.4
+Requires:       php-pecl
+Requires:       php-posix >= 7.4
+Requires:       php-xmlreader >= 7.4
+Requires:       php-xmlwriter >= 7.4
+Requires:       php-redis
 %if "%{_passbolt_flavour}" == "pro"
-Requires:       php7-ldap >= 7.3
+Requires:       php-ldap >= 7.4
 %endif
 Requires:       cronie
 Requires:       nginx
