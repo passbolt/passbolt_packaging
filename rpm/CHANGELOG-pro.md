@@ -1,3 +1,6 @@
+* [4.0.0-rc.4-1] Fri, 05 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24561 - Styleguide version bump to v4.0.3
+
 * [4.0.0-rc.3-1] Sat, 29 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24051 Fixes field obfuscation not to obfuscate the first element in pure array
 - PB-24470 Fixes recover_user command not showing while running passbolt -h
