@@ -21,7 +21,7 @@ endif
 PASSBOLT_PACKAGE = passbolt-$(PASSBOLT_FLAVOUR)-server
 PKG_ROOT := $(CURDIR)/debian/$(PASSBOLT_PACKAGE)
 PREPARE_FILES := $(shell cat debian/prepare-files)
-PATCHES_FILES := $(shell find debian/postinst debian/patches debian/README.debian.md -type f)
+PATCHES_FILES := $(shell find debian/postinst debian/patches debian/README.debian.md debian/preinst -type f)
 
 %:
 	dh $@
