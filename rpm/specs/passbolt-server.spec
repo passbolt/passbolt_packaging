@@ -23,6 +23,19 @@ Passbolt on RPM POC
 %patch1 -p1
 %patch2 -p1
 
+%pre 
+# Cancel upgrade if passbolt subscription is not valid
+if [ $1 -gt 1 ]
+then
+    if [ %{_passbolt_flavour} == "pro" ]; then
+        su -c '/usr/share/php/passbolt/bin/cake passbolt subscription_check' -s /bin/bash %{_nginx_user}
+        if [ $? -ne 0 ]; then
+          echo "Passbolt subscription is not valid. Aborting upgrade."
+          exit 1
+        fi  
+    fi
+fi
+
 %install
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/cron.d
