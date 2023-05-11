@@ -1,3 +1,10 @@
+* [4.0.0-rc.4-1] Fri, 05 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24561 - Styleguide version bump to v4.0.3
+
+* [4.0.0-rc.3-1] Fri, 05 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24051 Fixes field obfuscation not to obfuscate the first element in pure array
+- PB-24470 Fixes recover_user command not showing while running passbolt -h
+
 * [4.0.0-rc.2-1] Wed, 26 Apr 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24245 Adds two TOTP resource types feature flag
 - PB-24086 As an admin, I can create a user recovery token from the command line
