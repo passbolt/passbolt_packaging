@@ -12,6 +12,10 @@
 set -e
 
 . /usr/share/debconf/confmodule
+#
+# Parameters passed from apt install
+deb_action=$1
+deb_version=$2
 
 ###########################################
 # Helper internal functions
@@ -27,3 +31,14 @@ _echo() {
 ###########################################
 
 _echo "entering preinst script: action=$1"
+
+case "$deb_action" in
+
+  upgrade)
+    if [ "@PASSBOLT_FLAVOUR@" = "pro" ]; then
+        su -c '/usr/share/php/passbolt/bin/cake passbolt subscription_check' -s /bin/bash www-data
+    fi
+    ;;
+
+
+esac
