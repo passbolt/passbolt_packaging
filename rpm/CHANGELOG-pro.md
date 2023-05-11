@@ -1,3 +1,6 @@
+* [4.0.0-rc.5-1] Thu, 11 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24561 Upgrades cakephp/migrations library
+
 * [4.0.0-rc.4-1] Fri, 05 May 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24561 - Styleguide version bump to v4.0.3
 
