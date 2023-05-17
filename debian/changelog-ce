@@ -1,3 +1,7 @@
+passbolt-ce-server (4.0.0-2) buster; urgency=medium
+  * PB-24611 pin php 7.4 or superior
+ -- Diego Lendoiro <diego@passbolt.com>  Wed, 17 May 2023 12:07:00 +0000
+
 passbolt-ce-server (4.0.0-1) buster; urgency=medium
   * PB-24245 As LU using the API I can manage standalone TOTP and TOTP associated with passwords resources types
   * PB-24086 As an admin I can create a user recovery link from the command line
