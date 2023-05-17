@@ -1,3 +1,6 @@
+* [4.0.0-2] Wed, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
+- PB-22874 pin php 7.4 or superior
+
 * [4.0.0-1] Tue, 16 May 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-21580 As a user I can use Google as single sign on provider
 - PB-24245 As LU using the API I can manage standalone TOTP and TOTP associated with passwords resources types
