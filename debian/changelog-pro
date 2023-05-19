@@ -1,3 +1,8 @@
+passbolt-pro-server (4.0.1-rc.1-1) buster; urgency=medium
+  * PB-24644 As an admin I should be able to run migrations on a 32 bit environment
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 19 May 2023 14:15:17 +0000
+
 passbolt-pro-server (4.0.0-2) buster; urgency=medium
   * PB-24611 pin php7.4 or superior
  -- Diego Lendoiro <diego@passbolt.com>  Wed, 17 May 2023 12:07:00 +0000
