@@ -1,3 +1,6 @@
+* [4.0.1-1] Tue, 23 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24644 As an admin I should be able to run migrations on a 32 bit environment
+
 * [4.0.1-rc.1-1] Fri, 19 May 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24644 As an admin I should be able to run migrations on a 32 bit environment
 
