@@ -1,0 +1,52 @@
+.kitchen-test:
+  extends: .rules
+  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/ruby:latest
+  stage: test
+  script:
+    - apt update && apt install rsync build-essential openssh-client -y
+    - gem install bundler:2.4.5
+    - bundle install
+    - cat $GL_REGISTRY_CREDS > /tmp/creds.json
+    - ls -lash api
+    - pwd
+    - bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug
+
+.kitchen-test-debian:
+  extends: .kitchen-test
+  needs:
+    - job: composer
+      artifacts: true
+    - job: build-debian
+      artifacts: true
+
+.kitchen-test-yum:
+  extends: .kitchen-test
+  needs:
+    - job: composer
+      artifacts: true
+    - job: build-yum
+      artifacts: true
+
+.kitchen-test-yum-7:
+  extends: .kitchen-test
+  needs:
+    - job: composer
+      artifacts: true
+    - job: build-yum-7
+      artifacts: true
+
+.kitchen-test-suse:
+  extends: .kitchen-test
+  needs:
+    - job: composer
+      artifacts: true
+    - job: build-suse
+      artifacts: true
+
+include:
+  - local: "/.gitlab-ci/jobs/test/runtime/debian.yml"
+  - local: "/.gitlab-ci/jobs/test/runtime/rpm.yml"
+  - local: "/.gitlab-ci/jobs/test/cleanup/debian.yml"
+  - local: "/.gitlab-ci/jobs/test/cleanup/rpm.yml"
+  - local: "/.gitlab-ci/jobs/test/fs/debian.yml"
+  - local: "/.gitlab-ci/jobs/test/fs/rpm.yml"

@@ -17,17 +17,22 @@ variables:
 stages:
   - ci-scripts-tests
   - version-management
-  - package-deps
-  - package-build
-  - package-tests
+  - dependencies
+  - build
+  - test
   - publish
   - publish-artifacts
 
 include:
-  - local: "/.gitlab-ci/Jobs/artifact_build.yml"
-  - local: "/.gitlab-ci/Jobs/notification_changelog.yml"
-  - local: "/.gitlab-ci/Jobs/debian_package_build.yml"
-  - local: "/.gitlab-ci/Jobs/packages_tests.yml"
-  - local: "/.gitlab-ci/Jobs/rpm_package_build.yml"
-  - local: "/.gitlab-ci/Jobs/ci_scripts_tests.yml"
-  - local: "/.gitlab-ci/Jobs/version_management.yml"
+  - local: "/.gitlab-ci/jobs/build/dependencies.yml"
+  - local: "/.gitlab-ci/jobs/build/debian.yml"
+  - local: "/.gitlab-ci/jobs/build/rpm.yml"
+  - local: "/.gitlab-ci/jobs/test/ci_scripts.yml"
+  - local: "/.gitlab-ci/jobs/test/packages.yml"
+  - local: "/.gitlab-ci/jobs/publish/debian.yml"
+  - local: "/.gitlab-ci/jobs/publish/rpm.yml"
+  #- local: "/.gitlab-ci/jobs/publish/repo_backup_operations.yml"
+  - local: "/.gitlab-ci/jobs/publish/releases/version_management.yml"
+  - local: "/.gitlab-ci/jobs/publish/releases/notification_changelog.yml"
+  - local: "/.gitlab-ci/jobs/publish/artifacts/docker.yml"
+  - local: "/.gitlab-ci/jobs/publish/artifacts/vms.yml"

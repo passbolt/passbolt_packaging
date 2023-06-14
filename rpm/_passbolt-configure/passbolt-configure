@@ -26,7 +26,7 @@ readonly SSL_KEY_PATH='/etc/ssl/certs/passbolt_private.key'
 readonly LETSENCRYPT_LIVE_DIR='/etc/letsencrypt/live'
 if [ -f /usr/bin/zypper ]
 then
-  readonly FPM_WWW_POOL="/etc/php7/fpm/php-fpm.d/www.conf"
+  readonly FPM_WWW_POOL="/etc/php8/fpm/php-fpm.d/www.conf"
   readonly WWW_USER="wwwrun"
   readonly WWW_GROUP="www"
 else
@@ -652,10 +652,10 @@ setup_fpm(){
 
   if [ -f /usr/bin/zypper ]
   then
-    cp /etc/php7/fpm/php-fpm.conf.default /etc/php7/fpm/php-fpm.conf
+    cp /etc/php8/fpm/php-fpm.conf.default /etc/php8/fpm/php-fpm.conf
     # fix buggy and shity opensuse php-gnupg package
-    echo "extension=gnupg.so" > /etc/php7/conf.d/gnupg.ini
-    cat /etc/php7/conf.d/gnupg.ini
+    echo "extension=gnupg.so" > /etc/php8/conf.d/gnupg.ini
+    cat /etc/php8/conf.d/gnupg.ini
     # Comment systemd ProtectSystem
     sed -i 's/\(^ProtectSystem\)\(.*\)/#\1\2/g' /usr/lib/systemd/system/php-fpm.service
     systemctl daemon-reload
