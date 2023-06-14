@@ -1,3 +1,8 @@
+passbolt-pro-server (4.0.2-2) buster; urgency=medium
+  * PB-24985 added support for php 8.X
+
+ -- Daniel del Rio <daniel@passbolt.com>  Wed, 14 Jun 2023 18:00:24 +0000
+
 passbolt-pro-server (4.0.2-1) buster; urgency=medium
   * PB-24644 As an admin I should be able to run migrations on a 32 bit environment
 
