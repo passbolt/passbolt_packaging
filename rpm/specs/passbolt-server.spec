@@ -23,7 +23,7 @@ Passbolt on RPM POC
 %patch1 -p1
 %patch2 -p1
 
-%pre 
+%pre
 # Cancel upgrade if passbolt subscription is not valid
 if [ $1 -gt 1 ]
 then
@@ -32,7 +32,7 @@ then
         if [ $? -ne 0 ]; then
           echo "Passbolt subscription is not valid. Aborting upgrade."
           exit 1
-        fi  
+        fi
     fi
 fi
 
@@ -115,7 +115,7 @@ sed -i 's/@@NGINX_USER@@/%{_nginx_user}/g' %{_sysconfdir}/cron.d/passbolt-%{_pas
 
 if [ -f /usr/bin/zypper ]
 then
-  echo "extension=gnupg.so" > /etc/php7/conf.d/gnupg.ini
+  echo "extension=gnupg.so" > /etc/php8/conf.d/gnupg.ini
 fi
 
 set_jwt_keys() {

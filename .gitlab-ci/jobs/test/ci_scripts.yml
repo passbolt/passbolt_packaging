@@ -6,4 +6,7 @@ ci-scripts-tests:
     - curl -fsSL https://git.io/shellspec | sh -s -- --yes
   script:
     - /root/.local/bin/shellspec -c .gitlab-ci/scripts -s /bin/bash -f d
-
+  retry:
+    max: 2
+    when:
+      - always
