@@ -21,6 +21,8 @@ function parse_tag() {
 # Example [flavour: ce] # points to release branch
 # Example [branch: develop, flavour: ce]
 #
+# If the commit message does not contain any of the above patterns
+# We default to clone: pro api release branch
 function parse_commit_message() {
   local message="$1"
   local branch

@@ -11,25 +11,32 @@ database_engine = 'mysql'
 if platform_family?('debian')
   apt_update
   package 'Debian: Install mariadb and nginx' do
-    package_name ['debconf-utils', 'curl', 'nginx', 'default-mysql-server']
+    package_name %w[debconf-utils curl nginx default-mysql-server]
     action :install
   end
 
   # Use different database service depending on the OS
-  if (node['platform'] == 'debian' && node['platform_version'] =='11')
-    database_engine = 'mariadb'
-  end
+  database_engine = 'mariadb' if node['platform'] == 'debian' && node['platform_version'] =~ /11|12/
 
-  execute "Start mysql" do
+  execute 'Start mysql' do
     command "service #{database_engine} start"
     action  :run
   end
 elsif platform_family?('rhel', 'suse')
-  package 'RHEL: Install mariadb and nginx' do
-    if platform_family?('rhel', 'fedora')
-      flush_cache [ :before ]
+  if platform_family?('rhel', 'fedora')
+    package 'RHEL: Install dependencies' do
+      package_name ['bc']
+      action :install
     end
-    package_name ['nginx', 'mariadb-server', 'createrepo_c', 'firewalld']
+    execute 'Setup EPEL repository' do
+      cwd node['dest_dir'].to_s
+      command  '/bin/sh rpm/scripts/setup-epel.sh'
+      action   :run
+    end
+  end
+  package 'RHEL: Install mariadb and nginx' do
+    flush_cache [:before] if platform_family?('rhel', 'fedora')
+    package_name %w[nginx mariadb-server createrepo_c firewalld]
     action :install
   end
 end

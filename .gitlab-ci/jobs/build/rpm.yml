@@ -1,0 +1,89 @@
+.install-jq-rhel-8: &install-jq-rhel-8 yum install -y jq ${DEPENDENCIES}
+
+.install-jq-rhel-7: &install-jq-rhel-7
+  - yum install -y epel-release
+  - yum install -y jq ${DEPENDENCIES}
+
+.build-passbolt-rpm-package: &build-passbolt-rpm-package |
+  rpmdev-setuptree
+  PKG_VERSION=$(cat rpm/CHANGELOG.md | awk 'match($0, /\[([0-9]+\.[0-9]+\.[0-9]+)\]?/) {print substr($0, RSTART, RLENGTH);exit}' | tr -d "[]")
+  PASSBOLT_PKG_VERSION=$(cat rpm/CHANGELOG.md | awk 'match($0, /\[([0-9]+\.[0-9]+\.[0-9]+\-[0-9])\]?/) {print substr($0, RSTART, RLENGTH);exit}' | awk -F "-" '{print $2}' | tr -d "[]")
+  /bin/sh rpm/scripts/build-passbolt-server.sh
+  cp ~/rpmbuild/RPMS/noarch/passbolt-* .
+
+.build-rpm:
+  extends: .rules
+  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/rockylinux-8:latest
+  stage: build
+  dependencies:
+    - composer
+  artifacts:
+    paths:
+      - "api/*.rpm"
+      - "api/rpm/scripts/*"
+    expire_in: 1 week
+    when: on_success
+
+.build-zypper:
+  extends: .rules
+  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/opensuse-leap-15:latest
+  stage: build
+  dependencies:
+    - composer
+  artifacts:
+    paths:
+      - "api/*.rpm"
+      - "api/rpm/scripts/*"
+    expire_in: 1 week
+    when: on_success
+
+build-yum:
+  extends: .build-rpm
+  variables:
+    DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
+  script:
+    - mv debian/changelog{-$PASSBOLT_FLAVOUR,}
+    - mv rpm/CHANGELOG{-$PASSBOLT_FLAVOUR,}.md
+    - *install-jq-rhel-8
+    - rsync -azh ./ ./api --exclude api
+    - cd api
+    - PKG_VERSION=0.4 /bin/sh rpm/scripts/build-passbolt-selinux.sh
+    - *build-passbolt-rpm-package
+    - |
+      if [[ "$CI_COMMIT_TAG" != "" ]]; then
+        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":package: A new wild rpm (yum) package appeared! $API_CLONE_BRANCH $PASSBOLT_FLAVOUR" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/browse/api/"
+      fi
+
+build-yum-7:
+  extends: .build-rpm
+  image: centos:7
+  variables:
+    DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
+  script:
+    - mv debian/changelog{-$PASSBOLT_FLAVOUR,}
+    - mv rpm/CHANGELOG{-$PASSBOLT_FLAVOUR,}.md
+    - *install-jq-rhel-7
+    - rsync -azh ./ ./api --exclude api
+    - cd api
+    - PKG_VERSION=0.4 /bin/sh rpm/scripts/build-passbolt-selinux.sh
+    - *build-passbolt-rpm-package
+    - |
+      if [[ "$CI_COMMIT_TAG" != "" ]]; then
+        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":package: A new wild rpm (yum 7) package appeared! $API_CLONE_BRANCH $PASSBOLT_FLAVOUR" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/browse/api/"
+      fi
+
+build-suse:
+  extends: .build-zypper
+  variables:
+    DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
+  script:
+    - mv debian/changelog{-$PASSBOLT_FLAVOUR,}
+    - mv rpm/CHANGELOG{-$PASSBOLT_FLAVOUR,}.md
+    - zypper install -y rpmdevtools rpmlint rsync rpm-build bc jq
+    - rsync -azh ./ ./api --exclude api
+    - cd api
+    - *build-passbolt-rpm-package
+    - |
+      if [[ "$CI_COMMIT_TAG" != "" ]]; then
+        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":package: A new wild suse package appeared! $API_CLONE_BRANCH $PASSBOLT_FLAVOUR" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/browse/api/"
+      fi

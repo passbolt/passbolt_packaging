@@ -1,0 +1,39 @@
+centos-7-fs:
+  extends: .kitchen-test-yum-7
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-centos-7
+
+almalinux-8-fs:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-almalinux-8
+
+fedora-34-fs:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-fedora-34
+
+fedora-35-fs:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-fedora-35
+
+oraclelinux-8-fs:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-oraclelinux-8
+
+rockylinux-8-fs:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-rockylinux-8
+
+rockylinux-9-fs:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-rockylinux-9
+
+opensuse-leap-15-fs:
+  extends: .kitchen-test-suse
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-opensuse-leap-15

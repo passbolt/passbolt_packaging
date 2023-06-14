@@ -1,0 +1,39 @@
+centos-7-runtime:
+  extends: .kitchen-test-yum-7
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-centos-7
+
+almalinux-8-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-almalinux-8
+
+fedora-34-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-fedora-34
+
+fedora-35-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-fedora-35
+
+oraclelinux-8-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-oraclelinux-8
+
+rockylinux-8-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-rockylinux-8
+
+rockylinux-9-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-rockylinux-9
+
+opensuse-leap-15-runtime:
+  extends: .kitchen-test-suse
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-opensuse-leap-15
