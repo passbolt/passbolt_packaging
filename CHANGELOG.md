@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/passbolt/charts-passbolt/compare/v0.3.0...HEAD)
+## [Unreleased](https://github.com/passbolt/passbolt-packaging/compare/1.1.0...HEAD)
+
+## [1.1.0] - 2023-06-14
+
+This release add support for debian bookworm and other distros
+supporting php 8.X.
+
+### Added
+
+- Support debian bookworm.
+- Support php 8.X.
 
 ## [1.0.1] - 2023-05-11
 

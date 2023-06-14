@@ -20,6 +20,8 @@ Install the dependencies with bundler:
 bundle install
 ```
 
+### Running the tests 
+
 List all available targets:
 
 ```bash
