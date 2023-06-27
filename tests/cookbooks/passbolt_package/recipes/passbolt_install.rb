@@ -57,3 +57,8 @@ elsif platform_family?('rhel', 'suse', 'fedora')
     action :run
   end
 end
+
+execute 'Set SSL FORCE to false' do
+  command "sed -i \"s/'PASSBOLT_SSL_FORCE', true/'PASSBOLT_SSL_FORCE', false/\" /etc/passbolt/default.php"
+  action :run
+end
