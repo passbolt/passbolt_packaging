@@ -1,3 +1,6 @@
+* [4.1.0-rc.3-1] Thu, 29 Jun 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25275 As an admin I should see the option page during installation after creating the server GPG keys
+
 * [4.1.0-rc.2-1] Wed, 28 Jun 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24273 As an admin I can disable the GET auth/logout.json endpoint (enabled by default)
 - PB-25274 Set force SSL config to false by default
