@@ -1,3 +1,6 @@
+* [4.1.1-rc.1-1] Tue, 11 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
+
 * [4.1.0-1] Tue, 04 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24259 As an administrator I can define with role based access control users' rights
 - PB-24054 As an administrator I can define LDAP field mapping

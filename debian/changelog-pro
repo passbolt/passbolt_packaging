@@ -1,3 +1,8 @@
+passbolt-pro-server (4.1.1-rc.1-1) buster; urgency=medium
+  * PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 11 Jul 2023 12:04:48 +0000
+
 passbolt-pro-server (4.1.0-1) buster; urgency=medium
   * PB-24259 As an administrator I can define with role based access control users' rights
   * PB-24054 As an administrator I can define LDAP field mapping
