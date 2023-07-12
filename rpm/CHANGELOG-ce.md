@@ -1,3 +1,6 @@
+* [4.1.1-rc.2-1] Wed, 12 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25304 As an administrator the application healthcheck should compare passbolt version with the latest stable release
+
 * [4.1.1-rc.1-1] Tue, 11 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
 
