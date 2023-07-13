@@ -1,3 +1,6 @@
+* [4.1.2-rc.1-1] Thu, 13 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25373 LDAP sync not working by selecting all group fields
+
 * [4.1.1-1] Thu, 13 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-25304 As an administrator the application healthcheck should compare passbolt version with the latest stable release
 - PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
