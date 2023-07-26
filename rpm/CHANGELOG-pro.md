@@ -1,3 +1,7 @@
+* [4.1.2-1] Wed, 26 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25472 Fix emails not sent for SMTP server using NTLM authentication
+- PB-25471 Crowdin should export only a selected subset of languages
+
 * [4.1.2-rc.2-1] Wed, 26 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-25472 Fix emails not sent for SMTP server using NTLM authentication
 - PB-25373 Revert changes for LDAP sync not working issue
