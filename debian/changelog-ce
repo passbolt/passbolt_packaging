@@ -1,3 +1,9 @@
+passbolt-ce-server (4.1.2-rc.2-1) buster; urgency=medium
+  * PB-25472 Fix emails not sent for SMTP server using NTLM authentication
+  * PB-25471 Crowdin should export only a selected subset of languages
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 26 Jul 2023 09:31:09 +0000
+
 passbolt-ce-server (4.1.1-1) buster; urgency=medium
   * PB-25304 As an administrator the application healthcheck should compare passbolt version with the latest stable release
   * PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
