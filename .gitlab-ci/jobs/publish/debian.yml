@@ -9,9 +9,13 @@
   script:
     - |
       source .gitlab-ci/scripts/bin/set-env.sh "$CI_COMMIT_TAG"
-      export PREFIX=$PASSBOLT_FLAVOUR/$DISTRIBUTION_REPO_DIR
-      cd api && /publisher.sh
-      bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":rocket: $API_CLONE_BRANCH $PASSBOLT_FLAVOUR $PASSBOLT_COMPONENT $DISTRIBUTION_REPO_DIR package has been published" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID"
+      if $PASSBOLT_PUBLISH; then
+        export PREFIX=$PASSBOLT_FLAVOUR/$DISTRIBUTION_REPO_DIR
+        cd api && /publisher.sh
+        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":rocket: $API_CLONE_BRANCH $PASSBOLT_FLAVOUR $PASSBOLT_COMPONENT $DISTRIBUTION_REPO_DIR package has been published" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID"
+      else
+        echo "THIS IS A TESTING RELEASE, NOT PUBLISHING"
+      fi
   retry:
     max: 0
 
