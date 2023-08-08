@@ -21,9 +21,18 @@ function update_packages_changelog_and_tag() {
   git add "$rpm_changelog" "$debian_changelog"
   git commit -m ":robot: Automatically added changelog for version $passbolt_version $passbolt_flavour"
 
-  if ! is_release_candidate "$passbolt_version"; then
+  if is_release_candidate "$passbolt_version"; then
+    create_git_tag "$passbolt_version" "$passbolt_flavour" "$filter" testing
+    return 0
+  fi
+
+  if is_testing_candidate "$passbolt_version"; then
+    create_git_tag "$passbolt_version" "$passbolt_flavour" "$filter" testing
+    return 0
+  fi
+
+  if is_stable_candidate "$passbolt_version"; then
     create_git_tag "$passbolt_version" "$passbolt_flavour" "$filter" stable
     return 0
-  fi 
-  create_git_tag "$passbolt_version" "$passbolt_flavour" "$filter" testing
+  fi
 }
