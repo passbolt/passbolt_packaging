@@ -1,3 +1,68 @@
+* [4.1.2-1] Wed, 26 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25472 Fix emails not sent for SMTP server using NTLM authentication
+- PB-25471 Crowdin should export only a selected subset of languages
+
+* [4.1.2-rc.2-1] Wed, 26 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25472 Fix emails not sent for SMTP server using NTLM authentication
+- PB-25471 Crowdin should export only a selected subset of languages
+
+* [4.1.1-1] Thu, 13 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25304 As an administrator the application healthcheck should compare passbolt version with the latest stable release
+- PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
+
+* [4.1.1-rc.2-1] Wed, 12 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25304 As an administrator the application healthcheck should compare passbolt version with the latest stable release
+
+* [4.1.1-rc.1-1] Tue, 11 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25325 As an administrator running the database healthcheck I should not see a false fail on the default database content
+
+* [4.1.0-1] Tue, 04 Jul 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24259 As an administrator I can define with role based access control users' rights
+- PB-24744 As a LU the date time format in the response always display the time zone
+- PB-24929 As a LU with multiple MFA providers setup, the latest provider used is proposed by default
+- PB-24488 Non-JSON request should return a 404 if JSON is required
+- PB-24617 As LU I want improved performance while sharing a folder with a user
+- PB-25030 As an admin I can set a feature flag to prevent user email enumeration
+- PB-24273 As an admin I can disable the GET auth/logout.json endpoint (enabled by default)
+- PB-19510 As a user I should be redirected to HTTPS if SSL FORCE configuration is true
+- PB-24566 As an admin the email settings password should be masked in the test email command log output
+- PB-23591 As a user authenticating I can perform a limited amount of TOTP MFA attempts
+- PB-24658 As an admin I should see no false warning in the email notification configuration section
+- PB-25275 As an admin I should see the option page during installation after creating the server GPG keys
+- PB-25276 As an admin on installation SSL force option should be set to true if the installation is launched over https
+- PB-25274 Set force SSL config to false by default
+- PB-24925 Updates the fixture factories to its latest version
+- PB-24913 Removes "type" from required JSON schema definition for TOTP resource types
+- PB-24305 Recovery and register legacy routes are not used in emails and commands outputs
+- PB-21604 Extract composer audit task from checkstyle job and make it non-blocking
+- PB-21641 Rename check-style job to static-analysis and make it blocking
+
+* [4.1.0-rc.3-1] Thu, 29 Jun 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25275 As an admin I should see the option page during installation after creating the server GPG keys
+
+* [4.1.0-rc.2-1] Wed, 28 Jun 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24273 As an admin I can disable the GET auth/logout.json endpoint (enabled by default)
+- PB-25274 Set force SSL config to false by default
+- PB-25276 Webinstaller SSL force option should be set to true if the installation is launched over https
+
+* [4.1.0-rc.1-1] Wed, 28 Jun 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24259 As an administrator I can define with role based access control users' rights
+- PB-24744 As a LU the date time format in the response always display the time zone
+- PB-24929 As a LU with multiple MFA providers setup, the latest provider used is proposed by default
+- PB-24488 Non-JSON request should return a 404 if JSON is required
+- PB-24617 As LU I want improved performance while sharing a folder with a user
+- PB-25030 As an admin I can set a feature flag to prevent user email enumeration
+- PB-24273 As an admin I can enable the GET auth/logout.json endpoint (disabled by default)
+- PB-19510 As a user I should be redirected to HTTPS if SSL FORCE configuration is true
+- PB-24566 As an admin the email settings password should be masked in the test email command log output
+- PB-23591 As a user authenticating I can perform a limited amount of TOTP MFA attempts
+- PB-24658 As an admin I should see no false warning in the email notification configuration section
+- PB-24925 Updates the fixture factories to its latest version
+- PB-24913 Removes "type" from required JSON schema definition for TOTP resource types
+- PB-24305 Recovery and register legacy routes are not used in emails and commands outputs
+- PB-21604 Extract composer audit task from checkstyle job and make it non-blocking
+- PB-21641 Rename check-style job to static-analysis and make it blocking
+
 * [4.0.2-1] Thu, 25 May 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24644 As an admin I should be able to run migrations on a 32 bit environment
 
