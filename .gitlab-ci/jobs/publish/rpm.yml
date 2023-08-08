@@ -60,6 +60,7 @@
     PACKAGE_ARCH: "noarch"
   before_script:
     - source .gitlab-ci/scripts/bin/set-env.sh "$CI_COMMIT_TAG"
+    - if ! $PASSBOLT_PUBLISH; then echo "THIS IS A TESTING RELEASE, NOT PUBLISHING"; exit 0; fi
     - export REPO_PATH="$PASSBOLT_FLAVOUR/rpm/$EL_VERSION"
     - export REPO="$BUCKET_NAME/$REPO_PATH/$PASSBOLT_COMPONENT"
     - *clone-repo-bucket
