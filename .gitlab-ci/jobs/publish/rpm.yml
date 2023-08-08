@@ -1,4 +1,3 @@
-# needed to sign packages with gpg key
 .gpg-functions: &gpg-functions |
   kms_decrypt() {
     payload="$1"
@@ -11,83 +10,6 @@
       --plaintext-file - \
       --ciphertext-file -
   }
-
-.install-jq-rhel-8: &install-jq-rhel-8 yum install -y jq ${DEPENDENCIES}
-
-.install-jq-rhel-7: &install-jq-rhel-7
-  - yum install -y epel-release
-  - yum install -y jq ${DEPENDENCIES}
-
-.build-passbolt-rpm-package: &build-passbolt-rpm-package |
-  rpmdev-setuptree
-  PKG_VERSION=$(cat rpm/CHANGELOG.md | awk 'match($0, /\[([0-9]+\.[0-9]+\.[0-9]+)\]?/) {print substr($0, RSTART, RLENGTH);exit}' | tr -d "[]")
-  PASSBOLT_PKG_VERSION=$(cat rpm/CHANGELOG.md | awk 'match($0, /\[([0-9]+\.[0-9]+\.[0-9]+\-[0-9])\]?/) {print substr($0, RSTART, RLENGTH);exit}' | awk -F "-" '{print $2}' | tr -d "[]")
-  /bin/sh rpm/scripts/build-passbolt-server.sh
-  cp ~/rpmbuild/RPMS/noarch/passbolt-* .
-
-.build-rpm:
-  extends: .rules
-  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/rockylinux-8:latest
-  stage: package-build
-  dependencies:
-    - composer
-  artifacts:
-    paths:
-      - "api/*.rpm"
-    expire_in: 1 week
-    when: on_success
-
-.build-zypper:
-  extends: .rules
-  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/opensuse-leap-15:latest
-  stage: package-build
-  dependencies:
-    - composer
-  artifacts:
-    paths:
-      - "api/*.rpm"
-    expire_in: 1 week
-    when: on_success
-
-build-yum:
-  extends: .build-rpm
-  variables:
-    DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
-  script:
-    - PKG_VERSION=0.4 /bin/sh rpm/scripts/build-passbolt-selinux.sh
-    - *install-jq-rhel-8
-    - *build-passbolt-rpm-package
-    - |
-      if [[ "$CI_COMMIT_TAG" != "" ]]; then
-        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":package: A new wild rpm (yum) package appeared! $API_CLONE_BRANCH $PASSBOLT_FLAVOUR" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/browse/api/"
-      fi
-
-build-yum-7:
-  extends: .build-rpm
-  image: centos:7
-  variables:
-    DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
-  script:
-    - PKG_VERSION=0.4 /bin/sh rpm/scripts/build-passbolt-selinux.sh
-    - *install-jq-rhel-7
-    - *build-passbolt-rpm-package
-    - |
-      if [[ "$CI_COMMIT_TAG" != "" ]]; then
-        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":package: A new wild rpm (yum 7) package appeared! $API_CLONE_BRANCH $PASSBOLT_FLAVOUR" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/browse/api/"
-      fi
-
-build-suse:
-  extends: .build-zypper
-  variables:
-    DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
-  script:
-    - zypper install -y rpmdevtools rpmlint rsync rpm-build bc jq
-    - *build-passbolt-rpm-package
-    - |
-      if [[ "$CI_COMMIT_TAG" != "" ]]; then
-        bash ../.gitlab-ci/scripts/bin/slack-status-messages.sh ":package: A new wild suse package appeared! $API_CLONE_BRANCH $PASSBOLT_FLAVOUR" "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/browse/api/"
-      fi
-
 # gcloud sdk https://cloud.google.com/sdk/docs/downloads-versioned-archives
 .clone-repo-bucket: &clone-repo-bucket |
   cd api
@@ -153,33 +75,23 @@ publish-yum-el8:
   extends: .publish-rpm
   needs:
     - job: "almalinux-8-runtime"
-    - job: "almalinux-8-break"
     - job: "almalinux-8-purge"
     - job: "almalinux-8-fs"
     - job: "fedora-34-runtime"
-    - job: "fedora-34-break"
     - job: "fedora-34-purge"
     - job: "fedora-34-fs"
     - job: "fedora-35-runtime"
-    - job: "fedora-35-break"
     - job: "fedora-35-purge"
     - job: "fedora-35-fs"
     - job: "oraclelinux-8-runtime"
-    - job: "oraclelinux-8-break"
     - job: "oraclelinux-8-purge"
     - job: "oraclelinux-8-fs"
     - job: "rockylinux-8-runtime"
-    - job: "rockylinux-8-break"
     - job: "rockylinux-8-purge"
     - job: "rockylinux-8-fs"
     - job: "rockylinux-9-runtime"
-    - job: "rockylinux-9-break"
     - job: "rockylinux-9-purge"
     - job: "rockylinux-9-fs"
-    - job: "redhat-9-runtime"
-    - job: "redhat-9-break"
-    - job: "redhat-9-purge"
-    - job: "redhat-9-fs"
     - job: build-yum
       artifacts: true
 
@@ -189,7 +101,6 @@ publish-yum-el7:
     EL_VERSION: "el7"
   needs:
     - job: "centos-7-runtime"
-    - job: "centos-7-break"
     - job: "centos-7-purge"
     - job: "centos-7-fs"
     - job: build-yum-7
@@ -201,7 +112,6 @@ publish-suse:
     EL_VERSION: "opensuse"
   needs:
     - job: "opensuse-leap-15-runtime"
-    - job: "opensuse-leap-15-break"
     - job: "opensuse-leap-15-purge"
     - job: "opensuse-leap-15-fs"
     - job: build-suse

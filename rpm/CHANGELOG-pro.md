@@ -1,3 +1,18 @@
+* [4.0.2-1] Thu, 25 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24644 As an admin I should be able to run migrations on a 32 bit environment
+
+* [4.0.2-rc.1-1] Wed, 24 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24644 As an admin I should be able to run migrations on a 32 bit environment
+
+* [4.0.1-1] Tue, 23 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24644 As an admin I should be able to run migrations on a 32 bit environment
+
+* [4.0.1-rc.1-1] Fri, 19 May 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24644 As an admin I should be able to run migrations on a 32 bit environment
+
+* [4.0.0-2] Fri, 17 Mar 2023 Diego Lendoiro <diego@passbolt.com>
+- PB-22874 pin php 7.4 or superior
+
 * [4.0.0-1] Tue, 16 May 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-21580 As a user I can use Google as single sign on provider
 - PB-24245 As LU using the API I can manage standalone TOTP and TOTP associated with passwords resources types

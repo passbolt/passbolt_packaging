@@ -1,7 +1,4 @@
 GEM
-  specs:
-
-GEM
   remote: https://rubygems.org/
   specs:
     activesupport (7.0.4.3)
@@ -814,15 +811,15 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  berkshelf!
-  bigdecimal!
-  chef!
-  chef-cli!
-  inspec!
-  kitchen-dokken!
-  kitchen-inspec!
-  pry!
-  test-kitchen!
+  berkshelf
+  bigdecimal
+  chef
+  chef-cli
+  inspec
+  kitchen-dokken
+  kitchen-inspec
+  pry
+  test-kitchen
 
 BUNDLED WITH
    2.4.5

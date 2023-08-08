@@ -76,14 +76,14 @@ Obsoletes:      php80-pecl-%{pecl_name} <= %{version}
 
 
 %description
-This module allows you to interact with gnupg. 
+This module allows you to interact with gnupg.
 
 Documentation : http://www.php.net/gnupg
 
 Package built for PHP %(%{__php} -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')%{?scl: as Software Collection (%{scl} by %{?scl_vendor}%{!?scl_vendor:rh})}.
 
 
-%prep 
+%prep
 %setup -c -q
 
 # Don't install/register tests
