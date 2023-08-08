@@ -2,18 +2,27 @@
 # v3.11.0-rc.1-pro-all
 #
 # All of the fields are mandatory:
-# Version: v3.11.0-rc.1|v3.11.0
+# Version: v3.11.0-rc.1|v3.11.0-test.1|v3.11.0
 # Passbolt flavour: pro|ce
 # Per package filter: all|rpm|debian
 #
-# It also provides the component based on if it is RC: testing|stable
+# It also provides the component based on if it is RC/test: testing|stable
+# It also provides a boolean for the publication:
+# Publish: RC/stable
+# Don't publish: test
 function parse_tag() {
   local tag=$1
 
+  if is_testing_candidate "$tag"; then
+    echo "$tag" | awk -F '-' '{print $1"-"$2,$3,$4,"testing","false"}'
+  fi
+
   if is_release_candidate "$tag"; then
-    echo "$tag" | awk -F '-' '{print $1"-"$2,$3,$4,"testing"}'
-  else
-    echo "$tag" | awk -F '-' '{print $1,$2,$3,"stable"}'
+    echo "$tag" | awk -F '-' '{print $1"-"$2,$3,$4,"testing","true"}'
+  fi
+
+  if is_stable_candidate "$tag"; then
+    echo "$tag" | awk -F '-' '{print $1,$2,$3,"stable","true"}'
   fi
 }
 
@@ -34,8 +43,9 @@ function parse_commit_message() {
   component=$(calculate_regex "$message" "testing" "component")
   filter=$(calculate_regex "$message" "all" "filter")
   flavour=$(calculate_regex "$message" "pro" "flavour")
+  publish=$(calculate_regex "$message", "false" "publish")
 
-  echo "$branch" "$flavour" "$filter" "$component"
+  echo "$branch" "$flavour" "$filter" "$component" "$publish"
 }
 
 function calculate_regex() {
