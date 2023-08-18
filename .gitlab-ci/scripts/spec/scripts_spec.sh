@@ -68,6 +68,97 @@ Describe "validate_config_version_and_api_tag function"
 
 End
 
+Describe "is_testing_candidate function"
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be true for stable candidate tag"
+    When call is_stable_candidate "$PASSBOLT_VERSION"
+    The status should be success
+  End
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1-rc.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be false for stable NON candidate tag (rc)"
+    When call is_stable_candidate "$PASSBOLT_VERSION"
+    The status should be failure
+  End
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1-test.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be false for stable NON candidate tag (test)"
+    When call is_stable_candidate "$PASSBOLT_VERSION"
+    The status should be failure
+  End
+
+End
+
+Describe "is_testing_candidate function"
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1-test.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be true for test candidate tag"
+    When call is_testing_candidate "$PASSBOLT_VERSION"
+    The status should be success
+  End
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1-rc.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be false for test NON candidate tag (rc)"
+    When call is_testing_candidate "$PASSBOLT_VERSION"
+    The status should be failure
+  End
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be false for test NON candidate tag (stable)"
+    When call is_testing_candidate "$PASSBOLT_VERSION"
+    The status should be failure
+  End
+
+End
+
+Describe "is_release_candidate function"
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1-rc.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be true for release candidate tag"
+    When call is_release_candidate "$PASSBOLT_VERSION"
+    The status should be success
+  End
+
+  function environment {
+    export PASSBOLT_VERSION=v33.18.1
+  }
+  Before 'environment'
+  Include "lib/version-check.sh"
+  It "should be false for release NON candidate tag"
+    When call is_release_candidate "$PASSBOLT_VERSION"
+    The status should be failure
+  End
+
+End
 Describe "is_release_candidate function"
 
   function environment {
