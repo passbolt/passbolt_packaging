@@ -23,7 +23,7 @@ function is_testing_candidate () {
 
 function is_stable_candidate () {
   local version=$1
-  if [[ ! $version =~ [0-9]+\.[0-9]+\.[0-9]+(-ce|-pro) ]];then
+  if [[ ! $version =~ [0-9]+\.[0-9]+\.[0-9]+(-ce-*|-pro-*|$) ]];then
     return 1
   fi
   return 0
