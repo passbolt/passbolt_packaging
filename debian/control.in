@@ -25,7 +25,8 @@ Depends: ${misc:Depends},
   @PASSBOLT_EXTENSIONS@
   php-gnupg,
   php-redis,
-Recommends: default-mysql-server | virtual-mysql-server, nginx | apache2
+  php-pgsql
+Recommends: default-mysql-server | virtual-mysql-server | postgresql , nginx | apache2
 Suggests: certbot, python-certbot-nginx | python-certbot-apache
 Description: Passbolt, open source password manager for teams
  Passbolt is a free and open source password manager
