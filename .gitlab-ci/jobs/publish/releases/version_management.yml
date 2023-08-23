@@ -1,6 +1,6 @@
 version-management:
   image:
-    name: registry.gitlab.com/passbolt/passbolt-ops/changelog-updater:v0.2.1
+    name: registry.gitlab.com/passbolt/passbolt-ops/changelog-updater:0.2.2
     entrypoint: [""]
   stage: version-management
   variables:
