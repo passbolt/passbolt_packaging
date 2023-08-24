@@ -8,6 +8,7 @@ Requires:       php-json >= 7.4
 Requires:       php-mbstring >= 7.4
 Requires:       php-mysqlnd >= 7.4
 Requires:       php-pecl-gnupg
+Requires:       php-pgsql >= 7.4
 Requires:       php-process >= 7.4
 Requires:       php-xml >= 7.4
 Requires:       php-pecl-redis
