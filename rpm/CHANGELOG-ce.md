@@ -1,3 +1,6 @@
+* [4.2.0-rc.2-1] Thu, 24 Aug 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-25964 As a user login with JWT authentication the verify-token in the challenge should not be lower cased
+
 * [4.2.0-rc.1-1] Wed, 23 Aug 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24987 As an administrator I can define the password policies from the administration UI
 - PB-25462 As an administrator I can deactivate RBACs with a feature flag

@@ -1,3 +1,8 @@
+passbolt-ce-server (4.2.0-rc.2-1) buster; urgency=medium
+  * PB-25964 As a user login with JWT authentication the verify-token in the challenge should not be lower cased
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 24 Aug 2023 10:21:37 +0000
+
 passbolt-ce-server (4.2.0-rc.1-1) buster; urgency=medium
   * PB-24987 As an administrator I can define the password policies from the administration UI
   * PB-25462 As an administrator I can deactivate RBACs with a feature flag
