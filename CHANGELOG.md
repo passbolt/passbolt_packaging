@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/passbolt/passbolt-packaging/compare/1.1.0...HEAD)
+## [Unreleased](https://github.com/passbolt/passbolt-packaging/compare/1.2.0...HEAD)
+
+## [1.2.0] - 2023-08-24
+
+This release includes:
+
+- php-pgsql extension installed by default to ease postgresql installations
 
 ## [1.1.0] - 2023-06-14
 
