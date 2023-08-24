@@ -11,6 +11,7 @@ Requires:       php-mbstring >= 7.4
 Requires:       php-mysql >= 7.4
 Requires:       php-openssl >= 7.4
 Requires:       php-pecl
+Requires:       php-pgsql >= 7.4
 Requires:       php-posix >= 7.4
 Requires:       php-xmlreader >= 7.4
 Requires:       php-xmlwriter >= 7.4
