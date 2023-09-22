@@ -71,14 +71,19 @@ platforms:
       image: rockylinux-9
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
-  - name: fedora-34
+  - name: fedora-36
     driver:
-      image: fedora-34
+      image: fedora-36
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
-  - name: fedora-35
+  - name: fedora-37
     driver:
-      image: fedora-35
+      image: fedora-37
+      privileged: true
+      pid_one_command: /usr/lib/systemd/systemd
+  - name: fedora-38
+    driver:
+      image: fedora-38
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: opensuse-leap-15
