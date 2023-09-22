@@ -8,15 +8,20 @@ almalinux-8-runtime:
   variables:
     KITCHEN_JOB: runtime-benchmarks-almalinux-8
 
-fedora-34-runtime:
+fedora-36-runtime:
   extends: .kitchen-test-yum
   variables:
-    KITCHEN_JOB: runtime-benchmarks-fedora-34
+    KITCHEN_JOB: runtime-benchmarks-fedora-36
 
-fedora-35-runtime:
+fedora-37-runtime:
   extends: .kitchen-test-yum
   variables:
-    KITCHEN_JOB: runtime-benchmarks-fedora-35
+    KITCHEN_JOB: runtime-benchmarks-fedora-37
+
+fedora-38-runtime:
+  extends: .kitchen-test-yum
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-fedora-38
 
 oraclelinux-8-runtime:
   extends: .kitchen-test-yum
