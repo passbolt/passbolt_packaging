@@ -1,3 +1,17 @@
+* [4.4.0-test.1-1] Fri, 27 Oct 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-27773 As an administrator I can deny access to the mobile setup screen with RBAC
+- PB-27951 As system operator I should be warned in the healthcheck when using PHP < 8.1, as support for PHP versions 7.4 and 8.0 will soon be removed
+- PB-27948 Guest identification by their username should be case-insensitive, unless specified in configuration
+- PB-27957 Send notifications to all administrators when an administrator is deleted
+- PB-27941 Send notifications to administrators when an administrator loses its administrator role
+- PB-28171 Enable the email digest by default
+- PB-28274 Fixes an XSS Security issue with mail content sanitization
+- PB-25477 As an administrator, I should be able to recreate a user with an email that exists in the db
+- PB-27799 As an administrator installing passbolt on PostgreSQL, the database encoding should be set to utf-8
+- PB-27857 Fix help site release notes automation by adding flavour on help site release notes merge request
+- PB-27932 Improve code static by using cakedccakephp/phpstan
+- PB-28079 Remove deprecation warnings from the test suite
+
 * [4.3.0-1] Tue, 26 Sep 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-25405 As an administrator installing passbolt through the web installer, I should be able to configure authentication method for SMTP
 - PB-25185 As a signed-in user on the browser extension, I want to export my account to configure the Windows application
@@ -14,25 +28,6 @@
 - PB-26107 Upgrade the cakephp/chronos library
 - PB-26159 Update singpolyma/openpgp-php to improve compatibility with PHP 8.2
 - PB-25247 Add integration tests on the MFA select provider endpoint
-
-* [4.3.0-test.2-1] Tue, 26 Sep 2023 Passbolt SA package signing key <contact@passbolt.com>
-- PB-27799 As an administrator installing passbolt on PostgreSQL, the database encoding should be set to utf-8
-
-* [4.3.0-test.1-1] Tue, 26 Sep 2023 Passbolt SA package signing key <contact@passbolt.com>
-- PB-25497 As an administrator I can disable users
-- PB-25405 As an administrator installing passbolt through the web installer, I should be able to configure authentication method for SMTP
-- PB-25185 As a signed-in user on the browser extension, I want to export my account to configure the Windows application (disabled by default)
-- PB-25944 As an administrator I can define the schema on installation with Postgres
-- PB-25999 Improve performance of update secret process
-- PB-26097 Adds cake.po translation files for all languages supported by CakePHP
-- PB-25827 As a user with encrypted message enabled in the email content visibility, I would like to see the gpg message encrypted with my key when a password is updated
-- PB-25802 As a user I want to see localized date in my emails
-- PB-25863 Set message-id header in emails
-- PB-25894 Run CI on postgres versions 13 and 15 instead of version 12 only
-- PB-25969 As a developer, I can render emails in tests with html special chars
-- PB-26107 Upgrade the cakephp/chronos library
-- PB-26159 Update singpolyma/openpgp-php to improve compatibility with PHP 8.2
-- PB-25247 Add integration tests on the MFA select endpoint
 
 * [4.3.0-rc.1-1] Thu, 21 Sep 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-25405 As an administrator installing passbolt through the web installer, I should be able to configure authentication method for SMTP
