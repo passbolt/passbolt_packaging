@@ -83,7 +83,7 @@ unless platform_family?('debian')
         action   :run
       end
       package 'SUSE: Install dependencies' do
-        package_name %w[php8-cli php8-zip php8-json wget unzip]
+        package_name %w[php8-cli php8-zip wget unzip]
         action :install
       end
       package 'SUSE: Install composer' do
