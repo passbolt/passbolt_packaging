@@ -10,7 +10,7 @@ title="$1"
 url="$2"
 
 curl -X POST -H 'Content-type: application/json' $SLACK_WEBHOOK \
---data-binary @- <<EOF
+	--data-binary @- <<EOF
 {
   "channel": "$SLACK_CHANNEL_ID",
   "attachments": [
