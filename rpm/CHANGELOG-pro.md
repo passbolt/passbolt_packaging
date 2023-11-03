@@ -1,7 +1,25 @@
-* [4.4.0-test.2-1] Mon, 30 Oct 2023 Passbolt SA package signing key <contact@passbolt.com>
+* [4.4.0-rc.1-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-27950 As a user I can use generic OAuth2 as single sign on provider
+- PB-27773 As an administrator I can deny access to the mobile setup screen with RBAC
+- PB-27951 As system operator I should be warned in the healthcheck when using PHP < 8.1, as support for PHP versions 7.4 and 8.0 will soon be removed
+- PB-26123 Update message for LDAP sync adding users to groups
+- PB-27948 Guest identification by their username should be case-insensitive, unless specified in configuration
+- PB-27957 Send notifications to all administrators when an administrator is deleted
+- PB-27941 Send notifications to administrators when an administrator loses its administrator role
+- PB-28171 Enable the email digest by default
+- PB-28274 Fixes an XSS Security issue with mail content sanitization
+- PB-26158 As an administrator I should be able to use the memberof LDAP filter following with a ldap-query
+- PB-27895 Fixes a wrong user passphrase policy URL in email the email sent after setting edition
+- PB-25477 As an administrator, I should be able to recreate a user with an email that exists in the db via the command line
+- PB-27799 As an administrator installing passbolt on PostgreSQL, the database encoding should be set to utf-8
+- PB-27857 Fix help site release notes automation by adding flavour on help site release notes merge request
+- PB-27932 Improve code static by using cakedccakephp/phpstan
+- PB-28079 Remove deprecation warnings from the test suite
+
+* [4.4.0-test.2-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-28482 Styleguide version bump to v4.4.0
 
-* [4.4.0-test.1-1] Mon, 30 Oct 2023 Passbolt SA package signing key <contact@passbolt.com>
+* [4.4.0-test.1-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-27950 As a user I can use generic OAuth2 as single sign on provider
 - PB-27773 As an administrator I can deny access to the mobile setup screen with RBAC
 - PB-27951 As system operator I should be warned in the healthcheck when using PHP < 8.1, as support for PHP versions 7.4 and 8.0 will soon be removed
