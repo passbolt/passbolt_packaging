@@ -8,11 +8,6 @@ almalinux-8-fs:
   variables:
     KITCHEN_JOB: filesystem-benchmarks-almalinux-8
 
-fedora-36-fs:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: filesystem-benchmarks-fedora-36
-
 fedora-37-fs:
   extends: .kitchen-test-yum
   variables:

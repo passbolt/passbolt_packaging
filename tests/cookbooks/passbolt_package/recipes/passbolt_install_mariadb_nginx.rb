@@ -22,7 +22,7 @@ if platform_family?('debian')
     command "service #{database_engine} start"
     action  :run
   end
-elsif platform_family?('rhel', 'suse')
+elsif platform_family?('rhel')
   if platform_family?('rhel', 'fedora')
     package 'RHEL: Install dependencies' do
       package_name ['bc']
@@ -37,6 +37,11 @@ elsif platform_family?('rhel', 'suse')
   package 'RHEL: Install mariadb and nginx' do
     flush_cache [:before] if platform_family?('rhel', 'fedora')
     package_name %w[nginx mariadb-server createrepo_c firewalld]
+    action :install
+  end
+elsif platform_family?('suse')
+  package 'Suse: Install mariadb and nginx' do
+    package_name %w[nginx mariadb createrepo_c firewalld]
     action :install
   end
 end

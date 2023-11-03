@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/passbolt/passbolt-packaging/compare/1.2.0...HEAD)
+## [Unreleased](https://github.com/passbolt/passbolt-packaging/compare/2.0.0...HEAD)
+
+## [2.0.0] - 2023-10-03
+This release drops support for Fedora35 and Fedora36
+
+### Removed
+- fedora36 from testing pipelines
 
 ## [1.2.0] - 2023-08-24
 
