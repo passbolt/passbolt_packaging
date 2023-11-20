@@ -1,3 +1,6 @@
+* [4.4.1-test.3-1] Mon, 20 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-27616 Revert performance improvements as further investigation is required
+
 * [4.4.1-test.2-1] Mon, 20 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-28521 Alter the gpgkeys.uid column length to 769
 
