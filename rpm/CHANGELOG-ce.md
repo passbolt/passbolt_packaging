@@ -1,4 +1,7 @@
-* [4.4.1-test.1-1] Fri, 17 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+* [4.4.1-test.2-1] Mon, 20 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-28521 Alter the gpgkeys.uid column length to 769
+
+* [4.4.1-test.1-1] Mon, 20 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-27616 As a user I should see improved performances when retrieving resources on the GET resources.json entry point
 - PB-27957 As an administrator I should be notified that an administrator was deleted only when an administrator has been deleted, and not a regular user
 - PB-27927 The unused user_agents table is now removed from the database

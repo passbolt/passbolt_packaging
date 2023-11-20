@@ -1,10 +1,15 @@
+passbolt-ce-server (4.4.1-test.2-1) buster; urgency=medium
+  * PB-28521 Alter the gpgkeys.uid column length to 769
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 20 Nov 2023 08:40:25 +0000
+
 passbolt-ce-server (4.4.1-test.1-1) buster; urgency=medium
   * PB-27616 As a user I should see improved performances when retrieving resources on the GET resources.json entry point
   * PB-27957 As an administrator I should be notified that an administrator was deleted only when an administrator has been deleted, and not a regular user
   * PB-27927 The unused user_agents table is now removed from the database
   * PB-28616 The email digest plugin code was deeply refactored for enhanced usage and maintainability
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 17 Nov 2023 18:29:20 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 20 Nov 2023 08:40:25 +0000
 
 passbolt-ce-server (4.4.0-1) buster; urgency=medium
   * PB-27773 As an administrator I can deny access to the mobile setup screen with RBAC
