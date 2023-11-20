@@ -1,3 +1,6 @@
+* [4.4.1-test.3-1] Mon, 20 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-27616 Revert performance improvements as further investigation is required
+
 * [4.4.1-test.1-1] Mon, 20 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-27616 As a user I should see improved performances when retrieving resources on the GET resources.json entry point
 - PB-28521 Alter the gpgkeys.uid column length to 769 to enable the synchronisation of user with very long names
