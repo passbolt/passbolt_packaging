@@ -1,4 +1,8 @@
-* [4.4.2-test.1-1] Mon, 27 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+* [4.4.2-1] Wed, 29 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-27616 As a user I should see improved performances when retrieving resources on the GET resources.json entry point
+- PB-28991 As a user emails should be resent if the first attempt failed
+
+* [4.4.2-test.1-1] Wed, 29 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-27616 As a user I should see improved performances when retrieving resources on the GET resources.json entry point
 
 * [4.4.1-1] Tue, 21 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
