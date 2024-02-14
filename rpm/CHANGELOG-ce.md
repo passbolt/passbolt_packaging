@@ -1,4 +1,14 @@
-* [4.5.2-test.1-1] Tue, 13 Feb 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.5.2-1] Wed, 14 Feb 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-29621 As a user I should get a 400 if the locale passed in the URL is not a string
+- PB-28867 As a user I should see an improved performance when requesting the folder index endpoint
+- PB-28635 As an administrator I can disable the email digest without having to change the command sending the emails
+- PB-29680 Bump dependency composer/composer to v2.7.0
+- PB-29109 Support PHP 8.3 for passbolt API
+- PB-29376 GITHUB-506 Bump dependency duosecurity/duo_universal_php to 1.0.2 (#506)
+- PB-29514 Fix password expiry test which randomly fails
+- PB-29625 Fix CI to support latest composer dependency version
+
+* [4.5.2-test.1-1] Wed, 14 Feb 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-29621 As a user I should get a 400 if the locale passed in the URL is not a string
 - PB-28867 Fix folder serialization performance
 - PB-28635 As a user I want to use one single command to send emails
