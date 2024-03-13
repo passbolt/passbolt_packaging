@@ -1,4 +1,7 @@
-* [4.6.0-rc.1-1] Tue, 12 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.6.0-rc.2-1] Wed, 13 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-30182 Build the styleguide on version 4.6.1
+
+* [4.6.0-test.1-1] Wed, 13 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24485 As an administrator I can view the API healthcheck in the administration section
 - PB-29396 As an administrator I can hide the share folder capability with a RBAC
 - PB-25463 As an administrator I can disable the healthcheck index endpoint with a flag
@@ -21,7 +24,7 @@
 - PB-27709 As an administrator I should not get an error updating directory sync settings after a server key rotation
 - PB-28247 Update cakephp/cakephp to version 4.5
 
-* [4.6.0-test.1-1] Tue, 12 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.6.0-rc.1-1] Tue, 12 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-24485 As an administrator I can view the API healthcheck in the administration section
 - PB-29396 As an administrator I can hide the share folder capability with a RBAC
 - PB-25463 As an administrator I can disable the healthcheck index endpoint with a flag
