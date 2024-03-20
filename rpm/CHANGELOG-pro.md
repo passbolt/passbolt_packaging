@@ -1,4 +1,168 @@
-* [4.4.0-rc.1-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+* [4.6.0-1] Thu, 14 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24485 As an administrator I can view the API healthcheck in the administration section
+- PB-29396 As an administrator I can hide the share folder capability with a RBAC
+- PB-25463 As an administrator I can disable the healthcheck index endpoint with a flag
+- PB-29397 As an administrator I can disable the healthcheck administration panel with a flag
+- PB-29050 As a user I can identify with Microsoft ADFS SSO provider
+- PB-29050 As an administrator I can enable Microsoft ADFS as SSO provider
+- PB-29009 As an administrator completing my setup I should not receive a notification that I completed my setup
+- PB-26152 The API should identify openpgpjs v5.10 revoked key as revoked
+- PB-29437 As an administrator I can log internal errors with the complete trace in Json format
+- PB-29188 As an administrator I can see log statements on token claim errors triggered by SSO authentication
+- PB-29206 As an administrator I can disable ssl peer certification verification on SSO authentication
+- PB-29206 As an administrator I can define a cafile for self-signed certificate ssl on SSO authentication
+- PB-30155 Update phpseclib/phpseclib to fix composer security vulnerability
+- PB-30019 As a user I should not get a 500 when editing a user with payload containing integers as fields
+- PB-29964 As an administrator disabling a user I should not get a 500 if the disabled date is not valid
+- PB-29970 As a group manager I should receive an accurate summary in my notifications on group permission changes
+- PB-29054 As an administrator I should not get an error when running the cleanup command and the users table does not exist
+- PB-28719 As an administrator sending emails the timezone displayed in the emails should be in the correct time zone
+- PB-30266 As an administrator sending emails with the email digest the message ID should be defined
+- PB-27709 As an administrator I should not get an error updating directory sync settings after a server key rotation
+- PB-28247 Update cakephp/cakephp to version 4.5
+
+* [4.6.0-test.1-1] Thu, 14 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24485 As an administrator I can view the API healthcheck in the administration section
+- PB-29396 As an administrator I can hide the share folder capability with a RBAC
+- PB-25463 As an administrator I can disable the healthcheck index endpoint with a flag
+- PB-29397 As an administrator I can disable the healthcheck administration panel with a flag
+- PB-29050 As a user I can identify with Microsoft ADFS SSO provider
+- PB-29050 As an administrator I can enable Microsoft ADFS as SSO provider
+- PB-29009 As an administrator completing my setup I should not receive a notification that I completed my setup
+- PB-26152 The API should identify openpgpjs v5.10 revoked key as revoked
+- PB-29437 As an administrator I can log internal errors with the complete trace in Json format
+- PB-29188 As an administrator I can see log statements on token claim errors triggered by SSO authentication
+- PB-29206 As an administrator I can disable ssl peer certification verification on SSO authentication
+- PB-29206 As an administrator I can define a cafile for self-signed certificate ssl on SSO authentication
+- PB-30155 Update phpseclib/phpseclib to fix composer security vulnerability
+- PB-30019 As a user I should not get a 500 when editing a user with payload containing integers as fields
+- PB-29964 As an administrator disabling a user I should not get a 500 if the disabled date is not valid
+- PB-29970 As a group manager I should receive an accurate summary in my notifications on group permission changes
+- PB-29054 As an administrator I should not get an error when running the cleanup command and the users table does not exist
+- PB-28719 As an administrator sending emails the timezone displayed in the emails should be in the correct time zone
+- PB-30266 As an administrator sending emails with the email digest the message ID should be defined
+- PB-27709 As an administrator I should not get an error updating directory sync settings after a server key rotation
+- PB-28247 Update cakephp/cakephp to version 4.5
+
+* [4.6.0-rc.2-1] Wed, 13 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-30182 Build the styleguide on version 4.6.1
+
+* [4.6.0-rc.1-1] Tue, 12 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-24485 As an administrator I can view the API healthcheck in the administration section
+- PB-29396 As an administrator I can hide the share folder capability with a RBAC
+- PB-25463 As an administrator I can disable the healthcheck index endpoint with a flag
+- PB-29397 As an administrator I can disable the healthcheck administration panel with a flag
+- PB-29050 As a user I can identify with Microsoft ADFS SSO provider
+- PB-29050 As an administrator I can enable Microsoft ADFS as SSO provider
+- PB-29009 As an administrator completing my setup I should not receive a notification that I completed my setup
+- PB-26152 The API should identify openpgpjs v5.10 revoked key as revoked
+- PB-29437 As an administrator I can log internal errors with the complete trace in Json format
+- PB-29188 As an administrator I can see log statements on token claim errors triggered by SSO authentication
+- PB-29206 As an administrator I can disable ssl peer certification verification on SSO authentication
+- PB-29206 As an administrator I can define a cafile for self-signed certificate ssl on SSO authentication
+- PB-30155 Update phpseclib/phpseclib to fix composer security vulnerability
+- PB-30019 As a user I should not get a 500 when editing a user with payload containing integers as fields
+- PB-29964 As an administrator disabling a user I should not get a 500 if the disabled date is not valid
+- PB-29970 As a group manager I should receive an accurate summary in my notifications on group permission changes
+- PB-29054 As an administrator I should not get an error when running the cleanup command and the users table does not exist
+- PB-28719 As an administrator sending emails the timezone displayed in the emails should be in the correct time zone
+- PB-30266 As an administrator sending emails with the email digest the message ID should be defined
+- PB-27709 As an administrator I should not get an error updating directory sync settings after a server key rotation
+- PB-28247 Update cakephp/cakephp to version 4.5
+
+* [4.5.2-1] Wed, 14 Feb 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-29621 As a user I should get a 400 if the locale passed in the URL is not a string
+- PB-29526 As an administrator I should be notified of group removal when the operation is performed by a users directory synchronization
+- PB-28867 As a user I should see an improved performance when requesting the folder index endpoint
+- PB-28635 As an administrator I can disable the email digest without having to change the command sending the emails
+- PB-29680 Bump dependency composer/composer to v2.7.0
+- PB-29109 Support PHP 8.3 for passbolt API
+- PB-29376 GITHUB-506 Bump dependency duosecurity/duo_universal_php to 1.0.2 (#506)
+- PB-29514 Fix password expiry test which randomly fails
+- PB-29625 Fix CI to support latest composer dependency version
+
+* [4.5.0-1] Thu, 08 Feb 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-23913 As a user I can define the expiry date of a password
+- PB-23913 As an administrator I can define advanced password expiry settings
+- PB-23913 As a user I can see my passwords marked as expired when users lose permissions on these
+- PB-23913 As an administrator I can activate the password expiry feature
+- PB-28923 As a user I want to be able to use passbolt in Russian
+- PB-21484 As an administrator I can define Microsoft 365 and Outlook providers in SMTP settings
+- PB-19652 As an administrator I can cleanup groups with no members with the cleanup command
+- PB-27707 As administrator, with RBAC I should be able to set “can see users workspace” to “Allow if group manager”
+- PB-28716 Desktop application flag is now enabled by default
+- PB-26203 Desktop app define the account kit exportation help page
+- PB-28521 Add migration to alter gpgkeys.uid column length to 769
+- PB-27616 Improve resources serialization performance on GET resources.json
+- PB-27760 As administrator, I can hide the administrator identity behind LDAP triggered emails
+- PB-29148 Bump selenium API plugin version to v4.5
+- PB-29005 Upgrades phpseclib/phpseclib to fix composer audit security vulnerability
+- PB-22336 As an admin I should be able to enable/disable request group managers to add users to groups emails separately (LDAP/AD)
+- PB-28871 Mitigate supply chain attack on PR and lint lock files
+- PB-28658 Mitigate supply chain attack on post npm install script
+- PB-27788 Correct gendered language on ldap sync ignore messages
+- PB-29200 Fixes the recover_user command (GITHUB #504)
+- PB-29164 Fix recent InstallCommand changes breaking selenium tests
+- PB-29132 Fix composer lock file not up-to-date message when installing dependencies
+- PB-29160 Fix failing static analysis job in CI
+- PB-29137 Fix failing in UsersEditDisableControllerTest file due to purifier
+- PB-29113 Fix a typo in the email sent when admins lose their admin role
+- PB-28130 Fix invalid cookie name should not trigger a 500
+- PB-29007 Fix constantly failing test in RbacsUpdateControllerTest file
+- PB-28991 Fix email queue entries not marked as sent
+- PB-28857 Require phpunit-speedtrap to track down slow tests
+- PB-25516 Remove --dev from .gitlab test options, it has not effect and will break with composer v3
+- PB-28844 Improves the methods testing email content
+- PB-28845 Skip unauthenticated exception from logging
+- PB-28653 Speed-up tests by mocking the client in healthcheck relevant tests
+
+* [4.5.0-rc.1-1] Thu, 01 Feb 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-23913 As a user I can define the expiry date of a password
+- PB-23913 As an administrator I can define advanced password expiry settings
+- PB-23913 As a user I can see my passwords marked as expired when users lose permissions on these
+- PB-23913 As an administrator I can activate the password expiry feature
+- PB-28923 As a user I want to be able to use passbolt in Russian
+- PB-21484 As an administrator I can define Microsoft 365 and Outlook providers in SMTP settings
+- PB-19652 As an administrator I can cleanup groups with no members with the cleanup command
+- PB-27707 As administrator, with RBAC I should be able to set “can see users workspace” to “Allow if group manager”
+- PB-28716 Desktop application flag is now enabled by default
+- PB-26203 Desktop app define the account kit exportation help page
+- PB-28521 Add migration to alter gpgkeys.uid column length to 769
+- PB-27616 Improve resources serialization performance on GET resources.json
+- PB-27760 As administrator, I can hide the administrator identity behind LDAP triggered emails
+- PB-29148 Bump selenium API plugin version to v4.5
+- PB-29005 Upgrades phpseclib/phpseclib to fix composer audit security vulnerability
+- PB-22336 As an admin I should be able to enable/disable request group managers to add users to groups emails separately (LDAP/AD)
+- PB-28871 Mitigate supply chain attack on PR and lint lock files
+- PB-28658 Mitigate supply chain attack on post npm install script
+- PB-27788 Correct gendered language on ldap sync ignore messages
+- PB-29200 Fixes the recover_user command (GITHUB #504)
+- PB-29164 Fix recent InstallCommand changes breaking selenium tests
+- PB-29132 Fix composer lock file not up-to-date message when installing dependencies
+- PB-29160 Fix failing static analysis job in CI
+- PB-29137 Fix failing in UsersEditDisableControllerTest file due to purifier
+- PB-29113 Fix a typo in the email sent when admins lose their admin role
+- PB-28130 Fix invalid cookie name should not trigger a 500
+- PB-29007 Fix constantly failing test in RbacsUpdateControllerTest file
+- PB-28991 Fix email queue entries not marked as sent
+- PB-28857 Require phpunit-speedtrap to track down slow tests
+- PB-25516 Remove --dev from .gitlab test options, it has not effect and will break with composer v3
+- PB-28844 Improves the methods testing email content
+- PB-28845 Skip unauthenticated exception from logging
+- PB-28653 Speed-up tests by mocking the client in healthcheck relevant tests
+
+* [4.4.2-1] Wed, 29 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-27616 As a user I should see improved performances when retrieving resources on the GET resources.json entry point
+- PB-28991 As a user emails should be resent if the first attempt failed
+
+* [4.4.1-1] Tue, 21 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+- PB-28521 Alter the gpgkeys.uid column length to 769 to enable the synchronisation of user with very long names
+- PB-28728 Fix SSO Azure response_mode should be set to query by default to avoid session cookie SameSite issue
+- PB-27957 As an administrator I should be notified that an administrator was deleted only when an administrator has been deleted, and not a regular user
+- PB-27927 Remove unused user_agents table
+- PB-28616 Refactor the email digest plugin code for easier usage and maintainability
+
+* [4.4.0-1] Tue, 07 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-27950 As a user I can use generic OAuth2 as single sign on provider
 - PB-27773 As an administrator I can deny access to the mobile setup screen with RBAC
 - PB-27951 As system operator I should be warned in the healthcheck when using PHP < 8.1, as support for PHP versions 7.4 and 8.0 will soon be removed
@@ -16,10 +180,7 @@
 - PB-27932 Improve code static by using cakedccakephp/phpstan
 - PB-28079 Remove deprecation warnings from the test suite
 
-* [4.4.0-test.2-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
-- PB-28482 Styleguide version bump to v4.4.0
-
-* [4.4.0-test.1-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
+* [4.4.0-rc.1-1] Fri, 03 Nov 2023 Passbolt SA package signing key <contact@passbolt.com>
 - PB-27950 As a user I can use generic OAuth2 as single sign on provider
 - PB-27773 As an administrator I can deny access to the mobile setup screen with RBAC
 - PB-27951 As system operator I should be warned in the healthcheck when using PHP < 8.1, as support for PHP versions 7.4 and 8.0 will soon be removed
@@ -31,7 +192,7 @@
 - PB-28274 Fixes an XSS Security issue with mail content sanitization
 - PB-26158 As an administrator I should be able to use the memberof LDAP filter following with a ldap-query
 - PB-27895 Fixes a wrong user passphrase policy URL in email the email sent after setting edition
-- PB-25477 As an administrator, I should be able to recreate a user with an email that exists in the db
+- PB-25477 As an administrator, I should be able to recreate a user with an email that exists in the db via the command line
 - PB-27799 As an administrator installing passbolt on PostgreSQL, the database encoding should be set to utf-8
 - PB-27857 Fix help site release notes automation by adding flavour on help site release notes merge request
 - PB-27932 Improve code static by using cakedccakephp/phpstan
