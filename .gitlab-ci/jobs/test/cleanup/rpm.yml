@@ -8,11 +8,6 @@ almalinux-8-purge:
   variables:
     KITCHEN_JOB: purge-benchmarks-almalinux-8
 
-fedora-37-purge:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: purge-benchmarks-fedora-37
-
 fedora-38-purge:
   extends: .kitchen-test-yum
   variables:
