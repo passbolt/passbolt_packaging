@@ -1,7 +1,12 @@
+passbolt-ce-server (4.6.1-1) buster; urgency=medium
+  * PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 27 Mar 2024 11:17:03 +0000
+
 passbolt-ce-server (4.6.1-test.1-1) buster; urgency=medium
   * PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 26 Mar 2024 12:11:33 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 27 Mar 2024 11:17:03 +0000
 
 passbolt-ce-server (4.6.0-1) buster; urgency=medium
   * PB-24485 As an administrator I can view the API healthcheck in the administration section
