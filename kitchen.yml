@@ -6,9 +6,9 @@ lifecycle:
 
 driver:
   name: dokken
-  creds_file: "/tmp/creds.json"
-  chef_image: chef
-  docker_registry: registry.gitlab.com/passbolt/passbolt-ci-docker-images
+  creds_file: <%= ENV['LOCAL_CREDS'] || "/tmp/creds.json" %>
+  chef_image: chef/chef
+  docker_registry: <%= ENV['CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX'] || "docker.io" %>
   volumes:
     - <%= ENV['PWD'] %>/api:/app/passbolt
 
@@ -31,59 +31,54 @@ verifier:
 platforms:
   - name: debian-bookworm
     driver:
-      image: debian-bookworm-12
+      image: debian:stable
   - name: debian-bullseye
     driver:
-      image: debian-bullseye-11
+      image: debian:oldstable
   - name: ubuntu-20.04
     driver:
-      image: ubuntu-focal-2004
+      image: ubuntu:20.04
   - name: ubuntu-22.04
     driver:
-      image: ubuntu-jammy-2204
+      image: ubuntu:22.04
   - name: centos-7
     driver:
-      image: centos-7
+      image: dokken/centos-7:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: oraclelinux-8
     driver:
-      image: oraclelinux-8
+      image: dokken/oraclelinux-8:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: oraclelinux-7
     driver:
-      image: oraclelinux-7
+      image: dokken/oraclelinux-7:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: almalinux-8
     driver:
-      image: almalinux-8
+      image: dokken/almalinux-8:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: rockylinux-8
     driver:
-      image: rockylinux-8
+      image: dokken/rockylinux-8:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: rockylinux-9
     driver:
-      image: rockylinux-9
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
-  - name: fedora-37
-    driver:
-      image: fedora-37
+      image: dokken/rockylinux-9:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: fedora-38
     driver:
-      image: fedora-38
+      image: dokken/fedora-38:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: opensuse-leap-15
     driver:
-      image: opensuse-leap-15
+      image: dokken/opensuse-leap-15:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
 

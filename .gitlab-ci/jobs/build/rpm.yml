@@ -13,7 +13,7 @@
 
 .build-rpm:
   extends: .rules
-  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/rockylinux-8:latest
+  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/dokken/rockylinux-8:latest
   stage: build
   dependencies:
     - composer
@@ -26,7 +26,7 @@
 
 .build-zypper:
   extends: .rules
-  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/opensuse-leap-15:latest
+  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/dokken/opensuse-leap-15:latest
   stage: build
   dependencies:
     - composer
@@ -56,7 +56,7 @@ build-yum:
 
 build-yum-7:
   extends: .build-rpm
-  image: centos:7
+  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/dokken/centos-7:latest
   variables:
     DEPENDENCIES: "rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc createrepo_c firewalld"
   script:
