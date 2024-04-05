@@ -12,12 +12,12 @@ set -eo pipefail
 #fi
 
 if [ ! -d api ]; then
-  git clone -b "${API_CLONE_BRANCH}" git@gitlab.com:passbolt/passbolt-"${PASSBOLT_FLAVOUR}"-api.git api
+	git clone -b "${API_CLONE_BRANCH}" git@gitlab.com:passbolt/passbolt-"${PASSBOLT_FLAVOUR}"-api.git api
 fi
 
 if [ -z "${GITLAB_CI+xxx}" ]; then
-  echo "Copying files to api build directory"
-  rsync -azh ./ ./api --exclude api
-  cp api/debian/changelog{-"$PASSBOLT_FLAVOUR",}
-  cp api/rpm/CHANGELOG{-"$PASSBOLT_FLAVOUR",}.md
+	echo "Copying files to api build directory"
+	rsync -azh ./ ./api --exclude api
+	cp api/debian/changelog{-"$PASSBOLT_FLAVOUR",}
+	cp api/rpm/CHANGELOG{-"$PASSBOLT_FLAVOUR",}.md
 fi

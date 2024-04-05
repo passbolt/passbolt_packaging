@@ -1,20 +1,22 @@
 .kitchen-test:
   extends: .rules
-  image: registry.gitlab.com/passbolt/passbolt-ci-docker-images/ruby:latest
+  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/ruby:slim-bookworm
   stage: test
   script:
-    - apt update && apt install rsync build-essential openssh-client -y
-    - gem install bundler:2.4.5
-    - bundle install
-    - cat $GL_REGISTRY_CREDS > /tmp/creds.json
-    - ls -lash api
-    - pwd
-    - bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug
+    - |
+      apt update && apt install rsync openssh-client -y
+      gem install bundler:2.4.5
+      bundle config set --local path .bundle
+      bundle install
+      echo "{\"username\": \"$CI_DEPENDENCY_PROXY_USER\", \"password\": \"$CI_DEPENDENCY_PROXY_PASSWORD\", \"serveraddress\": \"$CI_DEPENDENCY_PROXY_SERVER\" }" > /tmp/creds.json
+      bundle exec kitchen verify $KITCHEN_JOB -t tests/integration -l debug
 
 .kitchen-test-debian:
   extends: .kitchen-test
   needs:
     - job: composer
+      artifacts: true
+    - job: rubygems
       artifacts: true
     - job: build-debian
       artifacts: true
@@ -24,6 +26,8 @@
   needs:
     - job: composer
       artifacts: true
+    - job: rubygems
+      artifacts: true
     - job: build-yum
       artifacts: true
 
@@ -32,6 +36,8 @@
   needs:
     - job: composer
       artifacts: true
+    - job: rubygems
+      artifacts: true
     - job: build-yum-7
       artifacts: true
 
@@ -39,6 +45,8 @@
   extends: .kitchen-test
   needs:
     - job: composer
+      artifacts: true
+    - job: rubygems
       artifacts: true
     - job: build-suse
       artifacts: true
