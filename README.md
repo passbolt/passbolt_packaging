@@ -12,7 +12,6 @@ This repo relies on kitchen-ci to run automated tests on multiple target distrib
 - docker
 - ruby
 - bundler
-- Valid credentials for private registry in creds.json
 
 Install the dependencies with bundler:
 
