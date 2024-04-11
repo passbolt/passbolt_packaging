@@ -28,7 +28,7 @@ build-debian:
       # https://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1960569.html
       echo "deb http://deb.debian.org/debian/ stable main contrib" > /etc/apt/sources.list && rm /etc/apt/sources.list.d/debian.sources
       apt-get update
-      apt-get install -y rsync git-buildpackage devscripts apt-utils debconf-utils fakeroot equivs cdbs
+      apt-get install -y rsync git-buildpackage devscripts apt-utils debconf-utils fakeroot equivs cdbs curl
       mv debian/changelog{-$PASSBOLT_FLAVOUR,}
       mv rpm/CHANGELOG{-$PASSBOLT_FLAVOUR,}.md
       rsync -azh ./ ./api --exclude api
