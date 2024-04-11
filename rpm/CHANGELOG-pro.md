@@ -1,7 +1,7 @@
-* [4.6.1-1] Wed, 27 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
-- PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
+* [4.6.2-test.2-1] Thu, 11 Apr 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-32932 Fix error template title
 
-* [4.6.1-test.1-1] Wed, 27 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.6.1-1] Wed, 27 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
 
 * [4.6.0-1] Thu, 14 Mar 2024 Passbolt SA package signing key <contact@passbolt.com>

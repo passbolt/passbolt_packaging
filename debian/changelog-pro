@@ -1,9 +1,9 @@
+passbolt-pro-server (4.6.2-test.2-1) buster; urgency=medium
+  * PB-32932 Fix error template title
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 11 Apr 2024 13:33:49 +0000
+
 passbolt-pro-server (4.6.1-1) buster; urgency=medium
-  * PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
-
- -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 27 Mar 2024 11:49:28 +0000
-
-passbolt-pro-server (4.6.1-test.1-1) buster; urgency=medium
   * PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
 
  -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 27 Mar 2024 11:49:28 +0000
