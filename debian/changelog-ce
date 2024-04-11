@@ -1,7 +1,12 @@
+passbolt-ce-server (4.6.2-1) buster; urgency=medium
+  * PB-32932 Fix error template title
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 11 Apr 2024 16:04:01 +0000
+
 passbolt-ce-server (4.6.2-test.2-1) buster; urgency=medium
   * PB-32932 Fix error template title
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 11 Apr 2024 12:49:16 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 11 Apr 2024 16:04:01 +0000
 
 passbolt-ce-server (4.6.1-1) buster; urgency=medium
   * PB-32354 As an admin, I can re-enable a suspended user (GITHUB #512)
