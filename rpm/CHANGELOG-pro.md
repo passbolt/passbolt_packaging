@@ -1,3 +1,6 @@
+* [4.6.2-1] Thu, 11 Apr 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-32932 Fix error template title
+
 * [4.6.2-test.2-1] Thu, 11 Apr 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-32932 Fix error template title
 
