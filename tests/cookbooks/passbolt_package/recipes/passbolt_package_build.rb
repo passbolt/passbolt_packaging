@@ -32,9 +32,6 @@ if platform_family?('debian') && Dir.glob("#{node['dest_dir']}/passbolt-*.deb").
     cwd node['dest_dir'].to_s
     command "export PASSBOLT_FLAVOUR=#{node['passbolt_flavour']} \
                && make -f debian/rules debian/control \
-               && export EMAIL=test-noreply@passbolt.com \
-               && git config --global --add safe.directory /app/passbolt \
-               && gbp dch --snapshot --snapshot-number=$(date +%s) --ignore-branch >/dev/null 2>&1 \
                && mk-build-deps -irt'apt-get --no-install-recommends -yV' debian/control && dpkg-checkbuilddeps \
                && debuild --preserve-envvar PASSBOLT_FLAVOUR --preserve-envvar PASSBOLT_COMPONENT -us -uc -b -i -I  \
                && cp ../*.deb . \
