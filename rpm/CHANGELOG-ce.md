@@ -1,4 +1,7 @@
-* [4.7.0-test.1-1] Wed, 24 Apr 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.7.0-test.2-1] Fri, 26 Apr 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-33084 New release with fixed release pipes
+
+* [4.7.0-test.1-1] Fri, 26 Apr 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-30330 Add HTTP HEAD method support to /healthcheck/status.json to support more uptime monitoring tools (GITHUB #507)
 - PB-26156 As an administrator I can configure SMTP to use TLS with a self-signed cert on my mail server (GITHUB #498)
 - PB-30255 As an authenticated user I cannot access to the healthcheck endpoint when debug is on
