@@ -1,4 +1,4 @@
-* [4.8.0-rc.1-1] Fri, 17 May 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.8.0-1] Tue, 21 May 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-33071 As an administrator I can purge the action logs table with a dedicated command
 - PB-33231 As an administrator I want to know if a custom certificate is in use for SMTP
 - PB-32579 As an administrator I can view email_queue records via passbolt command
@@ -9,7 +9,18 @@
 - PB-33234 The application should not throw an error if the JWT public key is not parsable
 - PB-30314 Bump passbolt/passbolt-test-data to v4.8
 
-* [4.8.0-test.1-1] Fri, 17 May 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.8.0-test.1-1] Tue, 21 May 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-33071 As an administrator I can purge the action logs table with a dedicated command
+- PB-33231 As an administrator I want to know if a custom certificate is in use for SMTP
+- PB-32579 As an administrator I can view email_queue records via passbolt command
+- PB-32888 As an admin I should not get a time-out on health checks on air-gapped network
+- PB-32983 Access email settings only when emails are sent
+- PB-33451 Fix 500 error on authentication when nonce is not a string
+- PB-33073 As a user logging in, invalid login operation should not be logged as success in the audit logs
+- PB-33234 The application should not throw an error if the JWT public key is not parsable
+- PB-30314 Bump passbolt/passbolt-test-data to v4.8
+
+* [4.8.0-rc.1-1] Fri, 17 May 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-33071 As an administrator I can purge the action logs table with a dedicated command
 - PB-33231 As an administrator I want to know if a custom certificate is in use for SMTP
 - PB-32579 As an administrator I can view email_queue records via passbolt command
