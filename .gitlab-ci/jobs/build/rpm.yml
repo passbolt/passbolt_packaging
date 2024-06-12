@@ -21,7 +21,7 @@
     paths:
       - "api/*.rpm"
       - "api/rpm/scripts/*"
-      - "api/tests/scripts/*"
+      - "api/tests/fixtures/*"
     expire_in: 1 week
     when: on_success
 
@@ -35,7 +35,7 @@
     paths:
       - "api/*.rpm"
       - "api/rpm/scripts/*"
-      - "api/tests/scripts/*"
+      - "api/tests/fixtures/*"
     expire_in: 1 week
     when: on_success
 
