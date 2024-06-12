@@ -30,7 +30,7 @@ elsif platform_family?('rhel')
     end
     execute 'Setup EPEL repository' do
       cwd node['dest_dir'].to_s
-      command  '/bin/sh rpm/scripts/setup-epel.sh'
+      command  '/bin/sh tests/scripts/setup-epel.sh'
       action   :run
     end
   end
