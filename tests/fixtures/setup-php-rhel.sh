@@ -19,7 +19,7 @@ then
     fi
     yum install yum-utils -y
     yum-config-manager --disable 'remi-php*' -y
-    yum-config-manager --enable   remi-php74 -y
+    yum-config-manager --enable   remi-php81 -y
 elif [ ${OS_VERSION_MAJOR} -eq 8 ]
 then
     dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
@@ -28,7 +28,7 @@ then
       yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
     fi
     dnf module reset php -y
-    dnf module install php:remi-7.4 -y
+    dnf module install php:remi-8.1 -y
 elif [ ${OS_VERSION_MAJOR} -eq 9 ]
 then
     dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
