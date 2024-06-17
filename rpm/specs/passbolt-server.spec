@@ -115,7 +115,12 @@ sed -i 's/@@NGINX_USER@@/%{_nginx_user}/g' %{_sysconfdir}/cron.d/passbolt-%{_pas
 
 if [ -f /usr/bin/zypper ]
 then
-  echo "extension=gnupg.so" > /etc/php8/conf.d/gnupg.ini
+  php_version=7
+  if [[ `php -v` =~ 'PHP 8' ]]
+  then 
+    php_version=8
+  fi
+    echo "extension=gnupg.so" > /etc/php${php_version}/conf.d/gnupg.ini
 fi
 
 set_jwt_keys() {
