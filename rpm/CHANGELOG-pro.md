@@ -1,3 +1,8 @@
+* [4.8.0-2] Tue, 18 Jun 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-33812 OpenSUSE pipeline php issues
+- PB-33719 As an administrator I can install on RPM systems without Remi Repo
+- Remove php-redis dependency
+
 * [4.8.0-1] Tue, 21 May 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-33071 As an administrator I can purge the action logs table with a dedicated command
 - PB-33231 As an administrator I want to know if a custom certificate is in use for SMTP
