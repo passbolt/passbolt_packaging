@@ -1,0 +1,30 @@
+.build-php-gnupg:
+  extends: .rules
+  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/rockylinux/rockylinux:9
+  stage: build
+  allow_failure: true
+  script:
+    - bash rpm/scripts/build-php-gnupg.sh $PHP_VERSION
+    - mv /root/rpmbuild/RPMS/x86_64/php-pecl-gnupg-1.5.1*.rpm .
+  dependencies:
+    - composer
+  artifacts:
+    paths:
+      - "*.rpm"
+    expire_in: 1 week
+    when: on_success
+
+build-php-gnupg-80:
+  extends: .build-php-gnupg
+  variables:
+    PHP_VERSION: 8.0
+
+build-php-gnupg-81:
+  extends: .build-php-gnupg
+  variables:
+    PHP_VERSION: 8.1
+
+build-php-gnupg-82:
+  extends: .build-php-gnupg
+  variables:
+    PHP_VERSION: 8.2
