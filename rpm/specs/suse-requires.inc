@@ -15,7 +15,6 @@ Requires:       php-gnupg
 Requires:       php-posix >= 7.4
 Requires:       php-xmlreader >= 7.4
 Requires:       php-xmlwriter >= 7.4
-Requires:       php-redis
 %if "%{_passbolt_flavour}" == "pro"
 Requires:       php-ldap >= 7.4
 %endif
