@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/passbolt/passbolt-packaging/compare/2.0.0...HEAD)
 
+## [3.0.0] - 2024-06-18
+- Fix OpenSUSE pipeline issues with php versions
+- Add build and publish jobs for php-gnupg for RHEL
+- Remove support for Fedora37
+- Remove php-redis requirement for RPM packages
+
 ## [2.0.0] - 2023-10-03
 This release drops support for Fedora35 and Fedora36
 

@@ -36,3 +36,6 @@ include:
   - local: "/.gitlab-ci/jobs/publish/releases/notification_changelog.yml"
   - local: "/.gitlab-ci/jobs/publish/artifacts/docker.yml"
   - local: "/.gitlab-ci/jobs/publish/artifacts/vms.yml"
+  - local: "/.gitlab-ci/jobs/build/php_gnupg.yml"
+  - local: "/.gitlab-ci/jobs/publish/php_gnupg.yml"
+  - local: "/.gitlab-ci/jobs/publish/rpm_functions.yml"

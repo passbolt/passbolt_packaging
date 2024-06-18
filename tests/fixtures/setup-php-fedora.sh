@@ -14,7 +14,7 @@ fi
 
 dnf install -y dnf-plugins-core
 dnf module reset php -y
-dnf module install php:remi-7.4 -y
+dnf module install php:remi-8.1 -y
 dnf config-manager --set-enabled remi
 
 # pcre2 package needs to be upgraded to last version

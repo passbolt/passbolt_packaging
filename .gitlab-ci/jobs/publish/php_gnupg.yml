@@ -1,0 +1,13 @@
+publish-php-gnupg:
+  extends: .publish-rpm
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: manual
+  needs:
+    - job: "build-php-gnupg-80"
+    - job: "build-php-gnupg-81"
+    - job: "build-php-gnupg-82"
+      artifacts: true
+  variables:
+    PACKAGE_PATH: "php-pecl-gnupg"
+    PUBLISH_MESSAGE: ":rocket: php-gnupg $EL_VERSION package has been published"

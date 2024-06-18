@@ -20,13 +20,13 @@ elsif platform_family?('rhel', 'suse', 'fedora')
 
   execute 'Setup PHP repository' do
     cwd node['dest_dir'].to_s
-    command  "/bin/sh rpm/scripts/setup-php-#{node['platform_family']}.sh"
+    command  "/bin/sh tests/fixtures/setup-php-#{node['platform_family']}.sh"
     action   :run
   end
 
   execute 'Setup local repository' do
     cwd node['dest_dir'].to_s
-    command '/bin/sh rpm/scripts/setup-local-repository.sh'
+    command '/bin/sh tests/fixtures/setup-local-repository.sh'
     action :run
   end
 
