@@ -1,3 +1,6 @@
+* [4.8.0-3] Thu, 20 Jun 2024 Passbolt SA package signing key <contact@passbolt.com>
+- Fix RPM publishing job
+
 * [4.8.0-2] Tue, 18 Jun 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-33812 OpenSUSE pipeline php issues
 - PB-33719 As an administrator I can install on RPM systems without Remi Repo
