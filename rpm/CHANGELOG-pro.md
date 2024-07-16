@@ -1,3 +1,26 @@
+* [4.9.0-test.1-1] Tue, 16 Jul 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-33828 As an administrator I can define the deletion behaviour of users to suspended instead of deleted
+- PB-33014 As an administrator I want to know if TLS/SSL verification is disabled when connecting to LDAP server
+- PB-32284 As an administrator I can set the Default OpenID Connect param alg as optional as specified by the RFC
+- PB-33690 Improves response times by adding an index to gpgkeys.user_id column
+- PB-33639 Adds additional contain parameters to share/search-aros.json for enhanced performance
+- PB-33936 Adds a has-users filter to gpgkeys.json index endpoint
+- PB-33813 Adds a fixed limit to the search-aros.json endpoint
+- PB-33688 Improves the performance of tags.json index endpoint
+- PB-33650 Improves the performance of resources.json when retrieving tags
+- PB-33429 As a user I should retrieve resources and folders parent folders in a single query
+- PB-33826 Improves the performance of resources.json by improving the datetime fields processing
+- PB-24995 Improves last_logged_in property query performance to reduce response time of users.json endpoint
+- PB-33653 Improves is_mfa_enabled property query performance to reduce response time of users.json endpoint
+- PB-33702 Improves has-access filter performance on users.json
+- PB-32591 Validate passbolt.plugins.smtpSettings.security configuration values before passing it to SMTP server
+- PB-33214 Update sql export / improve mysql backup command compatibility with mariadb-dump
+- PB-33747 Fix command injections vulnerabilities in composer/composer package
+- PB-33427 As a user logging-in with Azure SSO I should not get a 500 if the secret is expired
+- PB-33881 Fixes a typo for the OAuth2 environment variable
+- PB-33616 As a user creating a resource I should get a validation error if the secret is a string and not an array
+- PB-33692 Bump enygma/yubikey to v3.8
+
 * [4.8.0-3] Thu, 20 Jun 2024 Passbolt SA package signing key <contact@passbolt.com>
 - Fix RPM publishing job
 
@@ -7,18 +30,6 @@
 - Remove php-redis dependency
 
 * [4.8.0-1] Tue, 21 May 2024 Passbolt SA package signing key <contact@passbolt.com>
-- PB-33071 As an administrator I can purge the action logs table with a dedicated command
-- PB-33231 As an administrator I want to know if a custom certificate is in use for SMTP
-- PB-32579 As an administrator I can view email_queue records via passbolt command
-- PB-30381 As administrator I want to be able to start a docker instance or pod instance even when my subscription key is expired
-- PB-32888 As an admin I should not get a time-out on health checks on air-gapped network
-- PB-32983 Access email settings only when emails are sent
-- PB-33451 Fix 500 error on authentication when nonce is not a string
-- PB-33073 As a user logging in, invalid login operation should not be logged as success in the audit logs
-- PB-33234 The application should not throw an error if the JWT public key is not parsable
-- PB-30314 Bump passbolt/passbolt-test-data to v4.8
-
-* [4.8.0-test.1-1] Tue, 21 May 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-33071 As an administrator I can purge the action logs table with a dedicated command
 - PB-33231 As an administrator I want to know if a custom certificate is in use for SMTP
 - PB-32579 As an administrator I can view email_queue records via passbolt command
