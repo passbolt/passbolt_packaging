@@ -18,6 +18,11 @@ ubuntu-2204-fs:
   variables:
     KITCHEN_JOB: filesystem-benchmarks-ubuntu-2204
 
+ubuntu-2404-fs:
+  extends: .kitchen-test-debian
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-ubuntu-2404
+
 debian-bullseye-purge:
   extends: .kitchen-test-debian
   variables:
@@ -32,3 +37,8 @@ ubuntu-2204-purge:
   extends: .kitchen-test-debian
   variables:
     KITCHEN_JOB: purge-benchmarks-ubuntu-2204
+
+ubuntu-2404-purge:
+  extends: .kitchen-test-debian
+  variables:
+    KITCHEN_JOB: purge-benchmarks-ubuntu-2404
