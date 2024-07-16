@@ -6,9 +6,15 @@ publish-yum-el8:
     - job: "almalinux-8-runtime"
     - job: "almalinux-8-purge"
     - job: "almalinux-8-fs"
-    - job: "fedora-38-runtime"
-    - job: "fedora-38-purge"
-    - job: "fedora-38-fs"
+    - job: "almalinux-9-runtime"
+    - job: "almalinux-9-purge"
+    - job: "almalinux-9-fs"
+    - job: "fedora-39-runtime"
+    - job: "fedora-39-purge"
+    - job: "fedora-39-fs"
+    - job: "fedora-40-runtime"
+    - job: "fedora-40-purge"
+    - job: "fedora-40-fs"
     - job: "oraclelinux-8-runtime"
     - job: "oraclelinux-8-purge"
     - job: "oraclelinux-8-fs"
@@ -19,18 +25,6 @@ publish-yum-el8:
     - job: "rockylinux-9-purge"
     - job: "rockylinux-9-fs"
     - job: build-yum
-      artifacts: true
-
-publish-yum-el7:
-  extends: .publish-rpm
-  variables:
-    EL_VERSION: "el7"
-    PACKAGE_PATH: "passbolt"
-  needs:
-    - job: "centos-7-runtime"
-    - job: "centos-7-purge"
-    - job: "centos-7-fs"
-    - job: build-yum-7
       artifacts: true
 
 publish-suse:

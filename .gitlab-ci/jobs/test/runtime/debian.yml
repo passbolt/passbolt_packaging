@@ -17,3 +17,8 @@ ubuntu-2204-runtime:
   extends: .kitchen-test-debian
   variables:
     KITCHEN_JOB: runtime-benchmarks-ubuntu-2204
+
+ubuntu-2404-runtime:
+  extends: .kitchen-test-debian
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-ubuntu-2404
