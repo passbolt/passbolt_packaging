@@ -31,16 +31,6 @@
     - job: build-yum
       artifacts: true
 
-.kitchen-test-yum-7:
-  extends: .kitchen-test
-  needs:
-    - job: composer
-      artifacts: true
-    - job: rubygems
-      artifacts: true
-    - job: build-yum-7
-      artifacts: true
-
 .kitchen-test-suse:
   extends: .kitchen-test
   needs:

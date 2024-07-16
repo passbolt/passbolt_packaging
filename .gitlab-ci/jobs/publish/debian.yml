@@ -45,4 +45,7 @@ publish-ubuntu:
     - job: "ubuntu-2204-runtime"
     - job: "ubuntu-2204-purge"
     - job: "ubuntu-2204-fs"
+    - job: "ubuntu-2404-runtime"
+    - job: "ubuntu-2404-purge"
+    - job: "ubuntu-2404-fs"
     - job: "build-debian"
