@@ -23,9 +23,6 @@ stages:
   - publish
   - publish-artifacts
 
-before_script:
-  - docker login -u $DEPENDENCY_PROXY_USER_TOKEN_NAME -p $DEPENDENCY_PROXY_TOKEN_PASSWORD $CI_DEPENDENCY_PROXY_SERVER
-
 include:
   - local: "/.gitlab-ci/jobs/build/dependencies.yml"
   - local: "/.gitlab-ci/jobs/build/debian.yml"
