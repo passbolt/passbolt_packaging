@@ -29,7 +29,7 @@ rubygems:
   rules:
     - if: '$CI_PIPELINE_SOURCE != "trigger"'
   variables:
-    PACKAGE_MANAGER_IMAGE: "${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/ruby:slim-bookworm"
+    PACKAGE_MANAGER_IMAGE: "${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/ruby"
     PACKAGE_MANAGER_PATH: .bundle
   script:
    - |
