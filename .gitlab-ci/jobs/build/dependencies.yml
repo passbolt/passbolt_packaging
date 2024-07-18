@@ -15,7 +15,7 @@ composer:
   rules:
     - if: '$CI_PIPELINE_SOURCE != "trigger"'
   variables:
-    PACKAGE_MANAGER_IMAGE: "${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/composer:latest"
+    PACKAGE_MANAGER_IMAGE: "${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/composer"
     PACKAGE_MANAGER_PATH: api/
   script:
     - |
