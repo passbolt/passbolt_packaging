@@ -7,7 +7,7 @@ ci-scripts-tests:
   rules:
     - if: $CI_PIPELINE_SOURCE == "trigger"
     - if: $CI_COMMIT_TAG
-    - if: $CI_COMMIT_TITLE != /:robot:*/
+    - if: $CI_COMMIT_TITLE !~ /:robot:*/
   script:
     - /root/.local/bin/shellspec -c .gitlab-ci/scripts -s /bin/bash -f d
   retry:
