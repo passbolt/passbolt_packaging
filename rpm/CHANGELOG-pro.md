@@ -1,3 +1,12 @@
+* [4.9.1-test.1-1] Mon, 12 Aug 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-34220 As a user I can search by users and groups case insensitively on PostgreSQL
+- PB-34246 As an administrator purging the action logs table, I can set a limit option (100k per default)
+- PB-34247 Adds a set of actions to be purged by the passbolt action_logs_purge command
+- PB-33939 As an administrator when running bin/cake passbolt -h, I should see all the passbolt commands listed
+- PB-32991 Optimizes CI pipeline run time on api repositories
+- PB-34219 Adds validation to retention days option in the action_logs_purge command
+- PB-33333 Refactor various tests to use fixture factories
+
 * [4.9.0-1] Tue, 23 Jul 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-33690 Improves response times by adding an index to gpgkeys.user_id column
 - PB-33639 Adds additional contain parameters to share/search-aros.json for enhanced performance
