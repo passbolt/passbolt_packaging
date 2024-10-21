@@ -1,10 +1,3 @@
-function is_valid_api_tag () {
-  if [[ ! $PASSBOLT_VERSION =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
-    echo "Invalid version format: $PASSBOLT_VERSION"
-    return 1
-  fi
-}
-
 function is_release_candidate () {
   local version=$1
   if [[ ! $version =~ [0-9]+\.[0-9]+\.[0-9]+-rc\.[0-9]+ ]];then
@@ -27,6 +20,14 @@ function is_stable_candidate () {
     return 1
   fi
   return 0
+}
+
+
+function is_valid_api_tag () {
+  if [[ ! $PASSBOLT_VERSION =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
+    echo "Invalid version format: $PASSBOLT_VERSION"
+    return 1
+  fi
 }
 
 function validate_config_version_and_api_tag () {
