@@ -1,4 +1,8 @@
-* [4.10.1-test.1-1] Mon, 25 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.10.1-1] Tue, 26 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-37010 Fix v5 resource types should not be returned if v5 flag is disabled
+- PB-37011 Fix session keys creation modified date validation to match ISO 8601 format
+
+* [4.10.1-test.1-1] Tue, 26 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-37010 Fix v5 resource types should not be returned if v5 flag is disabled
 - PB-37011 Fix session keys creation modified date validation to match ISO 8601 format
 
