@@ -642,8 +642,8 @@ setup_fpm() {
 	sed -i s:_WWW_GROUP_:"$WWW_GROUP": "$FPM_WWW_POOL"
 
 	if [ -f /usr/bin/zypper ]; then
-    if [ $PHP_VERSION == 7]; then
-		  cp /etc/php$PHP_VERSION/fpm/php-fpm.conf.default /etc/php$PHP_VERSION/fpm/php-fpm.conf
+    if [ $PHP_VERSION == 7 ]; then
+      cp /etc/php$PHP_VERSION/fpm/php-fpm.conf.default /etc/php$PHP_VERSION/fpm/php-fpm.conf
     fi
 		echo "extension=gnupg.so" >/etc/php$PHP_VERSION/conf.d/gnupg.ini
 		cat /etc/php$PHP_VERSION/conf.d/gnupg.ini
