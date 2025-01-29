@@ -570,7 +570,7 @@ setup_apparmor() {
 
     cp "$script_directory/conf/apparmor/php-fpm" "$APPARMOR_PHP_FPM"
     # Set firewall rules only if firewalld is running
-    if aa-status | grep 'apparmod module is loaded.'; then
+    if aa-status | grep 'apparmor module is loaded.'; then
       enable_service apparmor
     fi
   fi
@@ -798,7 +798,7 @@ get_php_version
 
 if [ -f /usr/bin/zypper ]; then
   readonly FPM_WWW_POOL="/etc/php$PHP_VERSION/fpm/php-fpm.d/www.conf"
-  readonly WWW_USER="www"
+  readonly WWW_USER="wwwrun"
   readonly WWW_GROUP="www"
 else
   readonly FPM_WWW_POOL="/etc/php-fpm.d/www.conf"
