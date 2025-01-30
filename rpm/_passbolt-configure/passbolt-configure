@@ -566,11 +566,10 @@ setup_firewall() {
 
 setup_apparmor() {
   if rpm -qa | grep apparmor >/dev/null; then
-    banner "Configuring apparmor rules for php-fpm"
-
-    cp "$script_directory/conf/apparmor/php-fpm" "$APPARMOR_PHP_FPM"
     # Set firewall rules only if firewalld is running
     if aa-status | grep 'apparmor module is loaded.'; then
+      banner "Configuring apparmor rules for php-fpm"
+      cp "$script_directory/conf/apparmor/php-fpm" "$APPARMOR_PHP_FPM"
       enable_service apparmor
     fi
   fi
