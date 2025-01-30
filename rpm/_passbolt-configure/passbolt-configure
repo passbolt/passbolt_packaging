@@ -703,7 +703,7 @@ setup_nginx() {
 # network or unix domain socket configuration
 
 upstream php-fpm {
-        server unix:/run/php-fpm/php-fpm.sock;
+        server unix:/run/php-fpm/www.sock;
 }
 EOF
   fi
