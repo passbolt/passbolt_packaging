@@ -3,9 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://gitlab.com/passbolt/passbolt-ops/passbolt-packaging/compare/4.0.0...HEAD)
+## [Unreleased](https://gitlab.com/passbolt/passbolt-ops/passbolt-packaging/compare/4.1.0...HEAD)
+
+## [4.1.0] - 2025-01-31
+
+- Add support for SLES
 
 ## [4.0.0] - 2024-07-16
+
 - Remove support for CentOS 7, OracleLinux 7, and Fedora 38
 - Add tests for Fedora 39/40, Almalinux/RockyLinux 9, and Ubuntu 24.04
 
