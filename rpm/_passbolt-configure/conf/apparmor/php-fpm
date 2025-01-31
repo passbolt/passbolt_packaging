@@ -28,6 +28,9 @@ owner /etc/passbolt/passbolt.php rwk,
 @{PROC}/@{pid}/fd/ r,
 @{PROC}/@{pid}/fd/** r,
 
+# php-fpm socket permissions
+/run/php-fpm/www.sock rwk,
+
 # Time sync access
 /run/systemd/journal/socket rw,
 /run/systemd/timesync/clock r,
