@@ -1,4 +1,12 @@
-* [4.10.0-rc.1-1] Thu, 14 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.10.1-1] Tue, 26 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-37010 Fix v5 resource types should not be returned if v5 flag is disabled
+- PB-37011 Fix session keys creation modified date validation to match ISO 8601 format
+
+* [4.10.1-test.1-1] Tue, 26 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
+- PB-37010 Fix v5 resource types should not be returned if v5 flag is disabled
+- PB-37011 Fix session keys creation modified date validation to match ISO 8601 format
+
+* [4.10.0-1] Wed, 20 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-34451 Update tags table with metadata fields
 - PB-35416 Update tags endpoints to support v5 format
 - PB-35697 Add ability to reuse existing shared tag by passing uuid
@@ -113,15 +121,12 @@
 - PB-35763 Refactor resource tags add controller
 - PB-36607 Bump cakephp/cakephp composer package version to 4.5.7
 
-* [4.10.0-test.1-1] Thu, 14 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
+* [4.10.0-rc.1-1] Thu, 14 Nov 2024 Passbolt SA package signing key <contact@passbolt.com>
 - PB-34451 Update tags table with metadata fields
 - PB-35416 Update tags endpoints to support v5 format
 - PB-35697 Add ability to reuse existing shared tag by passing uuid
 - PB-35760 Tags endpoints to throw an error if allow_usage_of_personal_keys is set to false and personal key is used
 - PB-35746 As an administrator I can run a command to migrate the tags to v5 format
-- PB-35945 Add static method to cache and reuse MetadataTypesSettingsGetService results
-- PB-35946 Add static method to cache and reuse MetadataKeysSettingsGetService results
-- PB-35921 Add API endpoint PUT /metadata/session-keys/<uuid>.json
 - PB-35934 Update edit tags to support allow_v5_v4_downgrade settings
 - PB-21404 As an admin I'd like to purge directory_reports
 - PB-34458 Add v5 config flag PASSBOLT_V5_ENABLED
@@ -156,6 +161,7 @@
 - PB-35365 Update POST /share/folders/<uuid>.json to support v5 logic
 - PB-35363 Update GET /folders/<uuid>.json to support v5 format
 - PB-35363 Update GET /folders.json to support v5 format
+- PB-35921 Add API endpoint PUT /metadata/session-keys/<uuid>.json
 - PB-35368 As a developer I can run a command to create metadata private key & share it with all users
 - PB-35362 Update PUT /folders/<uuid>.json to support v5 format
 - PB-35361 Update POST /folders.json to support v5 format
@@ -178,6 +184,8 @@
 - PB-35756 Update resource create endpoint to throw an error if allow_usage_of_personal_keys is set to false and personal key is used
 - PB-35758 Update folders create/update endpoints to throw an error if allow_usage_of_personal_keys is set to false and personal key is used
 - PB-35928 Add allow_v5_v4_downgrade to metadata types settings
+- PB-35945 Add static method to cache and reuse MetadataTypesSettingsGetService results
+- PB-35946 Add static method to cache and reuse MetadataKeysSettingsGetService results
 - PB-35930 Update edit resource to support allow_v5_v4_downgrade settings
 - PB-35931 Update edit folders to support allow_v5_v4_downgrade settings
 - PB-35937 Add allow_v5_v4_downgrade settings to passbolt update_metadata_types_settings command

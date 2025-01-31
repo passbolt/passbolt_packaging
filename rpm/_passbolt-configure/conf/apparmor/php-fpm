@@ -1,0 +1,45 @@
+# Site-specific additions for Passbolt
+# Include necessary abstractions
+include <abstractions/bash>
+include <abstractions/gnupg>
+
+# Passbolt root directory and files
+owner /etc/passbolt/passbolt.php rwk,
+/etc/passbolt/{,**} rw,
+/etc/passbolt/gpg/{,**} rw,
+
+# Passbolt specific directories
+/usr/share/php/passbolt/** r,
+/var/log/passbolt/* rw,
+/var/lib/passbolt/** rwk,
+
+# Temporary files with locks
+/tmp/** rwk,
+
+# Terminal access for shell commands
+/dev/tty rw,
+
+# GPG specific permissions
+/var/lib/passbolt/.gnupg/ rw,
+/var/lib/passbolt/.gnupg/** rwkl,
+/run/user/@{uid}/gnupg/ rw,
+/run/user/@{uid}/gnupg/** rwkl,
+/usr/bin/gpg-agent rix,
+@{PROC}/@{pid}/fd/ r,
+@{PROC}/@{pid}/fd/** r,
+
+# php-fpm socket permissions
+/run/php-fpm/www.sock rwk,
+
+# Time sync access
+/run/systemd/journal/socket rw,
+/run/systemd/timesync/clock r,
+
+# Required executables
+/usr/bin/bash rix,
+/usr/bin/grep rix,
+/usr/bin/uname rix,
+/usr/bin/gpg2 rix,
+/usr/bin/gpg rix,
+/usr/bin/gpgconf rix,
+/usr/bin/timedatectl rix,
