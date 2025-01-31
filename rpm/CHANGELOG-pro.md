@@ -1,3 +1,6 @@
+* [4.11.0-2] Fri, 31 Jan 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-38152 Added SLES support
+
 * [4.11.0-1] Thu, 30 Jan 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-35761 As an administrator I receive an email if zero_knowledge_key_share is set to true and a new user completed the setup
 - PB-36558 As an administrator I can mark metadata_keys as expired
