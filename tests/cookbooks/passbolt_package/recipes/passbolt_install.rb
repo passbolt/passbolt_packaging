@@ -55,7 +55,6 @@ elsif platform_family?('rhel', 'suse', 'fedora')
               -H 127.0.0.1 \
               -e -n"
     action :run
-    live_stream true
   end
 end
 
