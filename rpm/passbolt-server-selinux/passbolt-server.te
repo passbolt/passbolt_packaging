@@ -1,5 +1,5 @@
 
-module passbolt-server 0.4;
+module passbolt-server 0.6;
 
 require {
   type etc_t;
@@ -14,12 +14,20 @@ require {
   type mysqld_port_t;
   type postgresql_port_t;
   type ldap_port_t;
+  type user_tmp_t;
+  type system_cronjob_t;
+  type systemd_logind_t;
+  type http_port_t;
+  type httpd_tmp_t;
+  type timedatex_t;
+  type systemd_timedated_t;
   class sock_file { getattr setattr unlink write create };
-  class dir { add_name setattr write };
+  class dir { add_name setattr write read search rmdir remove_name };
   class file { create rename write unlink setattr open getattr read };
   class tcp_socket name_connect;
   class process setrlimit;
-  class dir search;
+  class unix_stream_socket connectto;
+  class dbus send_msg;
 }
 
 #============= httpd_t ==============
@@ -36,7 +44,18 @@ allow httpd_t cron_var_lib_t:file { getattr read write open };
 allow httpd_t mysqld_port_t:tcp_socket name_connect;
 allow httpd_t postgresql_port_t:tcp_socket name_connect;
 allow httpd_t ldap_port_t:tcp_socket name_connect;
+allow httpd_t user_tmp_t:sock_file { getattr unlink write create };
+allow httpd_t system_cronjob_t:unix_stream_socket connectto;
+allow httpd_t http_port_t:tcp_socket name_connect;
+allow httpd_t timedatex_t:dbus send_msg;
+allow httpd_t systemd_timedated_t:dbus send_msg;
 
 #============= postfix_local_t ==============
 allow postfix_local_t httpd_var_lib_t:dir search;
 
+#============= systemd_logind_t ==============
+allow systemd_logind_t httpd_tmp_t:dir { read rmdir write remove_name };
+allow systemd_logind_t httpd_tmp_t:sock_file unlink;
+
+#============= timedatex_t ==============
+allow timedatex_t httpd_t:dbus send_msg;
