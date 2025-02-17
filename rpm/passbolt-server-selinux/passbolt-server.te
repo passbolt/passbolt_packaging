@@ -22,7 +22,7 @@ require {
   type timedatex_t;
   type systemd_timedated_t;
   class sock_file { getattr setattr unlink write create };
-  class dir { add_name setattr write read search rmdir remove_name };
+  class dir { add_name setattr write read search rmdir remove_name watch };
   class file { create rename write unlink setattr open getattr read };
   class tcp_socket name_connect;
   class process setrlimit;
@@ -33,7 +33,7 @@ require {
 #============= httpd_t ==============
 allow httpd_t etc_t:dir { add_name setattr write };
 allow httpd_t etc_t:file { create write setattr };
-allow httpd_t var_lib_t:dir setattr;
+allow httpd_t var_lib_t:dir { setattr watch };
 allow httpd_t var_lib_t:file { write rename unlink };
 allow httpd_t var_lib_t:sock_file { create getattr unlink write setattr };
 allow httpd_t var_log_t:file { write open };
