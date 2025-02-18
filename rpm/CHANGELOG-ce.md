@@ -1,4 +1,7 @@
-* [4.11.1-test.1-1] Fri, 14 Feb 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [4.11.1-1] Tue, 18 Feb 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-39045 Fix empty fullBaseUrl leading to Host header injection attack
+
+* [4.11.1-test.1-1] Tue, 18 Feb 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39045 Fix empty fullBaseUrl leading to Host header injection attack
 
 * [4.11.0-2] Fri, 31 Jan 2025 Passbolt SA package signing key <contact@passbolt.com>
