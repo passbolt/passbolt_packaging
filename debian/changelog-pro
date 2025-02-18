@@ -1,7 +1,12 @@
+passbolt-pro-server (4.11.1-1) buster; urgency=medium
+  * PB-39045 Fix empty fullBaseUrl leading to Host header injection attack
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 18 Feb 2025 06:33:38 +0000
+
 passbolt-pro-server (4.11.1-test.1-1) buster; urgency=medium
   * PB-39045 Fix empty fullBaseUrl leading to Host header injection attack
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 14 Feb 2025 11:20:43 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 18 Feb 2025 06:33:38 +0000
 
 passbolt-pro-server (4.11.0-1) buster; urgency=medium
   * PB-35761 As an administrator I receive an email if zero_knowledge_key_share is set to true and a new user completed the setup
