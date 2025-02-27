@@ -3,7 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://gitlab.com/passbolt/passbolt-ops/passbolt-packaging/compare/4.1.0...HEAD)
+## [Unreleased](https://gitlab.com/passbolt/passbolt-ops/passbolt-packaging/compare/4.1.1...HEAD)
+
+## [4.1.1] - 2025-02-27
+
+- Update SELinux policies for RHEL
 
 ## [4.1.0] - 2025-01-31
 
