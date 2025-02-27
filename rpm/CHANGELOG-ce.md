@@ -1,3 +1,6 @@
+* [4.11.1-2] Thu, 27 Feb 2025 Clayton Stevenson <clayton@passbolt.com>
+- PB-39250 Additional allow rules in SELinux
+
 * [4.11.1-1] Tue, 18 Feb 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39045 Fix empty fullBaseUrl leading to Host header injection attack
 
