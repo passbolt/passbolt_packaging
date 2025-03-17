@@ -1,4 +1,7 @@
-* [4.12.1-test.1-1] Fri, 14 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [4.12.1-1] Mon, 17 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-39959 Fixes an issue when fetching the locale of suspended users when queried in a sub-query
+
+* [4.12.1-test.1-1] Mon, 17 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39965 Fixes an issue when fetching the locale of disabled users when queried in a sub-query
 
 * [4.12.0-1] Wed, 12 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
