@@ -1,7 +1,13 @@
+passbolt-pro-server (5.0.0-test.2-1) buster; urgency=medium
+  * PB-39712 Update CakePHP to version 5
+  * PB-40668 Cannot assign bool to property App\Notification\Email\EmailSender::$appFullBaseUrl of type string error
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 28 Mar 2025 12:27:24 +0000
+
 passbolt-pro-server (5.0.0-test.1-1) buster; urgency=medium
   * PB-39712 Update CakePHP to version 5
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 28 Mar 2025 06:09:23 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 28 Mar 2025 12:27:24 +0000
 
 passbolt-pro-server (4.12.1-1) buster; urgency=medium
   * PB-39959 Fixes an issue when fetching the locale of suspended users when queried in a sub-query
