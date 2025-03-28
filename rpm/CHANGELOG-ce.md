@@ -1,3 +1,7 @@
+* [5.0.0-test.2-1] Fri, 28 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-39712 Update CakePHP to version 5
+- PB-40668 Cannot assign bool to property App\Notification\Email\EmailSender::$appFullBaseUrl of type string error
+
 * [5.0.0-test.1-1] Fri, 28 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39712 Update CakePHP to version 5
 
