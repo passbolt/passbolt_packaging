@@ -1,10 +1,10 @@
+passbolt-pro-server (5.0.0-test.1-1) buster; urgency=medium
+  * PB-39712 Update CakePHP to version 5
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 28 Mar 2025 06:09:23 +0000
+
 passbolt-pro-server (4.12.1-1) buster; urgency=medium
   * PB-39959 Fixes an issue when fetching the locale of suspended users when queried in a sub-query
-
- -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 17 Mar 2025 15:15:46 +0000
-
-passbolt-pro-server (4.12.1-test.1-1) buster; urgency=medium
-  * PB-39965 Fixes an issue when fetching the locale of disabled users when queried in a sub-query
 
  -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 17 Mar 2025 15:15:46 +0000
 
