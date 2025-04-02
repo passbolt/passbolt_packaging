@@ -1,4 +1,4 @@
-* [5.0.0-test.3-1] Wed, 02 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.0.0-test.4-1] Wed, 02 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39434 As an administrator I can log user actions on file in an SIEM compatible format
 - PB-40155 Add Passbolt API support of PHP 8.4
 - PB-39627 Enforce PHP 8.2 as minimum passbolt API requirement
