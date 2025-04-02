@@ -1,13 +1,27 @@
+passbolt-pro-server (5.0.0-test.3-1) buster; urgency=medium
+  * PB-39434 As an administrator I can log user actions on file in an SIEM compatible format
+  * PB-40155 Add Passbolt API support of PHP 8.4
+  * PB-39627 Enforce PHP 8.2 as minimum passbolt API requirement
+  * PB-39706 When creating a user from CLI the metadata_private_keys should have their fields created_by and modified_by set
+  * PB-38164 Migrate passbolt API skeleton to v5
+  * PB-40247 Add API status documentation link to the health check command
+  * PB-28246 Refactor the whole application to upgrade CakePHP to version 5
+  * PB-39434 Add code coverage to ActionLogsUsernameQueryStrategy
+  * PB-39660 Mock MfaFormInterface to avoid tests failing occasionally
+  * PB-39630 Fix ResourcesIndexControllerPaginationTest recurrently failing test
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 02 Apr 2025 11:45:40 +0000
+
 passbolt-pro-server (5.0.0-test.2-1) buster; urgency=medium
   * PB-39712 Update CakePHP to version 5
   * PB-40668 Cannot assign bool to property App\Notification\Email\EmailSender::$appFullBaseUrl of type string error
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 28 Mar 2025 12:27:24 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 02 Apr 2025 11:45:40 +0000
 
 passbolt-pro-server (5.0.0-test.1-1) buster; urgency=medium
   * PB-39712 Update CakePHP to version 5
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 28 Mar 2025 12:27:24 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 02 Apr 2025 11:45:40 +0000
 
 passbolt-pro-server (4.12.1-1) buster; urgency=medium
   * PB-39959 Fixes an issue when fetching the locale of suspended users when queried in a sub-query
