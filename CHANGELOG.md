@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://gitlab.com/passbolt/passbolt-ops/passbolt-packaging/compare/4.1.1...HEAD)
 
+- Removed unsupported distros in ci test matrix
+- Removed entropy checks
+
 ## [4.1.1] - 2025-02-27
 
 - Update SELinux policies for RHEL
