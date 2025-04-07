@@ -1,42 +1,12 @@
-debian-bullseye-fs:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: filesystem-benchmarks-debian-bullseye
-
 debian-bookworm-fs:
   extends: .kitchen-test-debian
   variables:
     KITCHEN_JOB: filesystem-benchmarks-debian-bookworm
 
-ubuntu-2004-fs:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: filesystem-benchmarks-ubuntu-2004
-
-ubuntu-2204-fs:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: filesystem-benchmarks-ubuntu-2204
-
 ubuntu-2404-fs:
   extends: .kitchen-test-debian
   variables:
     KITCHEN_JOB: filesystem-benchmarks-ubuntu-2404
-
-debian-bullseye-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-debian-bullseye
-
-ubuntu-2004-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-ubuntu-2004
-
-ubuntu-2204-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-ubuntu-2204
 
 ubuntu-2404-purge:
   extends: .kitchen-test-debian

@@ -1,22 +1,22 @@
-Requires:       php >= 7.4
-Requires:       php-cli >= 7.4
-Requires:       php-curl >= 7.4
-Requires:       php-fileinfo >= 7.4
-Requires:       php-fpm >= 7.4
-Requires:       php-gd >= 7.4
-Requires:       php-intl >= 7.4
-Requires:       php-json >= 7.4
-Requires:       php-mbstring >= 7.4
-Requires:       php-mysql >= 7.4
-Requires:       php-openssl >= 7.4
+Requires:       php >= 8.2
+Requires:       php-cli >= 8.2
+Requires:       php-curl >= 8.2
+Requires:       php-fileinfo >= 8.2
+Requires:       php-fpm >= 8.2
+Requires:       php-gd >= 8.2
+Requires:       php-intl >= 8.2
+Requires:       php-json >= 8.2
+Requires:       php-mbstring >= 8.2
+Requires:       php-mysql >= 8.2
+Requires:       php-openssl >= 8.2
 Requires:       php-pecl
-Requires:       php-pgsql >= 7.4
+Requires:       php-pgsql >= 8.2
 Requires:       php-gnupg
-Requires:       php-posix >= 7.4
-Requires:       php-xmlreader >= 7.4
-Requires:       php-xmlwriter >= 7.4
+Requires:       php-posix >= 8.2
+Requires:       php-xmlreader >= 8.2
+Requires:       php-xmlwriter >= 8.2
 %if "%{_passbolt_flavour}" == "pro"
-Requires:       php-ldap >= 7.4
+Requires:       php-ldap >= 8.2
 %endif
 Requires:       cronie
 Requires:       nginx
