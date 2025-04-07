@@ -53,7 +53,7 @@ elsif platform_family?('rhel', 'suse', 'fedora')
               -d passboltdb \
               -u passboltadmin \
               -H 127.0.0.1 \
-              -e -n"
+              -n"
     action :run
   end
 end
