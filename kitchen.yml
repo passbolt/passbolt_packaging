@@ -32,51 +32,20 @@ platforms:
   - name: debian-bookworm
     driver:
       image: debian:stable
-  - name: debian-bullseye
-    driver:
-      image: debian:oldstable
-  - name: ubuntu-20.04
-    driver:
-      image: ubuntu:20.04
   - name: ubuntu-22.04
     driver:
       image: ubuntu:22.04
   - name: ubuntu-24.04
     driver:
       image: ubuntu:24.04
-  - name: oraclelinux-8
-    driver:
-      image: dokken/oraclelinux-8:latest
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
-  - name: almalinux-8
-    driver:
-      image: dokken/almalinux-8:latest
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
   - name: almalinux-9
     driver:
       image: dokken/almalinux-9:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
-  - name: rockylinux-8
-    driver:
-      image: dokken/rockylinux-8:latest
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
   - name: rockylinux-9
     driver:
       image: dokken/rockylinux-9:latest
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
-  - name: fedora-39
-    driver:
-      image: dokken/fedora-39:latest
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
-  - name: fedora-40
-    driver:
-      image: dokken/fedora-40:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
   - name: opensuse-leap-15

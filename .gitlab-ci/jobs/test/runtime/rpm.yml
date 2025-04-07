@@ -1,32 +1,7 @@
-almalinux-8-runtime:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: runtime-benchmarks-almalinux-8
-
 almalinux-9-runtime:
   extends: .kitchen-test-yum
   variables:
     KITCHEN_JOB: runtime-benchmarks-almalinux-9
-
-fedora-39-runtime:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: runtime-benchmarks-fedora-39
-
-fedora-40-runtime:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: runtime-benchmarks-fedora-40
-
-oraclelinux-8-runtime:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: runtime-benchmarks-oraclelinux-8
-
-rockylinux-8-runtime:
-  extends: .kitchen-test-yum
-  variables:
-    KITCHEN_JOB: runtime-benchmarks-rockylinux-8
 
 rockylinux-9-runtime:
   extends: .kitchen-test-yum

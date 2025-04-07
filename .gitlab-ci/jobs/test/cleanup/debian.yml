@@ -1,22 +1,7 @@
-debian-bullseye-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-debian-bullseye
-
 debian-bookworm-purge:
   extends: .kitchen-test-debian
   variables:
     KITCHEN_JOB: purge-benchmarks-debian-bookworm
-
-ubuntu-2004-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-ubuntu-2004
-
-ubuntu-2204-purge:
-  extends: .kitchen-test-debian
-  variables:
-    KITCHEN_JOB: purge-benchmarks-ubuntu-2204
 
 ubuntu-2404-purge:
   extends: .kitchen-test-debian
