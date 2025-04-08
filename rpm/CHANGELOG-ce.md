@@ -1,16 +1,8 @@
-* [5.0.0-rc.1-1] Mon, 07 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-39434 As an administrator I can log user actions on file in an SIEM compatible format
-- PB-39627 Enforce PHP 8.2 as minimum passbolt API requirement
-- PB-40155 Add Passbolt API support of PHP 8.4
-- PB-40247 Add API status documentation link to the health check command
-- PB-39706 When creating a user from CLI the metadata_private_keys should have their fields created_by and modified_by set
-- PB-41356 As an administrator I can delete a resource type associated to deleted resources
-- PB-28246 Refactor the whole application to upgrade CakePHP to version 5
-- PB-39434 Add code coverage to ActionLogsUsernameQueryStrategy
-- PB-39660 Mock MfaFormInterface to avoid tests failing occasionally
-- PB-39630 Fix ResourcesIndexControllerPaginationTest recurrently failing test
+* [5.0.0-rc.2-1] Tue, 08 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-41374 Fix unlimited session lifetime introduced in CakePHP 5
+- PB-41379 Updates the minimum next version to 8.2 to remove false warning from installation
 
-* [5.0.0-test.4-1] Mon, 07 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.0.0-test.4-1] Tue, 08 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39434 As an administrator I can log user actions on file in an SIEM compatible format
 - PB-40155 Add Passbolt API support of PHP 8.4
 - PB-39627 Enforce PHP 8.2 as minimum passbolt API requirement
@@ -22,12 +14,24 @@
 - PB-39660 Mock MfaFormInterface to avoid tests failing occasionally
 - PB-39630 Fix ResourcesIndexControllerPaginationTest recurrently failing test
 
-* [5.0.0-test.2-1] Mon, 07 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.0.0-test.2-1] Tue, 08 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39712 Update CakePHP to version 5
 - PB-40668 Cannot assign bool to property App\Notification\Email\EmailSender::$appFullBaseUrl of type string error
 
-* [5.0.0-test.1-1] Mon, 07 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.0.0-test.1-1] Tue, 08 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39712 Update CakePHP to version 5
+
+* [5.0.0-rc.1-1] Mon, 07 Apr 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-39434 As an administrator I can log user actions on file in an SIEM compatible format
+- PB-39627 Enforce PHP 8.2 as minimum passbolt API requirement
+- PB-40155 Add Passbolt API support of PHP 8.4
+- PB-40247 Add API status documentation link to the health check command
+- PB-39706 When creating a user from CLI the metadata_private_keys should have their fields created_by and modified_by set
+- PB-41356 As an administrator I can delete a resource type associated to deleted resources
+- PB-28246 Refactor the whole application to upgrade CakePHP to version 5
+- PB-39434 Add code coverage to ActionLogsUsernameQueryStrategy
+- PB-39660 Mock MfaFormInterface to avoid tests failing occasionally
+- PB-39630 Fix ResourcesIndexControllerPaginationTest recurrently failing test
 
 * [4.12.1-1] Mon, 17 Mar 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-39959 Fixes an issue when fetching the locale of suspended users when queried in a sub-query
