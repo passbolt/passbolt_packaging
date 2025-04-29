@@ -512,19 +512,18 @@ __config_get() {
 }
 setup_firewall() {
   if rpm -qa | grep firewalld >/dev/null; then
-    local zone=public
-    local services=(http https)
-    banner "Opening ports 80 and 443 on firewall"
-
     # Set firewall rules only if firewalld is running
     if firewall-cmd --state --quiet; then
-      enable_service firewalld
+      systemctl enable firewalld
+      local zone=$(firewall-cmd --get-default-zone)
+      local services=(http https)
+      banner "Opening ports 80 and 443 on firewall in zone $zone"
 
       for i in "${services[@]}"; do
         firewall-cmd --permanent --zone="$zone" --add-service="$i"
       done
 
-      enable_service firewalld
+      firewall-cmd --reload
     fi
   fi
 }
