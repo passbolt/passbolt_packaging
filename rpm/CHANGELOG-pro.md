@@ -1,3 +1,11 @@
+* [5.1.1-test.1-1] Wed, 21 May 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-42594 Fix directory_sync ignore-create CLI command shared from help message is not working
+- PB-42691 Make created & modified dates from AD/LDAP server optional
+- PB-42592 Fix missing attribute in ldap default configuration file
+- PB-42689 Fix type errors in directory_sync users & groups commands
+- PB-42701 Fix the contain of missing metadata key on view user endpoint
+- PB-42687 Security alert emails should display user IP and user agent only if configured
+
 * [5.1.0-1] Thu, 15 May 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-40712 Enable password expiry by default for new instances
 - PB-37364 As an administrator I can get and rotate tags with an expired metadata key
@@ -11,27 +19,6 @@
 - PB-41769 Fix action_logs_purge command only purging 100 records
 - PB-42108 Fix the APP_BASE variable ignored when generated URLs with CakePHP
 - PB-42378 PBL-13-001 - Sanitize open redirect on MFA step in login
-- PB-41840 Return creator along metadata keys on GET /metadata/keys.json
-- PB-42117 Populate metadata key ID for personal resources if null in payload
-- PB-40626 Update passbolt-test-data to improve PHP 8.4 compatibility
-- PB-40365 Updates the test pipelines to cover PHP 8.4
-- PB-40630 Bump bacon/bacon-qr-code to v3.0
-- PB-40627 Bump league/flysystem package to v3.29
-- PB-40625 Bump Spomky-Labs/otphp package to v11.3
-- PB-40641 Replace vimeo/psalm to psalm/phar
-
-* [5.1.0-test.1-1] Thu, 15 May 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-40712 Enable password expiry by default for new instances
-- PB-37364 As an administrator I can get and rotate tags with an expired metadata key
-- PB-37702 As an administrator I can upgrade tags from v4 format to v5
-- PB-41629 As a client I should know if the metadata plugin is set as in beta
-- PB-40275 Add support for email claim alias for OAUTH2 provider via server config
-- PB-41628 The metadata plugin is enabled by default
-- PB-41820 INC-262 - New pro subscription keys are failing and triggering 500s
-- PB-41736 Adjust datacheck command to support v5 resources
-- PB-40274 Fix azure SSO asking for password everytime even after setting prompt to false
-- PB-41769 Fix action_logs_purge command only purging 100 records
-- PB-42108 Fix APP_BASE not included in generated URLs
 - PB-41840 Return creator along metadata keys on GET /metadata/keys.json
 - PB-42117 Populate metadata key ID for personal resources if null in payload
 - PB-40626 Update passbolt-test-data to improve PHP 8.4 compatibility
