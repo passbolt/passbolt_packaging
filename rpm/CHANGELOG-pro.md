@@ -1,4 +1,12 @@
-* [5.1.1-test.1-1] Wed, 21 May 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.1.1-1] Thu, 22 May 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-42594 Fix directory_sync ignore-create CLI command shared from help message is not working
+- PB-42691 Make created & modified dates from AD/LDAP server optional
+- PB-42592 Fix missing attribute in ldap default configuration file
+- PB-42689 Fix type errors in directory_sync users & groups commands
+- PB-42701 Fix the contain of missing metadata key on view user endpoint
+- PB-42687 Security alert emails should display user IP and user agent only if configured
+
+* [5.1.1-test.1-1] Thu, 22 May 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-42594 Fix directory_sync ignore-create CLI command shared from help message is not working
 - PB-42691 Make created & modified dates from AD/LDAP server optional
 - PB-42592 Fix missing attribute in ldap default configuration file
