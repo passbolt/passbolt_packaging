@@ -1,4 +1,8 @@
-* [5.1.1-test.1-1] Wed, 21 May 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.1.1-1] Thu, 22 May 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-42701 Fix the contain of missing metadata key on view user endpoint
+- PB-42687 Security alert emails should display user IP and user agent only if configured
+
+* [5.1.1-test.1-1] Thu, 22 May 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-42701 Fix the contain of missing metadata key on view user endpoint
 - PB-42687 Security alert emails should display user IP and user agent only if configured
 

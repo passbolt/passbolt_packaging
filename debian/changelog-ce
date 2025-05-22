@@ -1,8 +1,14 @@
+passbolt-ce-server (5.1.1-1) buster; urgency=medium
+  * PB-42701 Fix the contain of missing metadata key on view user endpoint
+  * PB-42687 Security alert emails should display user IP and user agent only if configured
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 22 May 2025 10:36:21 +0000
+
 passbolt-ce-server (5.1.1-test.1-1) buster; urgency=medium
   * PB-42701 Fix the contain of missing metadata key on view user endpoint
   * PB-42687 Security alert emails should display user IP and user agent only if configured
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 21 May 2025 11:25:13 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 22 May 2025 10:36:21 +0000
 
 passbolt-ce-server (5.1.0-1) buster; urgency=medium
   * PB-40712 Enable password expiry by default for new instances
