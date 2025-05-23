@@ -147,7 +147,7 @@ control 'passbolt-config-10-1' do                        # A unique ID for this 
     it { should exist }
     its('owner') { should eq 'root' }
     its('group') { should eq webserver_group }
-    its('mode') { should cmp '00770' }
+    its('mode') { should cmp '00750' }
     it 'should be empty' do
       expect(command("ls #{config_dir}/gpg | wc -l").stdout).to eq "0\n"
     end
