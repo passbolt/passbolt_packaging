@@ -130,8 +130,9 @@ set_jwt_keys() {
     local jwt_key="$jwt_dir/jwt.key"
     local jwt_pem="$jwt_dir/jwt.pem"
     su -c '/usr/share/php/passbolt/bin/cake passbolt create_jwt_keys' -s /bin/bash "%{_nginx_user}"
-    chmod 640 "$jwt_key" && chown root:%{_nginx_group} "$jwt_key"
-    chmod 640 "$jwt_pem" && chown root:%{_nginx_group} "$jwt_pem"
+    chown root:%{_nginx_group} "$jwt_dir" && chmod 750 "$jwt_dir"
+    chown root:%{_nginx_group} "$jwt_key" && chmod 640 "$jwt_key"
+    chown root:%{_nginx_group} "$jwt_pem" && chmod 640 "$jwt_pem"
   fi
 }
 
