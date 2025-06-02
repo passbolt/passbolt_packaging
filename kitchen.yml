@@ -32,9 +32,6 @@ platforms:
   - name: debian-bookworm
     driver:
       image: debian:stable
-  - name: ubuntu-22.04
-    driver:
-      image: ubuntu:22.04
   - name: ubuntu-24.04
     driver:
       image: ubuntu:24.04
