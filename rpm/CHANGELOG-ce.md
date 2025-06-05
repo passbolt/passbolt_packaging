@@ -1,4 +1,20 @@
-* [5.2.0-test.1-1] Tue, 03 Jun 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.2.0-rc.1-1] Thu, 05 Jun 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-42861 As a user I can use passbolt in Slovenian language
+- PB-42986 As a user I can use passbolt in Ukrainian language
+- PB-42878 Add User GPG key policies (ECC by default) support behind a feature flag
+- PB-41966 As a resource owner I should receive a notification on the day that my resources expire
+- PB-42706 Alias POST /metadata/keys/privates.json endpoint to POST /metadata/keys/private.json
+- PB-42800 The check metadata key presence in the healthcheck should not fail if no metadata key is required
+- PB-42701 Fixes the contain of missing metadata key on view user endpoint
+- PB-42687 Security alert emails should display user IP and user agent only if configured
+- PB-42378 PBL-13-001 - Fixes open redirect on MFA step in login
+- PB-42379 PBL-13-004 - Fixes HTML injections in email notifications
+- PB-43115 Fix XSS in email footer where the full base URL was not escaped or sanitized
+- PB-42935 Upgrade API babel dev dependency
+- PB-42893 Upgrade API lock-link-api dev dependency
+- PB-42923 refactor code to remove warning in selenium execution context
+
+* [5.2.0-test.1-1] Thu, 05 Jun 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-42861 As a user I can use passbolt in Slovenian language
 - PB-42986 As a user I can use passbolt in Ukrainian language
 - PB-42878 Add User GPG key policies (ECC by default) support behind a feature flag
