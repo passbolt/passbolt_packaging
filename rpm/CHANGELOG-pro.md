@@ -1,3 +1,43 @@
+* [5.3.0-1] Wed, 09 Jul 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-41664 Enables OpenID Connect and ADFS SSO by default
+- PB-43066 As a developer I can setup my development environment using ddev
+- PB-43188 Adds Custom Fields Standalone resource type migration
+- PB-43383 Improves the performance of most paginated endpoints
+- PB-43659 Improve error handling when metadata key could not be saved due to unexpected reason
+- PB-43375 As a user performing an account recovery, Azure SSO should not return a 500 error when secret keys are expired
+- PB-43382 As an administrator I should not get a connection error when running the healthcheck when the database is empty
+- PB-43007 Fixes emails not sent after v5 upgrade if SMTP credentials are stored in environment variables (GITHUB #545)
+- PB-43122 As an administrator retrieving users metadata key, I should not trigger a validation type issue on the missing metadata_keys_id in certain conditions
+- PB-43137 Fixes a potential settings conflict in user key policy where key of type rsa should not have a preferred curve
+- PB-42784 As an administrator I should not get a health check error when all email notifications are enabled
+- PB-43259 Fixes a record not found error on table `organization_settings` in healthcheck after v5 upgrade (GITHUB #548)
+- PB-42072 As a user sharing permissions, I should not get a 500 response if the payload is wrongly formatted
+- PB-42071 Fixes 500 errors on malformed UTF-8 character-based URLs when using the JsonTraceFormatter class
+- PB-43659 Improves the error catching on creation of organization metadata key
+- PB-42177 Upgrades CakePHP version to 5.2.5
+- PB-43010 Replaces the use of static fixtures with fixture factories in multiple test cases
+- PB-41724 Map _cake_core_ cache config with _cake_translations_ in the bootstrap.php file
+- PB-42380 Adds the missing v5 resource types on data insertion in the passbolt-test-data vendor
+- PB-43658 Use FQN to load all vendor plugin
+
+* [5.3.0-test.1-1] Wed, 09 Jul 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-43066 As a developer I can setup my development environment using ddev
+- PB-41664 OpenID Connect and Active Directory Federation Services are now enabled by default
+- PB-43383 Improves the performance of most paginated endpoints
+- PB-43375 As a user performing an account recovery, Azure SSO should not return a 500 error when secret keys are expired
+- PB-43382 As an administrator I should not get a connection error when running the healthcheck when the database is empty
+- PB-43007 Fixes emails not sent after v5 upgrade if SMTP credentials are stored in environment variables (GITHUB #545)
+- PB-43122 As an administrator retrieving users metadata key, I should not trigger a validation type issue on the missing metadata_keys_id in certain conditions
+- PB-43137 Fixes a potential settings conflict in user key policy where key of type rsa should not have a preferred curve
+- PB-42784 As an administrator I should not get a health check error when all email notifications are enabled
+- PB-43259 Fixes a record not found error on table `organization_settings` in healthcheck after v5 upgrade (GITHUB #548)
+- PB-42072 As a user sharing permissions, I should not get a 500 response if the payload is wrongly formatted
+- PB-42071 Fixes 500 errors on malformed UTF-8 character-based URLs when using the JsonTraceFormatter class
+- PB-42177 Upgrade CakePHP version to 5.2.5
+- PB-43010 Replaces the use of static fixtures with fixture factories in multiple test case
+- PB-41724 Map _cake_core_ cache config with _cake_translations_ in the bootstrap.php file
+- PB-42380 Adds the missing v5 resource types on data insertion in the passbolt-test-data vendor
+
 * [5.3.0-rc.1-1] Fri, 04 Jul 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-41664 Enables OpenID Connect and ADFS SSO by default
 - PB-43066 As a developer I can setup my development environment using dev
@@ -15,24 +55,6 @@
 - PB-42071 Fixes 500 errors on malformed UTF-8 character-based URLs when using the JsonTraceFormatter class
 - PB-42177 Upgrades CakePHP version to 5.2.5
 - PB-43010 Replaces the use of static fixtures with fixture factories in multiple test cases
-- PB-41724 Map _cake_core_ cache config with _cake_translations_ in the bootstrap.php file
-- PB-42380 Adds the missing v5 resource types on data insertion in the passbolt-test-data vendor
-
-* [5.3.0-test.1-1] Fri, 04 Jul 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-43066 As a developer I can setup my development environment using ddev
-- PB-41664 OpenID Connect and Active Directory Federation Services are now enabled by default
-- PB-43383 Improves the performance of most paginated endpoints
-- PB-43375 As a user performing an account recovery, Azure SSO should not return a 500 error when secret keys are expired
-- PB-43382 As an administrator I should not get a connection error when running the healthcheck when the database is empty
-- PB-43007 Fixes emails not sent after v5 upgrade if SMTP credentials are stored in environment variables (GITHUB #545)
-- PB-43122 As an administrator retrieving users metadata key, I should not trigger a validation type issue on the missing metadata_keys_id in certain conditions
-- PB-43137 Fixes a potential settings conflict in user key policy where key of type rsa should not have a preferred curve
-- PB-42784 As an administrator I should not get a health check error when all email notifications are enabled
-- PB-43259 Fixes a record not found error on table `organization_settings` in healthcheck after v5 upgrade (GITHUB #548)
-- PB-42072 As a user sharing permissions, I should not get a 500 response if the payload is wrongly formatted
-- PB-42071 Fixes 500 errors on malformed UTF-8 character-based URLs when using the JsonTraceFormatter class
-- PB-42177 Upgrade CakePHP version to 5.2.5
-- PB-43010 Replaces the use of static fixtures with fixture factories in multiple test case
 - PB-41724 Map _cake_core_ cache config with _cake_translations_ in the bootstrap.php file
 - PB-42380 Adds the missing v5 resource types on data insertion in the passbolt-test-data vendor
 
