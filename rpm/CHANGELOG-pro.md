@@ -1,3 +1,6 @@
+* [5.4.0-test.2-1] Thu, 07 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44578 Align metadata setup settings entry point variable name with client
+
 * [5.4.0-test.1-1] Thu, 07 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-43713 Translate the application in Czech
 - PB-44285 Add endpoint to help clients enable E2EE by default for new instances
