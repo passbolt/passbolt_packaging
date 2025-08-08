@@ -1,3 +1,13 @@
+passbolt-ce-server (5.4.0-test.3-1) buster; urgency=medium
+  * PB-44573 Ensure standalone custom fields is resource type is updated irrespective of instance being installed for the first time with v5.3.0 or v5.3.1
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 08 Aug 2025 13:46:43 +0000
+
+passbolt-ce-server (5.4.0-test.2-1) buster; urgency=medium
+  * PB-44578 Align metadata setup settings entry point variable name with client
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 08 Aug 2025 13:46:43 +0000
+
 passbolt-ce-server (5.4.0-test.1-1) buster; urgency=medium
   * PB-43713 Translate the application in Czech
   * PB-44285 Add endpoint to help clients enable E2EE by default for new instances
@@ -33,7 +43,7 @@ passbolt-ce-server (5.4.0-test.1-1) buster; urgency=medium
   * PB-43752 Add assertJson assertions to folders endpoints
   * PB-41818 Bump cakephp version to 5.2.6
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 07 Aug 2025 14:10:44 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 08 Aug 2025 13:46:43 +0000
 
 passbolt-ce-server (5.3.2-1) buster; urgency=medium
   * PB-43910 As an administrator installing passbolt on postgres, the default postgres schema should be public

@@ -1,4 +1,10 @@
-* [5.4.0-test.1-1] Thu, 07 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.4.0-test.3-1] Fri, 08 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44573 Ensure standalone custom fields is resource type is updated irrespective of instance being installed for the first time with v5.3.0 or v5.3.1
+
+* [5.4.0-test.2-1] Fri, 08 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44578 Align metadata setup settings entry point variable name with client
+
+* [5.4.0-test.1-1] Fri, 08 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-43713 Translate the application in Czech
 - PB-44285 Add endpoint to help clients enable E2EE by default for new instances
 - PB-44184 As an administrator I should not be allowed to retrieve resources to migrate from v4 to v5 resource types from v4 resource types that are deleted
