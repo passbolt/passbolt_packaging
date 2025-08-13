@@ -1,3 +1,6 @@
+* [5.4.1-1] Wed, 13 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44220 Enforces the format to datetime string when persisting the last_logged_in field on users login
+
 * [5.4.1-test.1-1] Wed, 13 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-44220 Enforces the format to datetime string when persisting the last_logged_in field on users login
 
