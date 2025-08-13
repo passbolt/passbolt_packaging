@@ -31,7 +31,7 @@ verifier:
 platforms:
   - name: debian-bookworm
     driver:
-      image: debian:stable
+      image: debian:bookworm
   - name: ubuntu-24.04
     driver:
       image: ubuntu:24.04
