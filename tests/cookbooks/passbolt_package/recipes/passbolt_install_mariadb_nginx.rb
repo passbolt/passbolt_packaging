@@ -16,7 +16,7 @@ if platform_family?('debian')
   end
 
   # Use different database service depending on the OS
-  database_engine = 'mariadb' if node['platform'] == 'debian' && node['platform_version'] =~ /11|12/
+  database_engine = 'mariadb' if node['platform'] == 'debian' && node['platform_version'] =~ /12|13/
 
   execute 'Start mysql' do
     command "service #{database_engine} start"

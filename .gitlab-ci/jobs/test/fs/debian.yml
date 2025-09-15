@@ -3,6 +3,11 @@ debian-bookworm-fs:
   variables:
     KITCHEN_JOB: filesystem-benchmarks-debian-bookworm
 
+debian-trixie-fs:
+  extends: .kitchen-test-debian
+  variables:
+    KITCHEN_JOB: filesystem-benchmarks-debian-trixie
+
 ubuntu-2404-fs:
   extends: .kitchen-test-debian
   variables:

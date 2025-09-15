@@ -29,6 +29,9 @@ verifier:
     passbolt_flavour: <%= ENV['PASSBOLT_FLAVOUR'] %>
 
 platforms:
+  - name: debian-trixie
+    driver:
+      image: debian:trixie
   - name: debian-bookworm
     driver:
       image: debian:bookworm

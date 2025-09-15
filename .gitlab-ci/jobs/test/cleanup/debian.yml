@@ -3,6 +3,11 @@ debian-bookworm-purge:
   variables:
     KITCHEN_JOB: purge-benchmarks-debian-bookworm
 
+debian-trixie-purge:
+  extends: .kitchen-test-debian
+  variables:
+    KITCHEN_JOB: purge-benchmarks-debian-trixie
+
 ubuntu-2404-purge:
   extends: .kitchen-test-debian
   variables:
