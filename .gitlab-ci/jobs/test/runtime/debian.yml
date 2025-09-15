@@ -3,6 +3,11 @@ debian-bookworm-runtime:
   variables:
     KITCHEN_JOB: runtime-benchmarks-debian-bookworm
 
+debian-trixie-runtime:
+  extends: .kitchen-test-debian
+  variables:
+    KITCHEN_JOB: runtime-benchmarks-debian-trixie
+
 ubuntu-2404-runtime:
   extends: .kitchen-test-debian
   variables:
