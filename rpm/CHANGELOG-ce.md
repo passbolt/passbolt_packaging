@@ -1,3 +1,35 @@
+* [5.5.0-1] Mon, 15 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44639 As an administrator, when updating metadata settings from friendly mode to zero knowledge, I should see the server key dropped in DB
+- PB-44756 Updates metadata keys settings endpoint to accept server metadata private key
+- PB-44752 Adds a new data check for existing resources v5 encrypted with hard or soft deleted shared metadata key
+- PB-45060 Fixes custom fields json schema properties type
+- PB-45062 Fixes user_setup_complete.php template in LU folder instead of AD
+- PB-44760 Fixes health check "record not found in table organization_settings" issue (GITHUB #563)
+- PB-44915 Changes DDEV containers names and URLs from passbolt-ce-api to passbolt-api
+- PB-44813 Updates ddev config
+- PB-44772 Speeds up continuous integration by splitting pipelines in two distinct test suites
+
+* [5.5.0-test.2-1] Mon, 15 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44639 As an administrator, when updating metadata settings from friendly mode to zero knowledge, I should see the server key dropped in DB
+- PB-44756 Updates metadata keys settings endpoint to accept server metadata private key
+- PB-44752 Adds a new data check for existing resources v5 encrypted with hard or soft deleted shared metadata key
+- PB-45060 Fixes custom fields json schema properties type
+- PB-45062 Fixes user_setup_complete.php template in LU folder instead of AD
+- PB-44760 Fixes health check "record not found in table organization_settings" issue (GITHUB #563)
+- PB-44915 Changes DDEV containers names and URLs from passbolt-ce-api to passbolt-api
+- PB-44813 Updates ddev config
+- PB-44772 Speeds up continuous integration by splitting pipelines in two distinct test suites
+
+* [5.5.0-test.1-1] Mon, 15 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-44639 As an administrator when updating metadata settings from friendly mode to zero knowledge I should see the server key dropped in DB
+- PB-44756 Update metadata keys settings endpoint to accept server metadata private key
+- PB-44752 Add new datacheck for existing resources v5 encrypted with hard or soft deleted shared metadata key
+- PB-45060 Fixes custom fields json schema properties type
+- PB-45062 Fix user_setup_complete.php template in LU folder instead of AD
+- PB-44760 Fix healthcheck "record not found in table organization_settings" issue (GITHUB #563)
+- PB-44915 Change DDEV containers names and URLs from passbolt-ce-api to passbolt-api
+- PB-44813 Update ddev config
+
 * [5.5.0-rc.1-1] Fri, 12 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-44639 As an administrator, when updating metadata settings from friendly mode to zero knowledge, I should see the server key dropped in DB
 - PB-44756 Updates metadata keys settings endpoint to accept server metadata private key
@@ -8,27 +40,6 @@
 - PB-44915 Changes DDEV containers names and URLs from passbolt-ce-api to passbolt-api
 - PB-44813 Updates ddev config
 - PB-44772 Speeds up continuous integration by splitting pipelines in two distinct test suites
-
-* [5.5.0-test.2-1] Fri, 12 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-44639 As an administrator, when updating metadata settings from friendly mode to zero knowledge, I should see the server key dropped in DB
-- PB-44756 Updates metadata keys settings endpoint to accept server metadata private key
-- PB-44752 Adds a new data check for existing resources v5 encrypted with hard or soft deleted shared metadata key
-- PB-45060 Fixes custom fields json schema properties type
-- PB-45062 Fixes user_setup_complete.php template in LU folder instead of AD
-- PB-44760 Fixes health check "record not found in table organization_settings" issue (GITHUB #563)
-- PB-44915 Changes DDEV containers names and URLs from passbolt-ce-api to passbolt-api
-- PB-44813 Updates ddev config
-- PB-44772 Speeds up continuous integration by splitting pipelines in two distinct test suites
-
-* [5.5.0-test.1-1] Fri, 12 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-44639 As an administrator when updating metadata settings from friendly mode to zero knowledge I should see the server key dropped in DB
-- PB-44756 Update metadata keys settings endpoint to accept server metadata private key
-- PB-44752 Add new datacheck for existing resources v5 encrypted with hard or soft deleted shared metadata key
-- PB-45060 Fixes custom fields json schema properties type
-- PB-45062 Fix user_setup_complete.php template in LU folder instead of AD
-- PB-44760 Fix healthcheck "record not found in table organization_settings" issue (GITHUB #563)
-- PB-44915 Change DDEV containers names and URLs from passbolt-ce-api to passbolt-api
-- PB-44813 Update ddev config
 
 * [5.4.1-1] Wed, 13 Aug 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-44220 Enforces the format to datetime string when persisting the last_logged_in field on users login
