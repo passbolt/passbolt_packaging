@@ -1,3 +1,6 @@
+* [5.5.2-1] Mon, 29 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-45439 As an administrator I can edit the metadata key settings when not editing zero-knowledge mode
+
 * [5.5.2-test.1-1] Mon, 29 Sep 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-45439 As an administrator I can edit the metadata key settings when not editing zero-knowledge mode  when not editing zero-knowledge mode
 

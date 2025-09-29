@@ -1,7 +1,12 @@
+passbolt-pro-server (5.5.2-1) buster; urgency=medium
+  * PB-45439 As an administrator I can edit the metadata key settings when not editing zero-knowledge mode
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 29 Sep 2025 12:43:52 +0000
+
 passbolt-pro-server (5.5.2-test.1-1) buster; urgency=medium
   * PB-45439 As an administrator I can edit the metadata key settings when not editing zero-knowledge mode  when not editing zero-knowledge mode
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 29 Sep 2025 11:07:24 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 29 Sep 2025 12:43:52 +0000
 
 passbolt-pro-server (5.5.0-1) buster; urgency=medium
   * PB-44617 As an administrator I can provision users using the SCIM protocol (beta)
