@@ -1,7 +1,12 @@
+passbolt-ce-server (5.6.1-1) buster; urgency=medium
+  * PB-45919 Fix security issue in query generation for CakePHP
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 04 Nov 2025 10:12:17 +0000
+
 passbolt-ce-server (5.6.1-test.1-1) buster; urgency=medium
   * PB-45919 Fix security issue in query generation for CakePHP
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 03 Nov 2025 13:40:17 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 04 Nov 2025 10:12:17 +0000
 
 passbolt-ce-server (5.6.0-1) buster; urgency=medium
   * PB-45058 Add datacheck to check for existing metadata key with no metadata private keys

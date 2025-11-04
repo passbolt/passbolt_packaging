@@ -1,4 +1,7 @@
-* [5.6.1-test.1-1] Mon, 03 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.6.1-1] Tue, 04 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-45919 Fix security issue in query generation for CakePHP
+
+* [5.6.1-test.1-1] Tue, 04 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-45919 Fix security issue in query generation for CakePHP
 
 * [5.6.0-1] Wed, 08 Oct 2025 Passbolt SA package signing key <contact@passbolt.com>
