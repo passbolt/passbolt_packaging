@@ -1,9 +1,6 @@
 * [5.6.1-1] Tue, 04 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-45919 Fix security issue in query generation for CakePHP
 
-* [5.6.1-test.1-1] Tue, 04 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-45919 Fix security issue in query generation for CakePHP
-
 * [5.6.0-1] Wed, 08 Oct 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-45058 Add datacheck to check for existing metadata key with no metadata private keys
 - PB-44187 As an admin I cannot delete a metadata key associated with a deleted resource
