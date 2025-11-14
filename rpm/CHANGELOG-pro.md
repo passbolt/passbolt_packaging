@@ -1,3 +1,6 @@
+* [5.7.1-1] Fri, 14 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-46680 Fix DUO authentication form blocked by CSP header
+
 * [5.7.1-test.1-1] Fri, 14 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-46680 Fix DUO authentication form blocked by CSP header
 
