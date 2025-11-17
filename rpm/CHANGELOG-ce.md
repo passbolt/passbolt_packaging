@@ -1,7 +1,7 @@
-* [5.7.1-1] Fri, 14 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
-- PB-46680 Fix DUO authentication form blocked by CSP header
+* [5.7.2-test.1-1] Mon, 17 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-46826 As an administrator running the cleanup task, the server metadata private key entry should not be deleted
 
-* [5.7.1-test.1-1] Fri, 14 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.7.1-1] Fri, 14 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-46680 Fix DUO authentication form blocked by CSP header
 
 * [5.7.0-1] Thu, 13 Nov 2025 Passbolt SA package signing key <contact@passbolt.com>
