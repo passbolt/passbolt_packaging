@@ -1,3 +1,9 @@
+passbolt-pro-server (5.8.0-test.3-1) buster; urgency=medium
+  * PB-47665 As a user with account recovery view permissions I can see pending requests in users.json
+  * PB-47625 As an administrator I cannot recreate a role deleted previously
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 17 Dec 2025 08:52:54 +0000
+
 passbolt-pro-server (5.8.0-test.2-1) buster; urgency=medium
   * PB-46972 As an administrator I can create a new custom role
   * PB-46973 As an administrator I can update a custom role
@@ -25,7 +31,7 @@ passbolt-pro-server (5.8.0-test.2-1) buster; urgency=medium
   * PB-45979 Add CACHE_CAKETRANSLATIONS_CLASSNAME environment variable for _cake_translations_ cache config
   * PB-46388 Fix PHPUnit 11 deprecations
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 12 Dec 2025 12:38:18 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 17 Dec 2025 08:52:54 +0000
 
 passbolt-pro-server (5.8.0-test.1-1) buster; urgency=medium
   * PB-46972 As an administrator I can create a new custom role
@@ -54,7 +60,7 @@ passbolt-pro-server (5.8.0-test.1-1) buster; urgency=medium
   * PB-45979 Add CACHE_CAKETRANSLATIONS_CLASSNAME environment variable for _cake_translations_ cache config
   * PB-46388 Fix PHPUnit 11 deprecations
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Fri, 12 Dec 2025 12:38:18 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 17 Dec 2025 08:52:54 +0000
 
 passbolt-pro-server (5.7.2-1) buster; urgency=medium
   * PB-46826 As an administrator running the cleanup task, the server metadata private key entry should not be deleted

@@ -1,4 +1,8 @@
-* [5.8.0-test.2-1] Fri, 12 Dec 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.8.0-test.3-1] Wed, 17 Dec 2025 Passbolt SA package signing key <contact@passbolt.com>
+- PB-47665 As a user with account recovery view permissions I can see pending requests in users.json
+- PB-47625 As an administrator I cannot recreate a role deleted previously
+
+* [5.8.0-test.2-1] Wed, 17 Dec 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-46972 As an administrator I can create a new custom role
 - PB-46973 As an administrator I can update a custom role
 - PB-46968 As an administrator I can soft delete custom roles
@@ -25,7 +29,7 @@
 - PB-45979 Add CACHE_CAKETRANSLATIONS_CLASSNAME environment variable for _cake_translations_ cache config
 - PB-46388 Fix PHPUnit 11 deprecations
 
-* [5.8.0-test.1-1] Fri, 12 Dec 2025 Passbolt SA package signing key <contact@passbolt.com>
+* [5.8.0-test.1-1] Wed, 17 Dec 2025 Passbolt SA package signing key <contact@passbolt.com>
 - PB-46972 As an administrator I can create a new custom role
 - PB-46973 As an administrator I can update a custom role
 - PB-46968 As an administrator I can soft delete custom roles
