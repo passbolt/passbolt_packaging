@@ -1,68 +1,16 @@
+passbolt-pro-server (5.9.0-test.1-1) buster; urgency=medium
+  * PB-44749 As an administrator I should get notified in the healthcheck about the deprecation of the database type and version
+  * PB-47893 As an administrator running the bin/cron command, I can see in the logs the number of emails left to send
+  * PB-46111 As a user I should receive a single email digest when more than one folders are created, updated or deleted
+  * PB-47991 As an administrator I should not get a data-check error for deleted resources with no active metadata keys
+  * PB-47987 As an administrator I should not get a data-check error for deleted secrets
+  * PB-47276 As a non-logged in user I cannot enumerate user emails using the recover endpoint
+  * PB-47701 Specify 1.1.0 version as minimum duo universal SDK package version in composer.json
+  * PB-47794 Update composer/composer to fix security-check job due to CVE-2025-67746
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 20 Jan 2026 11:05:21 +0000
+
 passbolt-pro-server (5.8.0-1) buster; urgency=medium
-  * PB-46972 As an administrator I can create a new custom role
-  * PB-46973 As an administrator I can update a custom role
-  * PB-46968 As an administrator I can soft delete custom roles
-  * PB-46971 As an administrator I can list roles including deleted ones via filter
-  * PB-47169 As a user I receive an email notification when my role is changed
-  * PB-47345 As an administrator I receive an email notification when a role is created or updated
-  * PB-46975 As an administrator I can list RBACs including Actions
-  * PB-46976 As an administrator I can update RBACs for Actions
-  * PB-47006 As a logged-in user my role is fetched on every request to reflect role changes immediately
-  * PB-47083 As a user with appropriate RBAC permissions I can create groups
-  * PB-47171 As a user with appropriate RBAC permissions I can manage account recovery requests
-  * PB-47338 As a user with account recovery view permissions I can see pending requests in users.json
-  * PB-47196 As an administrator I can run the healthcheck command in POSIX mode
-  * PB-47274 As an administrator I can run a command to populate created_by and modified_by fields in secrets
-  * PB-47275 As an administrator I can run a command to populate secret revisions for existing secrets
-  * PB-46374 As first admin I should not receive emails regarding encrypted metadata enablement during the first setup
-  * PB-46613 Fix web installer not working in HTTP when not in secure context
-  * PB-46640 Fix warnings in mfa_user_settings_reset_self.php email template
-  * PB-46645 Optimize action logs purge command dry run query
-  * PB-46913 Fix MfaUserSettingsDisableCommand to support case sensitive username comparison
-  * PB-46935 Fix 500 error on /metadata/session-keys/{uuid}.json endpoint when the request is sent twice
-  * PB-47236 Reduce the PHP memory load of the V570PopulateSecretRevisionsForExistingSecrets migration
-  * PB-46890 Upgrade js-yaml dependency (Medium severity)
-  * PB-45979 Add CACHE_CAKETRANSLATIONS_CLASSNAME environment variable for _cake_translations_ cache config
-  * PB-46388 Fix PHPUnit 11 deprecations
-
- -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 22 Dec 2025 10:31:37 +0000
-
-passbolt-pro-server (5.8.0-test.3-1) buster; urgency=medium
-  * PB-47665 As a user with account recovery view permissions I can see pending requests in users.json
-  * PB-47625 As an administrator I cannot recreate a role deleted previously
-
- -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 22 Dec 2025 10:31:37 +0000
-
-passbolt-pro-server (5.8.0-test.2-1) buster; urgency=medium
-  * PB-46972 As an administrator I can create a new custom role
-  * PB-46973 As an administrator I can update a custom role
-  * PB-46968 As an administrator I can soft delete custom roles
-  * PB-46971 As an administrator I can list roles including deleted ones via filter
-  * PB-47169 As a user I receive an email notification when my role is changed
-  * PB-47345 As an administrator I receive an email notification when a role is created or updated
-  * PB-46975 As an administrator I can list RBACs including Actions
-  * PB-46976 As an administrator I can update RBACs for Actions
-  * PB-47006 As a logged-in user my role is fetched on every request to reflect role changes immediately
-  * PB-47083 As a user with appropriate RBAC permissions I can create groups
-  * PB-47171 As a user with appropriate RBAC permissions I can manage account recovery requests
-  * PB-47338 As a user with account recovery view permissions I can see pending requests in users.json
-  * PB-47196 As an administrator I can run the healthcheck command in POSIX mode
-  * PB-47274 As an administrator I can run a command to populate created_by and modified_by fields in secrets
-  * PB-47275 As an administrator I can run a command to populate secret revisions for existing secrets
-  * PB-46374 As first admin I should not receive emails regarding encrypted metadata enablement during the first setup
-  * PB-46613 Fix web installer not working in HTTP when not in secure context
-  * PB-46640 Fix warnings in mfa_user_settings_reset_self.php email template
-  * PB-46645 Optimize action logs purge command dry run query
-  * PB-46913 Fix MfaUserSettingsDisableCommand to support case sensitive username comparison
-  * PB-46935 Fix 500 error on /metadata/session-keys/{uuid}.json endpoint when the request is sent twice
-  * PB-47236 Reduce the PHP memory load of the V570PopulateSecretRevisionsForExistingSecrets migration
-  * PB-46890 Upgrade js-yaml dependency (Medium severity)
-  * PB-45979 Add CACHE_CAKETRANSLATIONS_CLASSNAME environment variable for _cake_translations_ cache config
-  * PB-46388 Fix PHPUnit 11 deprecations
-
- -- Passbolt SA package signing key <contact@passbolt.com>  Mon, 22 Dec 2025 10:31:37 +0000
-
-passbolt-pro-server (5.8.0-test.1-1) buster; urgency=medium
   * PB-46972 As an administrator I can create a new custom role
   * PB-46973 As an administrator I can update a custom role
   * PB-46968 As an administrator I can soft delete custom roles
