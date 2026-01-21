@@ -1,3 +1,17 @@
+passbolt-pro-server (5.9.0-test.2-1) buster; urgency=medium
+  * PB-44749 As an administrator I should get notified in the healthcheck about the deprecation of the database type and version
+  * PB-47893 As an administrator running the bin/cron command, I can see in the logs the number of emails left to send
+  * PB-46111 As a user I should receive a single email digest when more than one folders are created, updated or deleted
+  * PB-47991 As an administrator I should not get a data-check error for deleted resources with no active metadata keys
+  * PB-47987 As an administrator I should not get a data-check error for deleted secrets
+  * PB-47986 As a logged-in user tagging a resource I should not update the modified date of the resource
+  * PB-47070 As an administrator I can use the --no-verify option when truncating the account recovery tables
+  * PB-47276 As a non-logged in user I cannot enumerate user emails using the recover endpoint
+  * PB-47701 Specify 1.1.0 version as minimum duo universal SDK package version in composer.json
+  * PB-47794 Update composer/composer to fix security-check job due to CVE-2025-67746
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 21 Jan 2026 05:09:15 +0000
+
 passbolt-pro-server (5.9.0-test.1-1) buster; urgency=medium
   * PB-44749 As an administrator I should get notified in the healthcheck about the deprecation of the database type and version
   * PB-47893 As an administrator running the bin/cron command, I can see in the logs the number of emails left to send
@@ -8,7 +22,7 @@ passbolt-pro-server (5.9.0-test.1-1) buster; urgency=medium
   * PB-47701 Specify 1.1.0 version as minimum duo universal SDK package version in composer.json
   * PB-47794 Update composer/composer to fix security-check job due to CVE-2025-67746
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 20 Jan 2026 11:05:21 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Wed, 21 Jan 2026 05:09:15 +0000
 
 passbolt-pro-server (5.8.0-1) buster; urgency=medium
   * PB-46972 As an administrator I can create a new custom role
