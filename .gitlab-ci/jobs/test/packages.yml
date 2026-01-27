@@ -1,11 +1,11 @@
 .kitchen-test:
   extends: .rules
-  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/ruby:slim-bookworm
+  image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/ruby:4.0
   stage: test
   script:
     - |
       apt update && apt install rsync openssh-client -y
-      gem install bundler:2.4.5
+      gem install bundler:4.0.4
       bundle config set --local path .bundle
       bundle install
       echo "{\"username\": \"$CI_DEPENDENCY_PROXY_USER\", \"password\": \"$CI_DEPENDENCY_PROXY_PASSWORD\", \"serveraddress\": \"$CI_DEPENDENCY_PROXY_SERVER\" }" > /tmp/creds.json
