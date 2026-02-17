@@ -1,3 +1,8 @@
+passbolt-pro-server (5.10.0-test.2-1) buster; urgency=medium
+  * PB-49193 Updates passbolt styleguide version
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 17 Feb 2026 11:10:17 +0000
+
 passbolt-pro-server (5.10.0-test.1-1) buster; urgency=medium
   * PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
   * PB-45576 As a logged-in user, the user ID only should be stored in session
@@ -10,7 +15,7 @@ passbolt-pro-server (5.10.0-test.1-1) buster; urgency=medium
   * PB-48555 Fix CVE-2026-24765 security vulnerability advisory for phpunit/phpunit package
   * PB-48396 Update composer/composer package to 2.9.5 to fix CVE CVE-2026-24739 in symfony/process package
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 12 Feb 2026 09:43:48 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Tue, 17 Feb 2026 11:10:17 +0000
 
 passbolt-pro-server (5.9.0-1) buster; urgency=medium
   * PB-44749 As an administrator I should get notified in the healthcheck about the deprecation of the database type and version

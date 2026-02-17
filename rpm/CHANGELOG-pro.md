@@ -1,4 +1,7 @@
-* [5.10.0-test.1-1] Thu, 12 Feb 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.10.0-test.2-1] Tue, 17 Feb 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-49193 Updates passbolt styleguide version
+
+* [5.10.0-test.1-1] Tue, 17 Feb 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
 - PB-45576 As a logged-in user, the user ID only should be stored in session
 - PB-24273 GET /auth/logout endpoint is now disabled by default
