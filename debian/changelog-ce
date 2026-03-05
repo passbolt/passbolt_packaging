@@ -1,15 +1,20 @@
+passbolt-ce-server (5.10.0-test.5-1) buster; urgency=medium
+  * PB-49846 Fixes web installer CSS
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 17:11:47 +0000
+
 passbolt-ce-server (5.10.0-test.4-1) buster; urgency=medium
   * PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
   * PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:18:48 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 17:11:47 +0000
 
 passbolt-ce-server (5.10.0-test.3-1) buster; urgency=medium
   * PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
   * PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
   * PB-40266 Health-check issues on Ubuntu 24 when running while being in a directory without the +x permission bit for www-data user (GITHUB #571)
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:18:48 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 17:11:47 +0000
 
 passbolt-ce-server (5.10.0-test.1-1) buster; urgency=medium
   * PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
@@ -23,7 +28,7 @@ passbolt-ce-server (5.10.0-test.1-1) buster; urgency=medium
   * PB-48555 Fix CVE-2026-24765 security vulnerability advisory for phpunit/phpunit package
   * PB-48396 Update composer/composer package to 2.9.5 to fix CVE CVE-2026-24739 in symfony/process package
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:18:48 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 17:11:47 +0000
 
 passbolt-ce-server (5.9.0-1) buster; urgency=medium
   * PB-44749 As an administrator I should get notified in the healthcheck about the deprecation of the database type and version
