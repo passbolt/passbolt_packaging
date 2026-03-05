@@ -1,3 +1,16 @@
+passbolt-pro-server (5.10.0-test.4-1) buster; urgency=medium
+  * PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
+  * PB-49148 Fix PBL-15-002 WP3: Suboptimal token generation randomness
+  * PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
+  * PB-49152 PBL-15-004 WP1: Fix unsalted SHA256 hashing of bearer tokens in SCIM
+  * PB-49158 PBL-15-010 WP4: Fix Directory entry foreign key race condition
+  * PB-49153 PBL-15-005 WP2: Fix race condition in SCIM user creation endpoint
+  * PB-49158 PBL-15-010 WP4: Fix Directory entry foreign key race condition
+  * PB-47973 Improve Active Directory entries to allow long entries
+  * PB-49154 PBL-15-006 WP2: User enumeration via error messages
+
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:20:52 +0000
+
 passbolt-pro-server (5.10.0-test.3-1) buster; urgency=medium
   * PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
   * PB-49148 Fix PBL-15-002 WP3: Suboptimal token generation randomness
@@ -10,12 +23,12 @@ passbolt-pro-server (5.10.0-test.3-1) buster; urgency=medium
   * PB-47973 Improve Active Directory entries to allow long entries
   * PB-49154 PBL-15-006 WP2: User enumeration via error messages
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 10:06:11 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:20:52 +0000
 
 passbolt-pro-server (5.10.0-test.2-1) buster; urgency=medium
   * PB-49193 Updates passbolt styleguide version
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 10:06:11 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:20:52 +0000
 
 passbolt-pro-server (5.10.0-test.1-1) buster; urgency=medium
   * PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
@@ -29,7 +42,7 @@ passbolt-pro-server (5.10.0-test.1-1) buster; urgency=medium
   * PB-48555 Fix CVE-2026-24765 security vulnerability advisory for phpunit/phpunit package
   * PB-48396 Update composer/composer package to 2.9.5 to fix CVE CVE-2026-24739 in symfony/process package
 
- -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 10:06:11 +0000
+ -- Passbolt SA package signing key <contact@passbolt.com>  Thu, 05 Mar 2026 11:20:52 +0000
 
 passbolt-pro-server (5.9.0-1) buster; urgency=medium
   * PB-44749 As an administrator I should get notified in the healthcheck about the deprecation of the database type and version
