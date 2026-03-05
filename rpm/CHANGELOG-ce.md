@@ -1,4 +1,9 @@
-* [5.10.0-test.1-1] Thu, 12 Feb 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.10.0-test.3-1] Thu, 05 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
+- PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
+- PB-40266 Health-check issues on Ubuntu 24 when running while being in a directory without the +x permission bit for www-data user (GITHUB #571)
+
+* [5.10.0-test.1-1] Thu, 05 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
 - PB-45576 As a logged-in user, the user ID only should be stored in session
 - PB-24273 GET /auth/logout endpoint is now disabled by default
