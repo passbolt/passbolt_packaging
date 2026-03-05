@@ -1,3 +1,6 @@
+* [5.10.0-test.5-1] Thu, 05 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-49846 Fixes web installer CSS
+
 * [5.10.0-test.4-1] Thu, 05 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
 - PB-49148 Fix PBL-15-002 WP3: Suboptimal token generation randomness
