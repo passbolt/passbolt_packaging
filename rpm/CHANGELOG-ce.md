@@ -1,3 +1,7 @@
+* [5.10.0-test.4-1] Thu, 05 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
+- PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
+
 * [5.10.0-test.3-1] Thu, 05 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
 - PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
