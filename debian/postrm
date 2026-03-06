@@ -66,8 +66,8 @@ case "$1" in
     if [ -d /etc/nginx/sites-available ] && [ -d /etc/nginx/sites-enabled ]; then
       _echo "postrm: cleanup passbolt nginx configuration"
       ln -sfd /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-      rm -f /etc/nginx/sites-enabled/passbolt
-      rm -f /etc/nginx/sites-available/passbolt
+      rm -f /etc/nginx/sites-enabled/nginx-passbolt.conf
+      rm -f /etc/nginx/sites-available/nginx-passbolt.conf
     fi
 
     # Cleanup folders.
