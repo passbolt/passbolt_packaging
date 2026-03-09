@@ -35,12 +35,13 @@ PHP_MAJOR_MINOR="$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')"
 JWT_DIR="/etc/passbolt/jwt"
 JWT_KEY="$JWT_DIR/jwt.key"
 JWT_PEM="$JWT_DIR/jwt.pem"
-NGINX_CONF_EXAMPLE="/usr/share/passbolt/examples/nginx-passbolt.conf"
+NGINX_CONF_FILENAME="nginx-passbolt.conf"
+NGINX_CONF_EXAMPLE="/usr/share/passbolt/examples/$NGINX_CONF_FILENAME"
 NGINX_SSL_EXAMPLE="/usr/share/passbolt/examples/nginx-passbolt-ssl.conf"
-NGINX_CONF="/etc/nginx/sites-enabled/nginx-passbolt.conf"
 NGINX_SSL="/etc/passbolt/nginx-ssl.conf"
 NGINX_SITES_AVAILABLE="/etc/nginx/sites-available"
 NGINX_SITES_ENABLED="/etc/nginx/sites-enabled"
+NGINX_CONF="$NGINX_SITES_AVAILABLE/$NGINX_CONF_FILENAME"
 PASSBOLT_SSL_CERT_PATH="/etc/ssl/certs"
 PASSBOLT_SSL_KEY_PATH="/etc/ssl/private"
 RAND_ID="$(date +%s)"
@@ -171,14 +172,14 @@ configure_mysql() {
 ###########################################
 
 configure_nginx_config_file() {
-  if [ -d "$NGINX_SITES_AVAILABLE" ] && [ -d "$NGINX_SITES_ENABLED" ] && [ ! -f "$NGINX_CONF" ]; then
+  if [ -d "$NGINX_SITES_AVAILABLE" ] && [ -d "$NGINX_SITES_ENABLED" ] && [ ! -f "$NGINX_SITES_ENABLED/$NGINX_CONF_FILENAME" ]; then
     _echo "nginx: activating http configuration file"
 
     # install passbolt virtual host configuration
-    cp $NGINX_CONF_EXAMPLE "$NGINX_SITES_AVAILABLE"
-    ln -sf "$NGINX_SITES_AVAILABLE/nginx-passbolt.conf" "$NGINX_SITES_ENABLED/"
-    sed -i "s/# server_name/server_name ${nginx_values[domain]};/g" $NGINX_CONF
-    sed -i "s/__PHP_SOCK__/php${PHP_MAJOR_MINOR}-fpm.sock/g" $NGINX_CONF
+    cp "$NGINX_CONF_EXAMPLE" "$NGINX_CONF"
+    ln -sf "$NGINX_CONF" "$NGINX_SITES_ENABLED/"
+    sed -i "s/# server_name/server_name ${nginx_values[domain]};/g" "$NGINX_CONF"
+    sed -i "s/__PHP_SOCK__/php${PHP_MAJOR_MINOR}-fpm.sock/g" "$NGINX_CONF"
   fi
 }
 
