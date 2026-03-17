@@ -2,6 +2,8 @@
 
 This repository contains all the configurations required to package Passbolt for multiple Linux distributions.
 
+> ⚠️ Requires Passbolt 5.11 and onward.
+
 ## Requirements
 
 - Docker

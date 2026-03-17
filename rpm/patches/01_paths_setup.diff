@@ -2,7 +2,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/bin/cake.php
 ===================================================================
 --- passbolt-@PASSBOLT_FLAVOUR@-server.orig/bin/cake.php
 +++ passbolt-@PASSBOLT_FLAVOUR@-server/bin/cake.php
-@@ -3,6 +3,7 @@
+@@ -8,6 +8,7 @@
  // Check platform requirements
  require dirname(__DIR__) . '/config/requirements.php';
  require dirname(__DIR__) . '/vendor/autoload.php';
@@ -14,7 +14,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/config/default.php
 ===================================================================
 --- passbolt-@PASSBOLT_FLAVOUR@-server.orig/config/default.php
 +++ passbolt-@PASSBOLT_FLAVOUR@-server/config/default.php
-@@ -151,10 +151,10 @@ return [
+@@ -237,10 +237,10 @@ return [
              // - Apache on Debian it would be in '/var/www/.gnupg'
              // - Nginx on Centos it would be in '/var/lib/nginx/.gnupg'
              // - etc.
@@ -31,7 +31,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/config/paths.php
 ===================================================================
 --- passbolt-@PASSBOLT_FLAVOUR@-server.orig/config/paths.php
 +++ passbolt-@PASSBOLT_FLAVOUR@-server/config/paths.php
-@@ -28,7 +28,7 @@ if (!defined('DS')) {
+@@ -33,7 +33,7 @@ if (!defined('DS')) {
  /*
   * The full path to the directory which holds "src", WITHOUT a trailing DS.
   */
@@ -40,7 +40,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/config/paths.php
  
  /*
   * The actual directory name for the application directory. Normally
-@@ -44,7 +44,7 @@ define('APP', ROOT . DS . APP_DIR . DS);
+@@ -49,7 +49,7 @@ define('APP', ROOT . DS . APP_DIR . DS);
  /*
   * Path to the config directory.
   */
@@ -49,7 +49,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/config/paths.php
  
  /**
   * Path to the plugins directory.
-@@ -78,12 +78,12 @@ define('FIXTURES', TESTS . 'Fixture' . D
+@@ -83,12 +83,12 @@ define('FIXTURES', TESTS . 'Fixture' . D
  /*
   * Path to the temporary files directory.
   */
@@ -68,7 +68,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/webroot/index.php
 ===================================================================
 --- passbolt-@PASSBOLT_FLAVOUR@-server.orig/webroot/index.php
 +++ passbolt-@PASSBOLT_FLAVOUR@-server/webroot/index.php
-@@ -34,7 +34,7 @@ use App\Application;
+@@ -39,7 +39,7 @@ use App\Application;
  use Cake\Http\Server;
  
  // Bind your application to the server.

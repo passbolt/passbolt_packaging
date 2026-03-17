@@ -2,7 +2,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/webroot/index.php
 ===================================================================
 --- passbolt-@PASSBOLT_FLAVOUR@-server.orig/webroot/index.php
 +++ passbolt-@PASSBOLT_FLAVOUR@-server/webroot/index.php
-@@ -16,7 +16,7 @@
+@@ -21,7 +21,7 @@
   */
  
  // Check platform requirements
