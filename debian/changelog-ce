@@ -1,3 +1,8 @@
+passbolt-ce-server (5.10.0-2) buster; urgency=medium
+  * PB-50164 Revert HTTP2 directive as some supported distros do not provide nginx >= 1.25.1+
+
+ -- Daniel Del Rio Figueira <daniel@passbolt.com>  Mon, 23 Mar 2026 14:45:30 +0000
+
 passbolt-ce-server (5.10.0-1) buster; urgency=medium
   * PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
   * PB-45576 As a logged-in user, the user ID only should be stored in session
