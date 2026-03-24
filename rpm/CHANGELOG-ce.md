@@ -1,3 +1,6 @@
+* [5.10.0-2] Wed, 23 Mar 2026 Daniel del Rio Figueira <daniel@passbolt.com>
+- PB-50164 Revert HTTP2 directive as some supported distros do not provide nginx >= 1.25.1+
+
 * [5.10.0-1] Wed, 11 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
 - PB-45576 As a logged-in user, the user ID only should be stored in session
