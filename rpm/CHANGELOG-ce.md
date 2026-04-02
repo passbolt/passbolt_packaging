@@ -1,4 +1,22 @@
-* [5.10.0-2] Wed, 23 Mar 2026 Daniel del Rio Figueira <daniel@passbolt.com>
+* [5.11.0-test.1-1] Thu, 02 Apr 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-49875 OAuth support for smtp authentication
+- PB-50158 Add a feature flag to enable/disable Safari availability on a Passbolt instance
+- PB-50199 As an admin I can contain my_group_user in POST /groups.json
+- PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
+- PB-40266 Health-check issues on Ubuntu 24 when running while being in a directory without the +x permission bit for www-data user (GITHUB #571)
+- PB-50021 As a guest, I should not get a 500 on GET /users.json?contain[pending_account_recovery_request]=1
+- PB-49823 Fix misleading email notification footer
+- PB-50028 GITHUB - Fix GPG authentication nonce UUID validation using incorrect comparison operand (#592, #596)
+- PB-50121 Replace rand() with a static counter to generate unique bind-parameter placeholder (GITHUB #595)
+- PB-50241 As a logged-in user I should not get a 500 when logging-in again
+- PB-49902 As a user I cannot create a v4 resource with v5 resource type
+- PB-50489 Email digest batch sending improvements
+- PB-50070 Align X-Frame-Options with CSP and add missing X-XSS-Protection header
+- PB-50133 Align allowCsvFormat variable name in plugin config.php
+- PB-50173 Fix composer security vulnerability advisory affecting phpseclib/phpseclib package (CVE-2026-32935)
+- PB-49096 Remove unused MFA assets & pages served by the browser extension
+
+* [5.10.0-2] Mon, 23 Mar 2026 Daniel del Rio Figueira <daniel@passbolt.com>
 - PB-50164 Revert HTTP2 directive as some supported distros do not provide nginx >= 1.25.1+
 
 * [5.10.0-1] Wed, 11 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
@@ -10,30 +28,6 @@
 - PB-48208 POST /mfa/verify/yubikey should not trigger 500
 - PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
 - PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
-- PB-48556 Fixes CVE-2026-25129 security vulnerability advisory for psy/psysh package
-- PB-47677 Upgrades firebase/php-jwt to version v7.0.0
-- PB-47628 Upgrades cakephp/cakephp to v5.2.12
-- PB-48555 Fix CVE-2026-24765 security vulnerability advisory for phpunit/phpunit package
-- PB-48396 Update composer/composer package to 2.9.5 to fix CVE CVE-2026-24739 in symfony/process package
-
-* [5.10.0-test.5-1] Wed, 11 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-49846 Fixes web installer CSS
-
-* [5.10.0-test.4-1] Wed, 11 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
-- PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
-
-* [5.10.0-test.3-1] Wed, 11 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-43183 Improve folders cascade delete performance by refactoring code using iterative BFS and batch operations
-- PB-49323 As a user creating a resource, I should not get a 500 if the secret passed is not an array of secrets
-- PB-40266 Health-check issues on Ubuntu 24 when running while being in a directory without the +x permission bit for www-data user (GITHUB #571)
-
-* [5.10.0-test.1-1] Wed, 11 Mar 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-48415 As an administrator, I can define the export policies to prevent CSV Export RCE
-- PB-45576 As a logged-in user, the user ID only should be stored in session
-- PB-24273 GET /auth/logout endpoint is now disabled by default
-- PB-48092 Fixes incorrect client IP in error logs by moving HttpProxyMiddleware upper in the middlewares chain
-- PB-48208 POST /mfa/verify/yubikey should not trigger 500
 - PB-48556 Fixes CVE-2026-25129 security vulnerability advisory for psy/psysh package
 - PB-47677 Upgrades firebase/php-jwt to version v7.0.0
 - PB-47628 Upgrades cakephp/cakephp to v5.2.12
