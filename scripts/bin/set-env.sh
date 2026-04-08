@@ -2,10 +2,10 @@
 
 # shellcheck disable=SC1091
 
-CI_SCRIPTS_DIR=$(dirname "$BASH_SOURCE")/..
+SCRIPTS_DIR=$(dirname "$BASH_SOURCE")/..
 
-source "$CI_SCRIPTS_DIR"/lib/version-check.sh
-source "$CI_SCRIPTS_DIR"/lib/set-env.sh
+source "$SCRIPTS_DIR"/lib/version-check.sh
+source "$SCRIPTS_DIR"/lib/set-env.sh
 
 API_VERSION_PREFIX="v"
 

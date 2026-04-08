@@ -12,16 +12,16 @@
 
 set -eu
 
-CI_SCRIPTS_DIR=$(dirname "$0")/..
+SCRIPTS_DIR=$(dirname "$0")/..
 
-# shellcheck source=.gitlab-ci/scripts/lib/clone-api.sh
-source "$CI_SCRIPTS_DIR"/lib/clone-api.sh
-# shellcheck source=.gitlab-ci/scripts/lib/version-check.sh
-source "$CI_SCRIPTS_DIR"/lib/version-check.sh
-# shellcheck source=.gitlab-ci/scripts/lib/changelog-updater.sh
-source "$CI_SCRIPTS_DIR"/lib/changelog-updater.sh
-# shellcheck source=.gitlab-ci/scripts/lib/git-helpers.sh
-source "$CI_SCRIPTS_DIR"/lib/git-helpers.sh
+# shellcheck source=scripts/lib/clone-api.sh
+source "$SCRIPTS_DIR"/lib/clone-api.sh
+# shellcheck source=scripts/lib/version-check.sh
+source "$SCRIPTS_DIR"/lib/version-check.sh
+# shellcheck source=scripts/lib/changelog-updater.sh
+source "$SCRIPTS_DIR"/lib/changelog-updater.sh
+# shellcheck source=scripts/lib/git-helpers.sh
+source "$SCRIPTS_DIR"/lib/git-helpers.sh
 
 GIT_CI_TOKEN_NAME=${GIT_CI_TOKEN_NAME:-gitlab-ci-token}
 GITLAB_USER_EMAIL="contact@passbolt.com"
