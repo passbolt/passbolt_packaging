@@ -22,7 +22,7 @@ else
   read -r -a version_config <<< "$(parse_tag "$API_VERSION_PREFIX$tag")"
 fi
 
-export API_CLONE_BRANCH="${API_CLONE_BRANCH:-$version_config[0]}"
+export API_CLONE_BRANCH="${API_CLONE_BRANCH:-${version_config[0]}}"
 export PASSBOLT_FLAVOUR="${version_config[1]}"
 export FILTER="${version_config[2]}"
 export PASSBOLT_COMPONENT="${version_config[3]}"
