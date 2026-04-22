@@ -15,8 +15,6 @@ Requires:       php-gnupg
 Requires:       php-posix >= 8.2
 Requires:       php-xmlreader >= 8.2
 Requires:       php-xmlwriter >= 8.2
-%if "%{_passbolt_flavour}" == "pro"
 Requires:       php-ldap >= 8.2
-%endif
 Requires:       cronie
 Requires:       nginx

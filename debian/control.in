@@ -22,7 +22,7 @@ Depends: ${misc:Depends},
   php-fpm (>= 2:8.2),
   php-xml (>= 2:8.2),
   php-gd (>= 2:8.2),
-  @PASSBOLT_EXTENSIONS@
+  php-ldap (>= 2:8.2),
   php-gnupg,
   php-redis,
   php-pgsql

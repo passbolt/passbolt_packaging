@@ -12,12 +12,6 @@ ifeq ($(PASSBOLT_FLAVOUR), ce)
 	CONTROL_OP := d
 endif
 
-ifeq ($(PASSBOLT_FLAVOUR), pro)
-	PASSBOLT_EXTENSIONS := php-ldap,
-	SED_COMMAND := s
-	CONTROL_OP := /g
-endif
-
 PASSBOLT_PACKAGE = passbolt-$(PASSBOLT_FLAVOUR)-server
 PKG_ROOT := $(CURDIR)/debian/$(PASSBOLT_PACKAGE)
 PREPARE_FILES := $(shell cat debian/prepare-files)
@@ -65,7 +59,7 @@ override_dh_fixperms: check_env
 debian/control: debian/control.in check_env
 	# $@ means the target name (debian/control)
 	# $< is the param passed (debian/control.in)
-	sed -e "s/@PASSBOLT_FLAVOUR@/$(PASSBOLT_FLAVOUR)/g" -e "$(SED_COMMAND)/@PASSBOLT_EXTENSIONS@/$(PASSBOLT_EXTENSIONS)$(CONTROL_OP)" >$@ <$<
+	sed -e "s/@PASSBOLT_FLAVOUR@/$(PASSBOLT_FLAVOUR)/g" >$@ <$<
 	# ${file%.*} stripes the extension from the file name
 	for file in $(PREPARE_FILES); do cat debian/$$file > debian/passbolt-$(PASSBOLT_FLAVOUR)-server.$${file%.*}; done
 	for file in $(PATCHES_FILES); do sed -i "s/@PASSBOLT_FLAVOUR@/$(PASSBOLT_FLAVOUR)/g" $$file; done
