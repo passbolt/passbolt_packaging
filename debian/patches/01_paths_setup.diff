@@ -14,7 +14,7 @@ Index: passbolt-@PASSBOLT_FLAVOUR@-server/config/default.php
 ===================================================================
 --- passbolt-@PASSBOLT_FLAVOUR@-server.orig/config/default.php
 +++ passbolt-@PASSBOLT_FLAVOUR@-server/config/default.php
-@@ -237,10 +237,10 @@ return [
+@@ -202,10 +202,10 @@ return [
              // - Apache on Debian it would be in '/var/www/.gnupg'
              // - Nginx on Centos it would be in '/var/lib/nginx/.gnupg'
              // - etc.
