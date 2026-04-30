@@ -1,3 +1,6 @@
+* [5.12.0-test.1-1] Thu, 30 Apr 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-50963 Test package with PRO dependencies
+
 * [5.11.0-1] Thu, 09 Apr 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49875 OAuth support for smtp authentication
 - PB-50158 Add a feature flag to enable/disable Safari availability on a Passbolt instance
