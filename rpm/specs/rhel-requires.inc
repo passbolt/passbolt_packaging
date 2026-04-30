@@ -11,9 +11,7 @@ Requires:       php-pecl-gnupg
 Requires:       php-pgsql >= 8.2
 Requires:       php-process >= 8.2
 Requires:       php-xml >= 8.2
-%if "%{_passbolt_flavour}" == "pro"
 Requires:       php-ldap >= 8.2
-%endif
 Requires:       cronie
 Requires:       nginx
 Requires:       passbolt-server-selinux
