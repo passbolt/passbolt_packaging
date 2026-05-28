@@ -85,14 +85,14 @@ usage() {
 		  OPTIONS:
 		    -h                    This help message
 
-		  SSL SETUP OPTIONS:
+		  TLS (SSL) SETUP OPTIONS:
 		  ------------------
-		    -a                    Enable automatic SSL setup using Letsencrypt and certbot.
+		    -a                    Enable automatic TLS (SSL) setup using Letsencrypt and certbot.
 		                          Conflicts with -[ck]
-		    -c CERT_FILE_PATH     SSL certificate system path. Enables SSL
-		    -k KEY_FILE_PATH      SSL certificate key path. Enables SSL
+		    -c CERT_FILE_PATH     TLS (SSL) certificate system path. Enables TLS (SSL)
+		    -k KEY_FILE_PATH      TLS (SSL) private key path. Enables TLS (SSL)
 		    -m EMAIL              Email address to use for letsencrypt registration
-		    -n                    Disable SSL setup
+		    -n                    Disable TLS (SSL) setup
 		    -H HOSTNAME           Specifies the hostname nginx will use as server_name
 		                          and if -a specified it will be used as letsencrypt
 		                          domain name
@@ -143,7 +143,7 @@ usage() {
 
 __validate_cli_options() {
   local message_mysql="Wrong parameters. Check your database parameters"
-  local message_ssl="Wrong parameters. Check your SSL parameters"
+  local message_ssl="Wrong parameters. Check your TLS (SSL) parameters"
 
   if [[ "$(__config_get 'mariadb_local_installation')" &&
   "$(__config_get 'mariadb_remote_installation')" ]]; then
@@ -199,7 +199,7 @@ __validate_ssl_paths() {
 
 __validate_cli_options() {
   local message_mysql="Wrong parameters. Check your database parameters"
-  local message_ssl="Wrong parameters. Check your SSL parameters"
+  local message_ssl="Wrong parameters. Check your TLS (SSL) parameters"
 
   if [[ "$(__config_get 'mariadb_local_installation')" &&
   "$(__config_get 'mariadb_remote_installation')" ]]; then
@@ -320,7 +320,7 @@ __prompt_passbolt_hostname() {
     banner "Setting hostname...
     Please enter the domain name under which passbolt will run.
     Note this hostname will be used as server_name for nginx
-    and as the domain name to register a SSL certificate with
+    and as the domain name to register a TLS (SSL) certificate with
     let's encrypt.
     If you don't have a domain name and you do not plan to use
     let's encrypt please enter the ip address to access this machine"
@@ -420,19 +420,19 @@ __prompt_ssl_paths() {
   local _ssl_key
 
   if [[ -z "$(__config_get "$_config_ssl_cert")" ]]; then
-    read -rp "Enter the path to the SSL certificate: " _ssl_cert
+    read -rp "Enter the path to the TLS (SSL) certificate: " _ssl_cert
     while [[ "$(__validate_ssl_paths "$_ssl_cert")" == 'false' ]]; do
-      banner "Please introduce a valid path to your ssl certificate"
-      read -rp "Enter the path to the SSL certificate: " _ssl_cert
+      banner "Please introduce a valid path to your TLS (SSL) certificate"
+      read -rp "Enter the path to the TLS (SSL) certificate: " _ssl_cert
     done
     __config_set "$_config_ssl_cert" "$_ssl_cert"
   fi
 
   if [[ -z "$(__config_get "$_config_ssl_key")" ]]; then
-    read -rp "Enter the path to the SSL privkey: " _ssl_key
+    read -rp "Enter the path to the TLS (SSL) private key: " _ssl_key
     while [[ "$(__validate_ssl_paths "$_ssl_key")" == 'false' ]]; do
-      banner "Please introduce a valid path to your ssl key file"
-      read -rp "Enter the path to the SSL key: " _ssl_key
+      banner "Please introduce a valid path to your TLS (SSL) key file"
+      read -rp "Enter the path to the TLS (SSL) key: " _ssl_key
     done
     __config_set "$_config_ssl_key" "$_ssl_key"
   fi
@@ -460,10 +460,10 @@ __prompt_ssl() {
   if [[ -z "$(__config_get "$_config_ssl_auto")" &&
   -z "$(__config_get "$_config_ssl_manual")" &&
   -z "$(__config_get "$_config_ssl_none")" ]]; then
-    banner "Setting up SSL...
-    Do you want to setup a SSL certificate and enable HTTPS now?
-    - manual: Prompts for the path of user uploaded ssl certificates and set up nginx
-    - auto:   Will issue a free SSL certificate with https://www.letsencrypt.org and set up nginx
+    banner "Setting up TLS (SSL)...
+    Do you want to setup a TLS (SSL) certificate and enable HTTPS now?
+    - manual: Prompts for the path of user uploaded TLS (SSL) certificates and set up nginx
+    - auto:   Will issue a free TLS (SSL) certificate with https://www.letsencrypt.org and set up nginx
     - none:   Do not setup HTTPS at all"
     select opt in "${_options[@]}"; do
       case $opt in
@@ -705,7 +705,7 @@ __copy_ssl_certs() {
     cp "$(__config_get "$_config_ssl_key")" "$SSL_KEY_PATH"
   else
     mv "$NGINX_SITE_DIR"/passbolt_ssl.conf{,.orig}
-    banner "Unable to locate SSL certificate files."
+    banner "Unable to locate TLS (SSL) certificate files."
   fi
 }
 
