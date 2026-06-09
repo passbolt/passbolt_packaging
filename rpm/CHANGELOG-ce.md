@@ -1,3 +1,29 @@
+* [5.13.0-test.1-1] Tue, 09 Jun 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-42980 As an administrator I can upgrade my Passbolt CE instance to a Pro edition from the product
+- PB-42980 As an administrator I can downgrade my Passbolt Pro instance back to CE from the product
+- PB-51980 Adds a healthcheck that reports the edition currently served by the instance
+- PB-51533 As an admin I can contain my_group_user in PUT /groups.json
+- PB-52020 As an administrator I can run the healthcheck command if the DB is not reachable
+- PB-51039 Extends the /healthcheck/status.json endpoint to verify additional components such as the cache
+- PB-51161 Stops folder cycle detection at the personal folder boundary
+- PB-50013 Fixes user session being destroyed in Safari when fetching avatar images from the web application
+- PB-52027 Fixes SCIM endpoints returning non-standard HTTP status codes
+- PB-51646 Fixes missing spaces in the email sent when a user lost their key/passphrase and recovery is aborted
+- PB-52135 Upgrades mobiledetect/mobiledetectlib
+- PB-51940 Fixes qs security vulnerability advisory GHSA-q8mj-m7cp-5q26 (Medium)
+- PB-51639 Fixes PKSA-pwvr-3754-v57r security vulnerability advisory affecting composer/composer package
+- PB-51194 PBL-15-006: Fixes internal UUID still disclosed in SCIM user creation conflict response (Low)
+- PB-51650 Introduces ScimSettingsDto for the ScimGetSettingsService::getSettings()
+- PB-51647 Adds unit tests for GroupsUsersTable::isManager()
+- PB-52010 Removes cakephp/bake from composer dev requirements
+- PB-52126 Upgrades symfony/string to 7.4.13
+- PB-51570 Upgrades CakePHP to v5.3.6 and replaces _execute() calls with process() to fix deprecations
+- PB-52070 Fixes "Use expr() instead of newExpr()" deprecation warning after CakePHP upgrade
+- PB-48002 Removes security.prompt from the SSO configuration
+- PB-49755 Removes GitLab CI definition (moved to the ci-definitions repository)
+- PB-49425 Refactors DirectorySync controller tests using fixture factories
+- PB-35955 Refactors /healthcheck/status.json endpoint to use a pluggable default status strategy
+
 * [5.12.0-1] Tue, 12 May 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-51081 Adds pin code resource type
 - PB-51516 Enables Safari by default
@@ -17,44 +43,6 @@
 - PB-51243 Fixes activity logging breaking after instance reset while executing Selenium tests
 - PB-51428 Fixes dev test data inserting empty definitions for v5 resource types
 - PB-51541 Fixes SCIM endpoints returning 500 errors on cloud when resourceType is not supported
-
-* [5.12.0-test.3-1] Tue, 12 May 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-51081 Add pin code resource type
-- PB-51516 Enable Safari by default
-- PB-50625 Fix GHSA-F886-M6HF-6M8V security vulnerability advisory (Medium)
-- PB-50340 Upgrade picomatch package (Medium)
-- PB-50538 Upgrade lodash package (Critical)
-- PB-50895 Fix bn.js security vulnerability advisory GHSA-378v-28hj-76wf (Medium)
-- PB-50969 Fix composer security vulnerability advisory affecting phpseclib/phpseclib package (CVE-2026-40194)
-- PB-51135 Fix security vulnerability advisory affecting composer/composer package (CVE-2026-40261, CVE-2026-40176)
-- PB-51151 Fix i18next-http-backend security vulnerability advisory GHSA-r5fr-rjxr-66jc (Medium)
-- PB-51152 Fix uuid security vulnerability advisory GHSA-w5hq-g745-h8pq (Medium)
-- PB-51448 Fix security vulnerability advisory affecting phpseclib/phpseclib package (CVE-2026-44167)
-- PB-51208 Cleanup UserScimResource.php logged errors
-- PB-50893 As an administrator I can purge action additional logs by action via the logs purge command
-- PB-50914 Homogenize CE and Pro codebase
-- PB-51243 Fix activity logging breaking after instance reset while executing Selenium tests
-- PB-51428 Fix dev test data inserting empty definitions for v5 resource types
-
-* [5.12.0-test.2-1] Tue, 12 May 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-51081 Add pin code resource type
-- PB-50625 Fix GHSA-F886-M6HF-6M8V security vulnerability advisory (Medium)
-- PB-50340 Upgrade picomatch package (Medium)
-- PB-50538 Upgrade lodash package (Critical)
-- PB-50895 Fix bn.js security vulnerability advisory GHSA-378v-28hj-76wf (Medium)
-- PB-50969 Fix composer security vulnerability advisory affecting phpseclib/phpseclib package (CVE-2026-40194)
-- PB-51135 Fix security vulnerability advisory affecting composer/composer package (CVE-2026-40261, CVE-2026-40176)
-- PB-51151 Fix i18next-http-backend security vulnerability advisory GHSA-r5fr-rjxr-66jc (Medium)
-- PB-51152 Fix uuid security vulnerability advisory GHSA-w5hq-g745-h8pq (Medium)
-- PB-51448 Fix security vulnerability advisory affecting phpseclib/phpseclib package (CVE-2026-44167)
-- PB-51208 Cleanup UserScimResource.php logged errors
-- PB-50893 As an administrator I can purge action additional logs by action via the logs purge command
-- PB-50914 Homogenize CE and Pro codebase
-- PB-51243 Fix activity logging breaking after instance reset while executing Selenium tests
-- PB-51428 Fix dev test data inserting empty definitions for v5 resource types
-
-* [5.12.0-test.1-1] Tue, 12 May 2026 Passbolt SA package signing key <contact@passbolt.com>
-- PB-50963 Test package with PRO dependencies
 
 * [5.11.0-1] Thu, 09 Apr 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49875 OAuth support for smtp authentication
