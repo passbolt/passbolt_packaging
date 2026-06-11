@@ -59,6 +59,12 @@ cp -r src $RPM_BUILD_ROOT/%{_datadir}/php/passbolt
 cp -r templates $RPM_BUILD_ROOT/%{_datadir}/php/passbolt
 cp -r vendor $RPM_BUILD_ROOT/%{_datadir}/php/passbolt
 cp -r webroot $RPM_BUILD_ROOT/%{_datadir}/php/passbolt
+# Normalise webroot permissions: directories traversable, no file executable,
+# so static assets install as 0644 (mirrors `chmod -R -x+X` in debian/rules).
+# Without this, files carrying 0755 in the build tree (favicon.ico, favicon.png,
+# apple-touch-icon*.png) ship as 0755 and fail the passbolt-webroot-03 inspec
+# control on the RPM distros.
+chmod -R -x+X $RPM_BUILD_ROOT/%{_datadir}/php/passbolt/webroot
 cp -r _passbolt-configure/* $RPM_BUILD_ROOT/usr/local/bin
 
 %clean
