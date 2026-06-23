@@ -38,6 +38,9 @@ platforms:
   - name: ubuntu-24.04
     driver:
       image: ubuntu:24.04
+  - name: ubuntu-26.04
+    driver:
+      image: ubuntu:26.04
   - name: almalinux-9
     driver:
       image: dokken/almalinux-9:latest
