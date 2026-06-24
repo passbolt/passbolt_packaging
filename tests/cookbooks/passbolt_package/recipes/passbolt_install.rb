@@ -9,7 +9,7 @@ if platform_family?('debian')
   apt_update
   execute 'Install passbolt' do
     command  "DEBIAN_FRONTEND=noninteractive apt-get install -y /app/passbolt/passbolt*.deb \
-      && service php$(php -r 'echo PHP_VERSION;' | sed 's:\\([7|8]\\.[1-4]\\).*:\\1:')-fpm start #{node.key?(:parameters) ? '' : '&& service nginx start'}"
+      && service $(ls /etc/init.d/ | grep php) start #{node.key?(:parameters) ? '' : '&& service nginx start'}"
     action   :run
   end
 elsif platform_family?('rhel', 'suse', 'fedora')
