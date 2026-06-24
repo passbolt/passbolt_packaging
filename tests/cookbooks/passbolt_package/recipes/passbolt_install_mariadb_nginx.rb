@@ -11,15 +11,12 @@ database_engine = 'mysql'
 if platform_family?('debian')
   apt_update
   package 'Debian: Install mariadb and nginx' do
-    package_name %w[debconf-utils curl nginx default-mysql-server]
+    package_name %w[debconf-utils curl nginx mariadb-server]
     action :install
   end
 
-  # Use different database service depending on the OS
-  database_engine = 'mariadb' if node['platform'] == 'debian' && node['platform_version'] =~ /12|13/
-
-  execute 'Start mysql' do
-    command "service #{database_engine} start"
+  execute 'Start mariadb' do
+    command "service mariadb start"
     action  :run
   end
 elsif platform_family?('rhel')
