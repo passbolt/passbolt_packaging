@@ -35,12 +35,18 @@ platforms:
   - name: debian-bookworm
     driver:
       image: debian:bookworm
+  - name: debian-testing
+    driver:
+      image: debian:testing
   - name: ubuntu-24.04
     driver:
       image: ubuntu:24.04
   - name: ubuntu-26.04
     driver:
       image: ubuntu:26.04
+  - name: ubuntu-testing
+    driver:
+      image: ubuntu:devel
   - name: almalinux-9
     driver:
       image: dokken/almalinux-9:latest
