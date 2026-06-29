@@ -27,3 +27,18 @@ control 'passbolt-purge-03' do
     it { should_not exist }
   end
 end
+
+if os.family == 'debian'
+  control 'passbolt-purge-04' do
+    impact 0.1
+    title 'nginx default configuration is present'
+    desc 'Nginx default configuration is still there'
+    describe file('/etc/nginx/sites-enabled/default') do
+      it { should exist }
+      it { should be_symlink }
+      it { should be_file }
+      it { should_not be_directory }
+      it { should be_linked_to '/etc/nginx/sites-available/default' }
+    end
+  end
+end
