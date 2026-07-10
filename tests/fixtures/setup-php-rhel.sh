@@ -4,8 +4,7 @@
 
 set -eu
 
-OS_VERSION=$(grep -E '^VERSION_ID=' /etc/os-release | awk -F= '{print $2}' | sed 's/\"//g')
-OS_VERSION_MAJOR=$(echo ${OS_VERSION:0:1} | bc)
+OS_VERSION_MAJOR=$(grep -E '^VERSION_ID=' /etc/os-release | grep -E '[0-9]*' -m 1 -o | head -1)
 PHP_VERSION=8.4
 
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-"${OS_VERSION_MAJOR}".noarch.rpm -y
