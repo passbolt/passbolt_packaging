@@ -2,33 +2,36 @@
 
 set -e
 
+PROJECT_DIRECTORY="$(pwd)"
 PHP_VERSION="${1:-8.2}"
-DEPENDENCIES="vim git wget rpmdevtools rpmlint rsync selinux-policy-devel rpm-build bc gcc php-devel php-pear"
-GPGME_DEVEL_URL="https://dl.rockylinux.org/pub/rocky/9/CRB/x86_64/os/Packages/g/gpgme-devel-1.15.1-6.el9.x86_64.rpm"
-LIBASSUAN_DEVEL_URL="https://dl.rockylinux.org/pub/rocky/9/CRB/x86_64/os/Packages/l/libassuan-devel-2.5.5-3.el9.x86_64.rpm"
+DEPENDENCIES="git wget rpmdevtools rpmlint selinux-policy-devel rpm-build bc gcc php-devel php-pear gpgme-devel libassuan-devel"
 PHP_GNUPHP_REMI_REPO_URL="https://git.remirepo.net/git/rpms/php/pecl/php-pecl-gnupg.git"
 PHP_GNUPHP_URL="https://pecl.php.net/get/gnupg"
 
-function setup-php {
-	if [ "$PHP_VERSION" == "8.0" ]; then
-		yum install php -y
-	else
-		yum module reset php -y
-		yum module install php:"${PHP_VERSION}" -y
-	fi
-}
+# Create the meeting point directory
+mkdir "${PROJECT_DIRECTORY}"/rpms/
 
-setup-php
+# Enable and install the right PHP version
+dnf module reset php -y
+dnf module install php:"${PHP_VERSION}" -y
 
-yum install ${DEPENDENCIES} -y
-wget "$GPGME_DEVEL_URL" -O gpgme.rpm
-wget "$LIBASSUAN_DEVEL_URL" -O libassuan.rpm
-yum localinstall libassuan.rpm -y
-yum localinstall gpgme.rpm -y
+# Enable CRB (CodeReady Builder) repository
+# (used for gpgme-devel and libassuan-devel)
+dnf install dnf-plugins-core -y
+dnf config-manager --set-enabled crb
+dnf install ${DEPENDENCIES} -y
 
+# Clone Remi-repo's php-pecl-gnupg
 git clone "$PHP_GNUPHP_REMI_REPO_URL"
 cd php-pecl-gnupg/
+PHP_GNUPG_VER=$(grep "%global upstream_version" php-pecl-gnupg.spec | head -n 1 | rev | cut -d " " -f1 | rev)
+
+# Download GnuPG PECL and put it where expected and build the RPM
 wget "$PHP_GNUPHP_URL"
 mkdir -p /root/rpmbuild/SOURCES
-mv gnupg /root/rpmbuild/SOURCES/gnupg-1.5.1.tgz
+mv gnupg /root/rpmbuild/SOURCES/gnupg-"${PHP_GNUPG_VER}".tgz
 rpmbuild -ba php-pecl-gnupg.spec
+
+# Move the built RPM to a meeting point
+mv /root/rpmbuild/RPMS/x86_64/php-pecl-gnupg-"${PHP_GNUPG_VER}"-*.rpm "${PROJECT_DIRECTORY}"/rpms/
+
