@@ -8,9 +8,6 @@ DEPENDENCIES="git wget rpmdevtools selinux-policy-devel rpm-build bc gcc php-pea
 PHP_GNUPHP_REMI_REPO_URL="https://git.remirepo.net/git/rpms/php/pecl/php-pecl-gnupg.git"
 PHP_GNUPHP_URL="https://pecl.php.net/get/gnupg"
 
-# Create the meeting point directory
-mkdir "${PROJECT_DIRECTORY}"/rpms/
-
 # Install the right PHP version
 if [ "$PHP_VERSION" == "8.4" ]; then
     dnf install php8.4 php8.4-devel -y
@@ -38,5 +35,5 @@ mv gnupg /root/rpmbuild/SOURCES/gnupg-"${PHP_GNUPG_VER}".tgz
 rpmbuild -ba php-pecl-gnupg.spec
 
 # Move the built RPM to a meeting point
-mv /root/rpmbuild/RPMS/x86_64/php-pecl-gnupg-"${PHP_GNUPG_VER}"-*.rpm "${PROJECT_DIRECTORY}"/rpms/
+mv /root/rpmbuild/RPMS/x86_64/php-pecl-gnupg-"${PHP_GNUPG_VER}"-*.rpm "${PROJECT_DIRECTORY}"/
 
