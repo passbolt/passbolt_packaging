@@ -4,16 +4,21 @@ set -e
 
 PROJECT_DIRECTORY="$(pwd)"
 PHP_VERSION="${1:-8.2}"
-DEPENDENCIES="git wget rpmdevtools rpmlint selinux-policy-devel rpm-build bc gcc php-devel php-pear gpgme-devel libassuan-devel"
+DEPENDENCIES="git wget rpmdevtools selinux-policy-devel rpm-build bc gcc php-pear gpgme-devel libassuan-devel"
 PHP_GNUPHP_REMI_REPO_URL="https://git.remirepo.net/git/rpms/php/pecl/php-pecl-gnupg.git"
 PHP_GNUPHP_URL="https://pecl.php.net/get/gnupg"
 
 # Create the meeting point directory
 mkdir "${PROJECT_DIRECTORY}"/rpms/
 
-# Enable and install the right PHP version
-dnf module reset php -y
-dnf module install php:"${PHP_VERSION}" -y
+# Install the right PHP version
+if [ "$PHP_VERSION" == "8.4" ]; then
+    dnf install php8.4 php8.4-devel -y
+else
+    dnf module reset php -y
+    dnf module install php:"${PHP_VERSION}" -y
+    dnf install php-devel -y
+fi
 
 # Enable CRB (CodeReady Builder) repository
 # (used for gpgme-devel and libassuan-devel)
