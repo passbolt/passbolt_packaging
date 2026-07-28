@@ -1,4 +1,4 @@
-* [5.14.0-test.5-1] Mon, 27 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.14.0-1] Tue, 28 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49943 Add a model cache health check service
 - PB-50621 Add recover flow support for OAuth2 & ADFS SSO providers
 - PB-52153 Add a command to insert dummy data into the email_queue table
@@ -41,7 +41,7 @@
 - Renovate: Update dependency psalm/phar to v6.16.1
 - Renovate: Update dependency seec/phpunit-consecutive-params to v1.2
 
-* [5.14.0-test.4-1] Mon, 27 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.14.0-test.4-1] Tue, 28 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49943 Add a model cache health check service
 - PB-50621 Add recover flow support for OAuth2 & ADFS SSO providers
 - PB-52153 Add a command to insert dummy data into the email_queue table
@@ -84,7 +84,7 @@
 - Renovate: Update dependency psalm/phar to v6.16.1
 - Renovate: Update dependency seec/phpunit-consecutive-params to v1.2
 
-* [5.14.0-test.3-1] Mon, 27 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.14.0-test.3-1] Tue, 28 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49943 Add a model cache health check service
 - PB-50621 Add recover flow support for OAuth2 & ADFS SSO providers
 - PB-52153 Add a command to insert dummy data into the email_queue table
@@ -127,7 +127,7 @@
 - Renovate: Update dependency psalm/phar to v6.16.1
 - Renovate: Update dependency seec/phpunit-consecutive-params to v1.2
 
-* [5.14.0-test.2-1] Mon, 27 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.14.0-test.2-1] Tue, 28 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49943 Add a model cache health check service
 - PB-50621 Add recover flow support for OAuth2 & ADFS SSO providers
 - PB-52153 Add a command to insert dummy data into the email_queue table
@@ -169,7 +169,7 @@
 - Renovate: Update dependency psalm/phar to v6.16.1
 - Renovate: Update dependency seec/phpunit-consecutive-params to v1.2
 
-* [5.14.0-test.1-1] Mon, 27 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.14.0-test.1-1] Tue, 28 Jul 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-49943 Add a model cache health check service
 - PB-50621 Add recover flow support for OAuth2 & ADFS SSO providers
 - PB-52153 Add a command to insert dummy data into the email_queue table
