@@ -1,5 +1,5 @@
 
-module passbolt-server 0.6;
+module passbolt-server 0.7;
 
 require {
   type etc_t;
