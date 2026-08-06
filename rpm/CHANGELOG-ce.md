@@ -1,4 +1,8 @@
-* [5.14.3-test.1-1] Tue, 04 Aug 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.14.3-1] Thu, 06 Aug 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-53457 Fix env()-backed config flags to enforce strict boolean type
+- PB-53498 Fix CSRF cookie not working over HTTP deployments
+
+* [5.14.3-test.1-1] Thu, 06 Aug 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-53457 Fix env()-backed config flags to enforce strict boolean type
 - PB-53498 Fix CSRF cookie not working over HTTP deployments
 
