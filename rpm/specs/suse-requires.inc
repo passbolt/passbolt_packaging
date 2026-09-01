@@ -18,3 +18,4 @@ Requires:       php-xmlwriter >= 8.2
 Requires:       php-ldap >= 8.2
 Requires:       cronie
 Requires:       nginx
+Requires:       passbolt-server-selinux

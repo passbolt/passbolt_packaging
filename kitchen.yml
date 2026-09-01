@@ -77,11 +77,6 @@ platforms:
       image: dokken/oraclelinux-10:latest
       privileged: true
       pid_one_command: /usr/lib/systemd/systemd
-  - name: opensuse-leap-15
-    driver:
-      image: dokken/opensuse-leap-15.6:latest
-      privileged: true
-      pid_one_command: /usr/lib/systemd/systemd
   - name: opensuse-leap-16
     driver:
       image: dokken/opensuse-leap-16.0:latest
