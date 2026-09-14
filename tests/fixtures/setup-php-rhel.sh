@@ -10,7 +10,7 @@ PHP_VERSION=8.4
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-"${OS_VERSION_MAJOR}".noarch.rpm -y
 if ! rpm -qa | grep -q remi-release
 then
-  dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-"${OS_VERSION_MAJOR}".rpm -y
+  dnf install dnf-utils https://rpms.remirepo.net/enterprise/remi-release-"${OS_VERSION_MAJOR}".rpm -y
 fi
 dnf module reset php -y
 dnf module enable php:remi-$PHP_VERSION -y
