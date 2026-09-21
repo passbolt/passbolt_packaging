@@ -151,19 +151,17 @@ configure_mysql() {
   fi
 
   # Create the Passbolt Database and Username; Grant all access to new user
-  MYSQL="mysql -u${sql_values[db_username]} -e "
-  if [ "${sql_values[db_password]}" != "" ]; then
-    MYSQL="mysql -u${sql_values[db_username]} -p${sql_values[db_password]} -e "
-  fi
+  MYSQL_CONF_FILE=$(mktemp)
+  chmod 600 "${MYSQL_CONF_FILE}"
+  printf '[client]\nuser=%s\npassword=%s\n' "${sql_values[db_username]}" "${sql_values[db_password]}" > "${MYSQL_CONF_FILE}"
+  MYSQL_COMMANDS=(
+	"CREATE DATABASE IF NOT EXISTS ${sql_values[db_passbolt_dbname]} DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;"
+	"CREATE USER IF NOT EXISTS '${sql_values[db_passbolt_username]}'@'localhost' IDENTIFIED BY '${sql_values[db_passbolt_password]}' ;"
+	"GRANT ALL PRIVILEGES ON ${sql_values[db_passbolt_dbname]}.* TO '${sql_values[db_passbolt_username]}'@'localhost' ;"
+  )
 
-  $MYSQL "CREATE DATABASE IF NOT EXISTS ${sql_values[db_passbolt_dbname]} \
-         DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;"
-
-  $MYSQL "CREATE USER IF NOT EXISTS '${sql_values[db_passbolt_username]}'@'localhost' \
-         IDENTIFIED BY '${sql_values[db_passbolt_password]}' ;"
-
-  $MYSQL "GRANT ALL PRIVILEGES ON ${sql_values[db_passbolt_dbname]}.* \
-         TO '${sql_values[db_passbolt_username]}'@'localhost' ;"
+  mysql --defaults-extra-file="${MYSQL_CONF_FILE}" -e "${MYSQL_COMMANDS[*]}"
+  rm "${MYSQL_CONF_FILE}"
 }
 
 
