@@ -10,6 +10,7 @@
 # GPG_KEY_PATH path to gpg private key
 # GPG_KEY_GRIP gpg key grip for the private key
 
+# Don't set -x as we're manipulating sensitive passphrases in this script.
 set -eu
 
 SCRIPTS_DIR=$(dirname "$0")/..
