@@ -160,7 +160,12 @@ configure_mysql() {
 	"GRANT ALL PRIVILEGES ON ${sql_values[db_passbolt_dbname]}.* TO '${sql_values[db_passbolt_username]}'@'localhost' ;"
   )
 
-  mysql --defaults-extra-file="${MYSQL_CONF_FILE}" -e "${MYSQL_COMMANDS[*]}"
+  MYSQL_CLI="mysql"
+  if ! command -v mysql >/dev/null 2>&1; then
+    MYSQL_CLI="mariadb"
+  fi
+
+  "${MYSQL_CLI}" --defaults-extra-file="${MYSQL_CONF_FILE}" -e "${MYSQL_COMMANDS[*]}"
   rm "${MYSQL_CONF_FILE}"
 }
 
