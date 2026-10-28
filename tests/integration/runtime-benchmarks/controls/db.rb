@@ -1,16 +1,15 @@
 title 'Check passbolt database'
 
 sql_username = 'passboltadmin'
-sql_user_password = 'hawhawhaw'
+sql_password = 'hawhawhaw'
 
-sql=mysql_session(sql_username, sql_user_password)
-
-control 'passbolt-mysql-0' do
+control 'passbolt-db-0' do
   impact 1
   title 'Check that passbolt database is present'
   desc 'Passbolt installation has created its database'
 
-  describe sql.query('show databases;') do
+  describe command("mariadb -u #{sql_username} -p'#{sql_password}' -h localhost -e 'SHOW DATABASES;'") do
+    its('exit_status') { should eq 0 }
     its('stdout') { should include('passboltdb') }
   end
 end
