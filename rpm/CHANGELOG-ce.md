@@ -1,4 +1,7 @@
-* [5.18.0-test.1-1] Mon, 09 Nov 2026 Passbolt SA package signing key <contact@passbolt.com>
+* [5.18.0-test.2-1] Wed, 11 Nov 2026 Passbolt SA package signing key <contact@passbolt.com>
+- PB-56100 Bumps the styleguide
+
+* [5.18.0-test.1-1] Wed, 11 Nov 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-54386 As an administrator I can see every healthcheck in the administration panel through the generic healthcheck API
 - PB-54757 As an administrator I can exclude healthchecks by key or domain from the healthcheck API
 - PB-52437 As an administrator I can enforce Duo subscriber verification from the MFA settings
