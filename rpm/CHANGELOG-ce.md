@@ -1,3 +1,6 @@
+* [5.18.0-2] Wed, 18 Nov 2026 Daniel Del Rio Figueira <daniel@passbolt.com>
+- PB-56489 Disable http2 on nginx as per CVE-2026-123007 remediation
+
 * [5.18.0-1] Thu, 12 Nov 2026 Passbolt SA package signing key <contact@passbolt.com>
 - PB-54386 As an administrator I can see every healthcheck in the administration panel through the generic healthcheck API
 - PB-54757 As an administrator I can exclude healthchecks by key or domain from the healthcheck API

@@ -1,3 +1,8 @@
+passbolt-ce-server (5.18.0-2) buster; urgency=medium
+  * PB-56489 Disable http2 on nginx as per CVE-2026-123007 remediation
+
+ -- Daniel Del Rio Figueira <daniel@passbolt.com>  Wed, 18 Nov 2026 19:00:00 +0000
+
 passbolt-ce-server (5.18.0-1) buster; urgency=medium
   * PB-54386 As an administrator I can see every healthcheck in the administration panel through the generic healthcheck API
   * PB-54757 As an administrator I can exclude healthchecks by key or domain from the healthcheck API
