@@ -1,3 +1,6 @@
+* [5.18.0-3] Mon, 23 Nov 2026 Louis Vallat <louis@passbolt.com>
+- PB-56521 Re-enable http2 on nginx following upstream updates mitigating previously mentioned issue
+
 * [5.18.0-2] Wed, 18 Nov 2026 Daniel Del Rio Figueira <daniel@passbolt.com>
 - PB-56489 Disable http2 on nginx as per CVE-2026-123007 remediation
 
